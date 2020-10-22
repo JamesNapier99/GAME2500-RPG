@@ -4,64 +4,105 @@
 When play begins:
 	Say "Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! When playing our game, make sure you have a look at the possible actions that
 		can be taken!";
-		
-
-[STORY NOTES
-	Player works for Boston Manufacturing Company
-	Lives in Waltham, MA near main building
-]
-
-[HEXAGONAL MAP DECLARATION]
-Forward is a direction. Forward has opposite backward. Understand "f" as forward. 
-Backward is a direction. Backward has opposite forward. Understand "b" and "back" as backward. 
-Forward left is a direction. Forward left has opposite backward right. Understand "fl" as forward left. 
-Forward right is a direction. Forward right has opposite backward left. Understand "fr" as forward right. 
-Backward left is a direction. Backward left has opposite forward right. Understand "bl" as backward left. 
-Backward right is a direction. Backward right has opposite forward left. Understand "br" as backward right. 
-
-A direction can be hexagonal or squared-off. A direction is usually squared-off. Forward, backward, forward left, forward right, backward left and backward right are hexagonal. 
-
-Before going a squared-off direction, say "In this hexagonally-divided landscape, squared-off directions are not allowed." instead.
-
-Does the player mean going backward: it is very likely. Does the player mean going forward: it is very likely. 
-
-To say legend (D - direction): 
-	let destination hex be the room D from the location; 
-	if the destination hex is nothing, say " "; 
-	otherwise say the destination hex. 
-
-Carry out looking: 
-	say "[fixed letter spacing] \ [legend forward] /[line break][legend forward left] ---- [legend forward right][line break] / \[line break]--< [location] >--[line break] \ /[line break][legend backward left] ---- [legend backward right][line break] / [legend backward] \[variable letter spacing][line break]". 
-
-The player is in Home.
-
-Test me with "f / forward / backward left / bl / br / br / f".
 
 [Rooms]
 
-Home is a room. "Your small basement apartment in an alley of Main Street. Looks like a tornado has passed through it, but you haven't had the effort to clean up for years."
+	[Tenement]
 
-Main Street is a room. Main Street is forward of Home.
+The Tenement is a room. "You wake up to the drip of some cold water on your head. It's nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely.
 
-Cotton Gin - Main Entrance is a room. Cotton Gin - Main Entrance is forward left of Front Gate.
+As you adjust yourself, you see all the other tenants in your room. Each of them are visibly malnourished, wearing clothes that look more like throwaway rags than anything else. The dim rays of sunlight coming into the room suggest that it's about 6 AM.
 
-Cotton Gin - Worker's Entrance is a room. Cotton Gin - Worker's Entrance is forward right of Front Gate.
+You force yourself out of bed, guessing that work must start in about 30 minutes."
+	
+	[Alley]
 
-Locker Room is a room.  Locker Room is forward left of Cotton Gin - Worker's Entrance.
+The Alley is east of The Tenement. "You stumble from the darkness of the tenement into the gloomy alley. It's eerily quiet as this time of day, but in a few minutes you know the crowds will come pouring out from every household you can see. Perhaps you should move quickly to avoid the rush."
 
-Front Gate is a room. Front Gate is forward left of Main Street.
+	[Entrance]
 
-Intake Desk is a room. Intake Desk is forward of Cotton Gin - Main Entrance.
+The Entrance is east of The Alley. "After about 10 minutes of walking, you finally show up at the factory entrance. Peeking through the clouds of smoke pouring from the chimneys, you can just barely tell that it's a sunny day.
 
-Factory Floor - Main Level is a room. Factory Floor - Main Level is forward of Intake Desk and forward left of Locker Room.
+You see all the other factory workers slowly filing in. 
 
+Will you walk into the factory? As soon as you walk into the factory, you'll be starting your 11-hour shift."
 
+	[Factory]
 
-[Variables]
+The Factory is south of the Entrance. "As you work, the violent, periodic smashing of machinery forces itself in your head. You try to ignore it and focus on your cotton gin work, but every time you look at the thing, you can't help but picture what happened to Jones' wife. You shudder at the thought, and turn away from the machine for a bit, but there your boss is, staring in your soul with a furious glare. You turn back to the machine and keep working.
 
-[People/Animals]
+5 hours later, the machine whirring stops for lunch break. You only have 10 minutes.
 
-[Tables]
+You see your friend Winston in the other corner of the room. Being the (slightly) more well-off of you two, he has lunch for both of you."
 
+[Supporters of Rooms]
+
+	[Jones]
+
+Jones is a person in the Tenement. "Jones is the only other tenant that appears to be awake. It's only reasonable - how could he sleep? Nobody - not if they went through what he did.
+
+You feel the urge to approach him, but you're not sure if it's the right thing to do right now."
+
+	[Boy]
+
+The Boy is a person in the Alley. "You pass a newspaper boy, yelling about the latest issue of the Boston Globe. He holds up the paper to your face and says 'You want it, pal? Just 25 cents...' 
+
+Your daily wage is about 50 cents. Is it really worth it?" The Boy is carrying a newspaper, or paper.
+
+	[Winston]
+
+Winston is a person in the factory. Winston is carrying a lunch bag. The Basement is a room below the factory.
+		
+[Talking Actions]
+		
+talking is an action applying to one thing.
+understand "ask [thing]" as talking.
+understand "ask [thing] about" as talking.
+understand "talk to [thing]" as talking.
+understand "speak to [thing]" as talking.
+understand "approach [thing]" as talking.
+understand "go to [thing]" as talking.
+
+instead of talking a person:
+	if the noun is Jones:
+		say "You approach him, but he suddenly starts coughing hysterically, and gestures at you to move away. Maybe this isn't the best time to be talking to him, anyway.";
+		stop the action;
+	if the noun is Winston:
+		say "You come up to him and he gives you the lunch bag.";
+		now the player has the lunch bag;
+		say "He says...";
+	otherwise:
+		say "Who?";
+		
+[Actions]
+
+purchasing is an action applying to one thing.
+understand "buy [thing]" as purchasing.
+understand "purchase [thing]" as purchasing.
+understand "get [thing]" as purchasing.
+
+instead of purchasing a thing:
+	if the noun is newspaper or the noun is paper:
+		if the boy is carrying the newspaper:
+			now the player is carrying the newspaper;
+			say "Well, there goes your quarter. This better be good....
+			
+			The paper is dated October 4, 1872. Seems to be a high end newspaper, because you can't understand many of the words. There is, however, one section that catches your eye.
+			
+			'Cotton Gin accident leaves Factory Worker Dead'
+			
+			The paper then explained what had happened to Jones' wife. She got too close to the machine, the paper said, and before she knew it, it sucked her in, mechanically splitting her body into scattered parts and organs. Only some of her remains were found.
+			
+			You knew about this event well; it was in your own factory. But you hadn't seen the event take place, so it was interesting to see the details somewhere - especially when the company itself has been completely silent.
+			
+			You doubt that it'll break its silence any time soon, either.";
+		otherwise:
+			say "You already bought it...";
+	otherwise:
+		say "You can't buy this."
+				
+			
+
+			
 
 
