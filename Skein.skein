@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-1"/>
+  <activeNode nodeId="node-214"/>
   <item nodeId="node-1">
     <command xml:space="preserve">GAME-2500-RPG</command>
     <result xml:space="preserve">Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! When playing our game, make sure you have a look at the possible actions that can be taken!&#x000A;&#x000A;GAME2500 RPG&#x000A;An Interactive Fiction by James Napier&#x000A;Release 1 / Serial number 201022 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Tenement&#x000A;You wake up to the drip of some cold water on your head. It's nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely. As you adjust yourself, you see all the other tenants in your room. Each of them are visibly malnourished, wearing clothes that look more like throwaway rags than anything else. The dim rays of sunlight coming into the room suggest that it's about 6 AM. You force yourself out of bed, guessing that work must start in about 30 minutes.&#x000A;&#x000A;Jones is the only other tenant that appears to be awake. It's only reasonable - how could he sleep? Nobody - not if they went through what he did. You feel the urge to approach him, but you're not sure if it's the right thing to do right now.&#x000A;&#x000A;&gt;</result>
@@ -17,6 +17,8 @@
       <child nodeId="node-162"/>
       <child nodeId="node-183"/>
       <child nodeId="node-184"/>
+      <child nodeId="node-207"/>
+      <child nodeId="node-210"/>
     </children>
   </item>
   <item nodeId="node-2">
@@ -1798,6 +1800,72 @@
   <item nodeId="node-206">
     <command xml:space="preserve">clear</command>
     <result xml:space="preserve">(Winston)&#x000A;Winston might not like that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-207">
+    <command xml:space="preserve">room e of</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-208"/>
+    </children>
+  </item>
+  <item nodeId="node-208">
+    <command xml:space="preserve">room east of</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-209"/>
+    </children>
+  </item>
+  <item nodeId="node-209">
+    <command xml:space="preserve">room east from Tenement</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-210">
+    <command xml:space="preserve">look east</command>
+    <result xml:space="preserve">You make out the Alley that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-211"/>
+    </children>
+  </item>
+  <item nodeId="node-211">
+    <command xml:space="preserve">look north</command>
+    <result xml:space="preserve">You can't see anything promising that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-212"/>
+    </children>
+  </item>
+  <item nodeId="node-212">
+    <command xml:space="preserve">east</command>
+    <result xml:space="preserve">Alley&#x000A;You stumble from the darkness of the tenement into the gloomy alley. It's eerily quiet as this time of day, but in a few minutes you know the crowds will come pouring out from every household you can see. Perhaps you should move quickly to avoid the rush.&#x000A;&#x000A;You pass a boy, yelling about the latest issue of the Boston Globe. He holds up the paper to your face and says "You want it, pal? Just 25 cents..." Your daily wage is about 50 cents. Is it really worth it?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-213"/>
+    </children>
+  </item>
+  <item nodeId="node-213">
+    <command xml:space="preserve">look west</command>
+    <result xml:space="preserve">You make out the Tenement that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-214"/>
+    </children>
+  </item>
+  <item nodeId="node-214">
+    <command xml:space="preserve">look east</command>
+    <result xml:space="preserve">You make out the Front Gate that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>

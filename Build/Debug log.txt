@@ -14,7 +14,7 @@ Reading language definition from <C:\Program Files (x86)\Inform 7\Internal\Langu
 Phase I ... Lexical analysis
 -----------------------------------------------------
 
-I've now read your source text, which is 1852 words long.
+I've now read your source text, which is 2023 words long.
 
 
 -----------------------------------------------------
@@ -174,7 +174,7 @@ Providing for a total heap of 8192, given requirement of 8192
 Phase XIII ... Compilation now complete
 -----------------------------------------------------
 
-Total of 104 files written as streams.
+Total of 106 files written as streams.
 CPU time: 67 centiseconds
 
 

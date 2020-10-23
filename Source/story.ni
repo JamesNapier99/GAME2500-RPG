@@ -4,6 +4,37 @@
 When play begins:
 	Say "Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! When playing our game, make sure you have a look at the possible actions that
 		can be taken!";
+	Say "Valid Actions:
+-look (cardinal direction)
+-examine (object/person)
+-listen
+-listen to (object/person/room)
+-go (cardinal direction)
+-inventory
+-pick up (object)
+-drop (object)
+
+"
+
+Understand "look [direction]" as facing.
+
+Facing is an action applying to one visible thing.
+
+Carry out facing:
+	let the viewed item be the room noun from the location;
+	if the viewed item is not a room, say "You can't see anything promising that way." instead;
+	try looking toward the viewed item.
+	
+Instead of facing up:
+	say "Above you is bright sky."
+
+Understand "look toward [any adjacent room]" as looking toward. Understand "examine [any adjacent room]" as looking toward.
+
+Looking toward is an action applying to one visible thing.
+
+Carry out looking toward:
+	say "You make out [the noun] that way."
+
 
 [-----------------------------------------------------------------------Rooms-----------------------------------------------------------------------]
 
@@ -78,6 +109,11 @@ The Central Stairs is south of Cotton Engines.
 	The Basement Stairs is below Central Stairs. "Before you is a set of dusty, old, wooden stairs. The center of each stair has lost much of its color from use over the last however-many years. You look to the right and notice that the bare wooden framework of the cotton gin is visible. A single light bulb hangs from the ceiling to produce light.
 On the bottom of the stairs is a heavy metal door, presumably leading to the rest of the basement. It looks as if there is a lock above the door knob. You think you would be able to open the door silently, but you’re not entirely sure."
 
+		[Main Basement]
+	The Main Basement is north of Basement Stairs. "As soon as you enter, you notice that the air is not as stale as you would expect for a room that allegedly people had not been inside of for a long time. You can’t see very well, as the light is not on."
+
+		[Hidden Basement Room]
+	Hidden Basement Room is a room.
 [-----------------------------------------------------------------------People-----------------------------------------------------------------------]
 
 	[Jones]
