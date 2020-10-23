@@ -11392,6 +11392,7 @@ Object -> -> I143_lunch_bag ""
 Object -> I144_overseer ""
     class K10_man
     with short_name BC_265
+    with initial BC_266
     has proper
     has p60_active
     with vector 0
@@ -11405,8 +11406,7 @@ Object -> I144_overseer ""
     with KD_Count 10
     with name 'overseer' 'men//p' 
     with action_bitmap 0 0 0 0 0 
-    with description BC_266
-    with initial BC_267
+    with description BC_267
     with p15_sound BC_268
     with list_together BC_269
     with plural BC_270
@@ -49824,20 +49824,20 @@ Verb 'approach'
 
 
 
-Constant TX_PS_69 = ">";
+Constant TX_PS_70 = ">";
 Constant TX_PS_47 = "After about 10 minutes of walking, you finally show up at the factory front gate. Peeking through the clouds of smoke pouring from the chimneys, you can just barely tell that it's a sunny day. You see all the other factory workers slowly filing in. Will you walk into the factory? As soon as you walk into the factory, you'll be starting your 11-hour shift.";
 Constant TX_PS_39 = "Alley";
 Constant TX_PS_3 = "An Interactive Fiction";
 Constant TX_PS_33 = "As good-looking as ever.";
 Constant TX_PS_58 = "As you work, the violent, periodic smashing of machinery forces itself in your head. You try to ignore it and focus on your cotton gin work, but every time you look at the thing, you can't help but picture what happened to Jones~ wife. You shudder at the thought, and turn away from the machine for a bit, but there your boss is, staring in your soul with a furious glare. You turn back to the machine and keep working.";
-Constant TX_PS_67 = "Basement Stairs";
-Constant TX_PS_68 = "Before you is a set of dusty, old, wooden stairs. The center of each stair has lost much of its color from use over the last however-many years. You look to the right and notice that the bare wooden framework of the cotton gin is visible. A single light bulb hangs from the ceiling to produce light. On the bottom of the stairs is a heavy metal door, presumably leading to the rest of the basement. It looks as if there is a lock above the door knob. You think you would be able to open the door silently, but you're not entirely sure.";
-Constant TX_PS_62 = "Boiler Room";
+Constant TX_PS_68 = "Basement Stairs";
+Constant TX_PS_69 = "Before you is a set of dusty, old, wooden stairs. The center of each stair has lost much of its color from use over the last however-many years. You look to the right and notice that the bare wooden framework of the cotton gin is visible. A single light bulb hangs from the ceiling to produce light. On the bottom of the stairs is a heavy metal door, presumably leading to the rest of the basement. It looks as if there is a lock above the door knob. You think you would be able to open the door silently, but you're not entirely sure.";
+Constant TX_PS_63 = "Boiler Room";
 Constant TX_PS_41 = "Boy";
-Constant TX_PS_63 = "Central Stairs";
+Constant TX_PS_64 = "Central Stairs";
 Constant TX_PS_57 = "Cotton Engines";
-Constant TX_PS_70 = "Fiction";
-Constant TX_PS_66 = "Finishing Room";
+Constant TX_PS_71 = "Fiction";
+Constant TX_PS_67 = "Finishing Room";
 Constant TX_PS_46 = "Front Gate";
 Constant TX_PS_2 = "GAME2500 RPG";
 Constant TX_PS_49 = "Intake Desk";
@@ -49846,21 +49846,22 @@ Constant TX_PS_4 = "James Napier";
 Constant TX_PS_38 = "Jones is the only other tenant that appears to be awake. It's only reasonable - how could he sleep? Nobody - not if they went through what he did. You feel the urge to approach him, but you're not sure if it's the right thing to do right now.";
 Constant TX_PS_37 = "Jones";
 Constant TX_PS_56 = "Loading Dock";
-Constant TX_PS_65 = "Locker Rooms";
+Constant TX_PS_66 = "Locker Rooms";
 Constant TX_PS_48 = "Main Entrance";
 Constant TX_PS_61 = "Overseer";
 Constant TX_PS_45 = "Paper";
-Constant TX_PS_74 = "QUIT";
-Constant TX_PS_71 = "RESTART";
-Constant TX_PS_72 = "RESTORE a saved game";
+Constant TX_PS_75 = "QUIT";
+Constant TX_PS_72 = "RESTART";
+Constant TX_PS_73 = "RESTORE a saved game";
 Constant TX_PS_55 = "Robin";
 Constant TX_PS_53 = "Spindle Room Gossip";
 Constant TX_PS_52 = "Spindle Room";
 Constant TX_PS_35 = "Tenement";
-Constant TX_PS_75 = "UNDO the last command";
+Constant TX_PS_62 = "The overseer is heavy and muscular, with a large white beard and eyes you can barely make out, what with all the bags and wrinkles covering them up. He's somehow intimidating, despite the fact that it seems like his body could fall apart any second.";
+Constant TX_PS_76 = "UNDO the last command";
 Constant TX_PS_54 = "Whisper whisper whisper";
 Constant TX_PS_59 = "Winston";
-Constant TX_PS_64 = "Worker's Entrance";
+Constant TX_PS_65 = "Worker's Entrance";
 Constant TX_PS_42 = "You pass a boy, yelling about the latest issue of the Boston Globe. He holds up the paper to your face and says ~You want it, pal? Just 25 cents...~ Your daily wage is about 50 cents. Is it really worth it?";
 Constant TX_PS_51 = "You see Jackie, the company secretary, staring at the wall in silence as she sits at her reception desk. She glances at you quickly, taking on a suspicious expression, but then looks back, as if she has better things to do. Suddenly, she notices that you're looking at the book on her desk. It's hard to see what the title is, but instinctively, she grabs it and shoves it into the nearest drawer, locking it with a key.";
 Constant TX_PS_40 = "You stumble from the darkness of the tenement into the gloomy alley. It's eerily quiet as this time of day, but in a few minutes you know the crowds will come pouring out from every household you can see. Perhaps you should move quickly to avoid the rush.";
@@ -49886,7 +49887,7 @@ Constant TX_PS_44 = "paper";
 Constant TX_PS_7 = "people";
 Constant TX_PS_14 = "player's holdalls";
 Constant TX_PS_17 = "regions";
-Constant TX_PS_73 = "see some suggestions for AMUSING things to do";
+Constant TX_PS_74 = "see some suggestions for AMUSING things to do";
 Constant TX_PS_5 = "silence";
 Array TX_L_5 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_5;
 Constant TX_PS_23 = "south";
@@ -57320,52 +57321,52 @@ Array BC_262 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_263 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_264 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_265 --> PACKED_TEXT_STORAGE TX_PS_61;
-Array BC_266 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_266 --> PACKED_TEXT_STORAGE TX_PS_62;
 Array BC_267 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_268 --> PACKED_TEXT_STORAGE TX_PS_5;
 Array BC_269 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_270 --> PACKED_TEXT_STORAGE TX_PS_8;
 Array BC_271 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_272 --> PACKED_TEXT_STORAGE TX_PS_62;
+Array BC_272 --> PACKED_TEXT_STORAGE TX_PS_63;
 Array BC_273 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_274 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_275 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_276 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_277 --> PACKED_TEXT_STORAGE TX_PS_63;
+Array BC_277 --> PACKED_TEXT_STORAGE TX_PS_64;
 Array BC_278 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_279 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_280 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_281 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_282 --> PACKED_TEXT_STORAGE TX_PS_64;
+Array BC_282 --> PACKED_TEXT_STORAGE TX_PS_65;
 Array BC_283 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_284 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_285 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_286 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_287 --> PACKED_TEXT_STORAGE TX_PS_65;
+Array BC_287 --> PACKED_TEXT_STORAGE TX_PS_66;
 Array BC_288 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_289 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_290 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_291 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_292 --> PACKED_TEXT_STORAGE TX_PS_66;
+Array BC_292 --> PACKED_TEXT_STORAGE TX_PS_67;
 Array BC_293 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_294 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_295 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_296 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_297 --> PACKED_TEXT_STORAGE TX_PS_67;
-Array BC_298 --> PACKED_TEXT_STORAGE TX_PS_68;
+Array BC_297 --> PACKED_TEXT_STORAGE TX_PS_68;
+Array BC_298 --> PACKED_TEXT_STORAGE TX_PS_69;
 Array BC_299 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_300 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_301 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_302 --> PACKED_TEXT_STORAGE TX_PS_69;
+Array BC_302 --> PACKED_TEXT_STORAGE TX_PS_70;
 Array BC_303 --> PACKED_TEXT_STORAGE TX_PS_4;
 Array BC_304 --> PACKED_TEXT_STORAGE TX_PS_3;
-Array BC_305 --> PACKED_TEXT_STORAGE TX_PS_70;
+Array BC_305 --> PACKED_TEXT_STORAGE TX_PS_71;
 Array BC_306 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_307 --> PACKED_TEXT_STORAGE TX_PS_71;
-Array BC_308 --> PACKED_TEXT_STORAGE TX_PS_72;
-Array BC_309 --> PACKED_TEXT_STORAGE TX_PS_73;
-Array BC_310 --> PACKED_TEXT_STORAGE TX_PS_74;
-Array BC_311 --> PACKED_TEXT_STORAGE TX_PS_75;
+Array BC_307 --> PACKED_TEXT_STORAGE TX_PS_72;
+Array BC_308 --> PACKED_TEXT_STORAGE TX_PS_73;
+Array BC_309 --> PACKED_TEXT_STORAGE TX_PS_74;
+Array BC_310 --> PACKED_TEXT_STORAGE TX_PS_75;
+Array BC_311 --> PACKED_TEXT_STORAGE TX_PS_76;
 
 
 

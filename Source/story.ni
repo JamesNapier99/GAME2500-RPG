@@ -96,7 +96,7 @@ Winston is a man in the Cotton Engines. Winston is carrying a lunch bag.
 		
 	[Overseer]
 	[Forces player back to work]
-Overseer is a man in Cotton Engines. 
+Overseer is a man in Cotton Engines. "The overseer is heavy and muscular, with a large white beard and eyes you can barely make out, what with all the bags and wrinkles covering them up. He’s somehow intimidating, despite the fact that it seems like his body could fall apart any second."
 
 Overseer can be active or passive. Overseer is Active.
 

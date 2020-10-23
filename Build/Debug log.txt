@@ -14,7 +14,7 @@ Reading language definition from <C:\Program Files (x86)\Inform 7\Internal\Langu
 Phase I ... Lexical analysis
 -----------------------------------------------------
 
-I've now read your source text, which is 1807 words long.
+I've now read your source text, which is 1852 words long.
 
 
 -----------------------------------------------------
