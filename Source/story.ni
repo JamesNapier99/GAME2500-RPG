@@ -41,8 +41,7 @@ Carry out looking toward:
 	[Tenement F0]
 
 The Tenement is a room. "You wake up to the drip of some cold water on your head. It's nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely.
-As you adjust yourself, you see all the other tenants in your room. Each of them are visibly malnourished, wearing clothes that look more like throwaway rags than anything else. The dim rays of sunlight coming into the room suggest that it's about 6 AM.
-You force yourself out of bed, guessing that work must start in about 30 minutes."
+The unforgiving drops continue to pound mericlessless against your head - drilling in the miserly state of your surroundings. Swerving from the next oncoming drip, you adjust yourself, you observe other tenants in your room. Each of them are shells:  diminished beings curling, clutching themselves as if to hold on to the meager remains of their life-force in their cagey bodies. Clothes are a laugh at this point, looking more like throwaway rags than anything else. The dim rays of incriminating sunlight cut its way through the musty room and announce the breaking of dawn. You force yourself out of bed. Work awaits."
 
 [NOTE TO SELF]	[Make sure some of this is only repeated in the mornings or one time]
 	
@@ -60,7 +59,9 @@ Will you walk into the factory? As soon as you walk into the factory, you'll be 
 
 	[Main Entrance F0]
 
-The Main Entrance is south of Front Gate. 
+The Main Entrance is south of Front Gate. "The hulking doors invite to swallow you in. You are hit by a gush of humid sweltry breeze - no, not a breeze, it is the air you are to breathe now. It slowly cooks you in, ready to service you to some other. 'There won’t be much to eat,' You think sardonically. 
+A small crowd of grim women shuffle around the Mecca of the puncher. It bites the slim slivers of paper."
+
 
 	[Intake Desk F0]
 
