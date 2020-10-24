@@ -240,8 +240,11 @@ The Central Stairs is south of Cotton Engines.
 	The Basement Stairs is below Central Stairs. "Before you is a set of dusty, old, wooden stairs. The center of each stair has lost much of its color from use over the last however-many years. You look to the right and notice that the bare wooden framework of the cotton gin is visible. A single light bulb hangs from the ceiling to produce light.
 On the bottom of the stairs is a heavy metal door, presumably leading to the rest of the basement. It looks as if there is a lock above the door knob. You think you would be able to open the door silently, but you’re not entirely sure."
 
+		[Basement Door]
+	The Basement Door is a locked closed door. The Basement Door is north of Basement Stairs and south of Main Basement.
+
 		[Main Basement]
-	The Main Basement is north of Basement Stairs. "As soon as you enter, you notice that the air is not as stale as you would expect for a room that allegedly people had not been inside of for a long time. You can’t see very well, as the light is not on."
+	The description of the Main Basement is "As soon as you enter, you notice that the air is not as stale as you would expect for a room that allegedly people had not been inside of for a long time. You can’t see very well, as the light is not on."
 
 		[Hidden Basement Room]
 	Hidden Basement Room is a room.
