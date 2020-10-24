@@ -24,6 +24,19 @@ Looking toward is an action applying to one visible thing.
 Carry out looking toward:
 	say "You make out [the noun] that way."
 
+[-----------------------------------------------------------------------Extensions-----------------------------------------------------------------------]
+
+Include Basic Screen Effects by Emily Short.
+
+
+Table of Fancy Status
+left	central	right 
+"--Day--"	"Time of Day"	"Insanity" 
+"[current weekday]"	"[time of day as 24h time]"	"0" 
+
+Rule for constructing the status line:
+	 fill status bar with Table of Fancy Status;
+	 rule succeeds.
 [-----------------------------------------------------------------------Talking Actions-----------------------------------------------------------------------]
 		
 talking is an action applying to one thing.
@@ -73,15 +86,13 @@ To say (relevant time - a time) as 24h time:
 
 When play begins: 
 	now the time of day is 5:45 AM; 
-	now the right hand status line is "[time of day as 24h time]". 
 		
-
 [-----------------------------------------------------------------------Time of Day-----------------------------------------------------------------------]
 
 The sun is a backdrop. It is everywhere. The description is "Currently out of sight." 
 
 
-Night is a recurring scene. [Night begins when play begins. ]Night begins when Dusk ends. Night ends when (the time of day is 5:00 AM or the time of day is after 5:00 AM).
+Night is a recurring scene. [Night begins when play begins. ]Night begins when Dusk ends. Night ends when ((the time of day is 5:00 AM or the time of day is after 5:00 AM) and the time of day is before 7:00 AM).
 
 When Night begins: 
 	say "The sun falls below the horizon and the temperature drops abruptly to well below zero."; 
@@ -90,8 +101,15 @@ When Night begins:
 Dawn is a recurring scene. Dawn begins when play begins. Dawn begins when Night ends. Dawn ends when (the time of day is 6:00 AM or the time of day is after 6:00 AM). 
 
 When Dawn begins: 
-	say "The sun appears on the horizon."; 
-	now the description of the sun is "It is tiny and weak.". 
+	say "The sun appears on the horizon.";
+	now the description of the sun is "It is tiny and weak.";
+	if the StartState is true:
+		now StartState is false;
+	else if the current weekday is Friday:
+		say "Your continued exposure to the machine has driven you insane.";
+		stop game abruptly; [MORE DESCRIPTION!!!]
+	otherwise:
+		now the current weekday is the weekday after the current weekday.
 
 Day is a recurring scene. Day begins when Dawn ends. Day ends when (the time of day is 6:00 PM or the time of day is after 6:00 PM). 
 
@@ -102,6 +120,11 @@ Dusk is a recurring scene. Dusk begins when Day ends. Dusk ends when (the time o
 
 When Dusk begins: 
 	say "The sun has passed across the sky and is on the verge of setting." 
+[-----------------------------------------------------------------------Time of Day-----------------------------------------------------------------------]
+
+A weekday is a kind of value. The weekdays are Monday, Tuesday, Wednesday, Thursday, Friday. The current weekday is a weekday that varies. The current weekday is Monday.
+
+StartState is a truth state that varies. StartState is true.
 
 [-----------------------------------------------------------------------Action Duration-----------------------------------------------------------------------]
 
@@ -317,7 +340,7 @@ Every turn:
 [NOTE TO SELF, REPEAT THIS ONCE]
 
 	[Robin]
-Robin is a woman in Spindle Room. “You see Robin, who is (like usual) gossiping with her neighbor. She’s trying to be discrete, but it’s hard not to hear her when she has to speak over the roar of the machines to be heard by anyone. You can’t make out every word, but maybe if you listen more carefully, you’ll get to hear something interesting…”
+Robin is a woman in Spindle Room. “You see Robin, who is (like usual) gossiping with her neighbor. She’s trying to be discrete, but it’s hard not to hear her when she has to speak over the roar of the machines to be heard by anyone. You can’t make our every word, but maybe if you listen more carefully, you’ll get to hear something interesting…”
 
 [------------------------------------------------------------------------Things-----------------------------------------------------------------------]
 													[----------Sound----------]
@@ -355,4 +378,3 @@ instead of examining a thing:
 			You knew about this event well; it had happened in your own factory. But you hadn't seen the event take place, so it was interesting to see the details somewhere - especially when the company itself has been completely silent.
 			
 			You doubt that it'll break the silence any time soon, either.";
-
