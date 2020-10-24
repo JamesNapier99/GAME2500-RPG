@@ -276,7 +276,11 @@
             }
         }
         function showAllResp() {
+<<<<<<< HEAD
             for (var i=0;i<359;i++) {
+=======
+            for (var i=0;i<378;i++) {
+>>>>>>> Alpha-v1.1
                 showResp('extra'+(1000000+i), 'plus'+(1000000+i));
             }
         }
@@ -672,7 +676,15 @@
     A map of how the scenes begin and end<br><i>About scenes&nbsp;&nbsp;<a href=inform:/doc150.html><img border=0 src=inform:/doc_images/help.png></a>; How they link together&nbsp;&nbsp;<a href=inform:/doc154.html><img border=0 src=inform:/doc_images/help.png></a></i></p>
     </td>
     </tr></table>
+<<<<<<< HEAD
     <p class="tightin1"><img border=0 src=inform:/scene_icons/WPB.png>&nbsp;&nbsp;Entire Game&nbsp;<a href=#A0><img border=0 src=inform:/doc_images/Below.png></a>&nbsp;&nbsp;<img border=0 src=inform:/scene_icons/Recurring.png></p><p>Legend: <img border=0 src=inform:/scene_icons/WPB.png>&nbsp;<i>Begins when play begins</i>; <img border=0 src=inform:/scene_icons/WhenC.png>&nbsp;<i>can begin whenever some condition holds</i>; <img border=0 src=inform:/scene_icons/Segue.png>&nbsp;<i>follows when a previous scene ends</i>; <img border=0 src=inform:/scene_icons/Simul.png>&nbsp;<i>begins simultaneously</i>; <img border=0 src=inform:/scene_icons/WNever.png>&nbsp;<i>never begins</i>; <img border=0 src=inform:/scene_icons/ENever.png>&nbsp;<i>never ends</i>; <img border=0 src=inform:/scene_icons/Recurring.png>&nbsp;<i>recurring (can happen more than once)</i>. <i>Scene names are italicised when and if they appear for a second or subsequent time because the scene can begin in more than one way</i>.</p><a name=SDETAILS></a><hr><p class="hangingin1"><a name=A0></a><b>The <i>Entire Game</i> scene</b>&nbsp;&nbsp;<i>recurring</i></p><p class="tightin1">The Entire Game scene is built-in. It is going on whenever play is going on. (It is recurring so that if the story ends, but then resumes, it too will end but then begin again.)</p><p class="hangingin1"><i>Begins when:</i> the story has not ended</p><p class="hangingin1"><i>Ends when:</i> the story has ended</p></div>
+=======
+    <p class="tightin1"><img border=0 src=inform:/scene_icons/WPB.png>&nbsp;&nbsp;Entire Game&nbsp;<a href=#A0><img border=0 src=inform:/doc_images/Below.png></a>&nbsp;&nbsp;<img border=0 src=inform:/scene_icons/Recurring.png></p><p class="tightin1"><img border=0 src=inform:/scene_icons/WPB.png>&nbsp;&nbsp;Dawn&nbsp;<a href=#A2><img border=0 src=inform:/doc_images/Below.png></a>&nbsp;&nbsp;<img border=0 src=inform:/scene_icons/Recurring.png></p><p class="tightin2"><img border=0 src=inform:/scene_icons/Segue.png>&nbsp;&nbsp;Day&nbsp;<a href=#A3><img border=0 src=inform:/doc_images/Below.png></a>&nbsp;&nbsp;<img border=0 src=inform:/scene_icons/Recurring.png></p><p class="tightin3"><img border=0 src=inform:/scene_icons/Segue.png>&nbsp;&nbsp;Dusk&nbsp;<a href=#A4><img border=0 src=inform:/doc_images/Below.png></a>&nbsp;&nbsp;<img border=0 src=inform:/scene_icons/Recurring.png></p><p class="tightin4"><img border=0 src=inform:/scene_icons/Segue.png>&nbsp;&nbsp;Night&nbsp;<a href=#A1><img border=0 src=inform:/doc_images/Below.png></a>&nbsp;&nbsp;<img border=0 src=inform:/scene_icons/Recurring.png></p><p class="tightin5"><img border=0 src=inform:/scene_icons/Segue.png>&nbsp;&nbsp;<i>Dawn</i></p><p>Legend: <img border=0 src=inform:/scene_icons/WPB.png>&nbsp;<i>Begins when play begins</i>; <img border=0 src=inform:/scene_icons/WhenC.png>&nbsp;<i>can begin whenever some condition holds</i>; <img border=0 src=inform:/scene_icons/Segue.png>&nbsp;<i>follows when a previous scene ends</i>; <img border=0 src=inform:/scene_icons/Simul.png>&nbsp;<i>begins simultaneously</i>; <img border=0 src=inform:/scene_icons/WNever.png>&nbsp;<i>never begins</i>; <img border=0 src=inform:/scene_icons/ENever.png>&nbsp;<i>never ends</i>; <img border=0 src=inform:/scene_icons/Recurring.png>&nbsp;<i>recurring (can happen more than once)</i>. <i>Scene names are italicised when and if they appear for a second or subsequent time because the scene can begin in more than one way</i>.</p><a name=SDETAILS></a><hr><p class="hangingin1"><a name=A0></a><b>The <i>Entire Game</i> scene</b>&nbsp;&nbsp;<i>recurring</i></p><p class="tightin1">The Entire Game scene is built-in. It is going on whenever play is going on. (It is recurring so that if the story ends, but then resumes, it too will end but then begin again.)</p><p class="hangingin1"><i>Begins when:</i> the story has not ended</p><p class="hangingin1"><i>Ends when:</i> the story has ended</p><hr><p class="hangingin1"><a name=A2></a><b>The <i>Dawn</i> scene</b>&nbsp;<a href="source:story.ni#line103"><img border=0 src=inform:/doc_images/Reveal.png></a>&nbsp;&nbsp;<i>recurring</i></p><p class="hangingin1"><i>Begins when:</i> <b>play begins</b><br><i>or when:</i> <b>Night</b> <i>ends</i>&nbsp;<a href="source:story.ni#line103"><img border=0 src=inform:/doc_images/Reveal.png></a></p><p class="hangingin1"><i>What happens:</i></p><p class="hangingin2">&nbsp;&nbsp;&nbsp;&nbsp;<img border=0 src=inform:/doc_images/rulenone.png title="start of rulebook">&nbsp;<a href="source:story.ni#line105"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+    <p class="hangingin1"><i>Ends when:</i> (the time of day is 6:00 AM or the time of day is after 6:00 AM)&nbsp;<a href="source:story.ni#line103"><img border=0 src=inform:/doc_images/Reveal.png></a></p><hr><p class="hangingin1"><a name=A3></a><b>The <i>Day</i> scene</b>&nbsp;<a href="source:story.ni#line116"><img border=0 src=inform:/doc_images/Reveal.png></a>&nbsp;&nbsp;<i>recurring</i></p><p class="hangingin1"><i>Begins when:</i> <b>Dawn</b> <i>ends</i>&nbsp;<a href="source:story.ni#line116"><img border=0 src=inform:/doc_images/Reveal.png></a></p><p class="hangingin1"><i>What happens:</i></p><p class="hangingin2">&nbsp;&nbsp;&nbsp;&nbsp;<img border=0 src=inform:/doc_images/rulenone.png title="start of rulebook">&nbsp;<a href="source:story.ni#line118"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+    <p class="hangingin1"><i>Ends when:</i> (the time of day is 6:00 PM or the time of day is after 6:00 PM)&nbsp;<a href="source:story.ni#line116"><img border=0 src=inform:/doc_images/Reveal.png></a></p><hr><p class="hangingin1"><a name=A4></a><b>The <i>Dusk</i> scene</b>&nbsp;<a href="source:story.ni#line121"><img border=0 src=inform:/doc_images/Reveal.png></a>&nbsp;&nbsp;<i>recurring</i></p><p class="hangingin1"><i>Begins when:</i> <b>Day</b> <i>ends</i>&nbsp;<a href="source:story.ni#line121"><img border=0 src=inform:/doc_images/Reveal.png></a></p><p class="hangingin1"><i>What happens:</i></p><p class="hangingin2">&nbsp;&nbsp;&nbsp;&nbsp;<img border=0 src=inform:/doc_images/rulenone.png title="start of rulebook">&nbsp;<a href="source:story.ni#line123"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+    <p class="hangingin1"><i>Ends when:</i> (the time of day is 7:00 PM or the time of day is after 7:00 PM)&nbsp;<a href="source:story.ni#line121"><img border=0 src=inform:/doc_images/Reveal.png></a></p><hr><p class="hangingin1"><a name=A1></a><b>The <i>Night</i> scene</b>&nbsp;<a href="source:story.ni#line97"><img border=0 src=inform:/doc_images/Reveal.png></a>&nbsp;&nbsp;<i>recurring</i></p><p class="hangingin1"><i>Begins when:</i> <b>Dusk</b> <i>ends</i>&nbsp;<a href="source:story.ni#line97"><img border=0 src=inform:/doc_images/Reveal.png></a></p><p class="hangingin1"><i>What happens:</i></p><p class="hangingin2">&nbsp;&nbsp;&nbsp;&nbsp;<img border=0 src=inform:/doc_images/rulenone.png title="start of rulebook">&nbsp;<a href="source:story.ni#line99"><img border=0 src=inform:/doc_images/Reveal.png></a></p>
+    <p class="hangingin1"><i>Ends when:</i> ((the time of day is 5:00 AM or the time of day is after 5:00 AM) and the time of day is before 7:00 AM)&nbsp;<a href="source:story.ni#line97"><img border=0 src=inform:/doc_images/Reveal.png></a></p></div>
+>>>>>>> Alpha-v1.1
     <div id="segment2">
     <hr><table cellspacing="3" border="0" style="background:#eeeeee;"><tr>
     <td valign="top" align="left">
@@ -701,64 +713,104 @@
     </td>
     </tr></table>
     <p><b>The scene-changing machinery</b><p><p class="in1"><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #e0e0e0"><tr><td width="8"><img src="inform:/bg_images/tl_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td><td></td><td width="8"><img src="inform:/bg_images/tr_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td></tr><tr><td width="8"></td><td><font size=2><table border="0" cellspacing="4" cellpadding="0" width=100%><tr><td align="left" valign="top"><font size=2><p class="tightin1"><b>scene changing</b> ...  rulebook</p></font></td><td align="right" valign="top"><font size=2><p class="tightin1"><script language="JavaScript">
+<<<<<<< HEAD
     function pasteCode1966(code) {
+=======
+    function pasteCode2001(code) {
+>>>>>>> Alpha-v1.1
         var myProject = project();
 
         myProject.selectView('source');
         myProject.pasteCode('scene changing');
     }
     </script>
+<<<<<<< HEAD
     <a href="javascript:pasteCode1966()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i></p></font></td></tr></table><p class="hangingin2">&nbsp;&nbsp;&nbsp;&nbsp;<img border=0 src=inform:/doc_images/rulenone.png title="start of rulebook"><font color="#800000">scene change machinery rule</font>&nbsp;&nbsp;<script language="JavaScript">
     function pasteCode1967(code) {
+=======
+    <a href="javascript:pasteCode2001()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i></p></font></td></tr></table><p class="hangingin2">&nbsp;&nbsp;&nbsp;&nbsp;<img border=0 src=inform:/doc_images/rulenone.png title="start of rulebook"><font color="#800000">scene change machinery rule</font>&nbsp;&nbsp;<script language="JavaScript">
+    function pasteCode2002(code) {
+>>>>>>> Alpha-v1.1
         var myProject = project();
 
         myProject.selectView('source');
         myProject.pasteCode('scene change machinery rule');
     }
     </script>
+<<<<<<< HEAD
     <a href="javascript:pasteCode1967()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
     function pasteCode1968(code) {
+=======
+    <a href="javascript:pasteCode2002()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+    function pasteCode2003(code) {
+>>>>>>> Alpha-v1.1
         var myProject = project();
 
         myProject.selectView('source');
         myProject.pasteCode('The scene change machinery rule is not listed in the scene changing rulebook.[=0x000A=]');
     }
     </script>
+<<<<<<< HEAD
     <a href="javascript:pasteCode1968()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
     </font></td><td width="8"></td></tr><tr><td width="8"><img src="inform:/bg_images/bl_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td><td></td><td width="8"><img src="inform:/bg_images/br_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td></tr></table></p><p><a name=SRULES></a><b>General rules applying to scene changes</b><p><p class="in1"><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #e0e0e0"><tr><td width="8"><img src="inform:/bg_images/tl_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td><td></td><td width="8"><img src="inform:/bg_images/tr_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td></tr><tr><td width="8"></td><td><font size=2><table border="0" cellspacing="4" cellpadding="0" width=100%><tr><td align="left" valign="top"><font size=2><p class="tightin1"><b>when a scene begins</b> ...  a scene based rulebook</p></font></td><td align="right" valign="top"><font size=2><p class="tightin1"><script language="JavaScript">
     function pasteCode1969(code) {
+=======
+    <a href="javascript:pasteCode2003()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
+    </font></td><td width="8"></td></tr><tr><td width="8"><img src="inform:/bg_images/bl_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td><td></td><td width="8"><img src="inform:/bg_images/br_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td></tr></table></p><p><a name=SRULES></a><b>General rules applying to scene changes</b><p><p class="in1"><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #e0e0e0"><tr><td width="8"><img src="inform:/bg_images/tl_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td><td></td><td width="8"><img src="inform:/bg_images/tr_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td></tr><tr><td width="8"></td><td><font size=2><table border="0" cellspacing="4" cellpadding="0" width=100%><tr><td align="left" valign="top"><font size=2><p class="tightin1"><b>when a scene begins</b> ...  a scene based rulebook</p></font></td><td align="right" valign="top"><font size=2><p class="tightin1"><script language="JavaScript">
+    function pasteCode2004(code) {
+>>>>>>> Alpha-v1.1
         var myProject = project();
 
         myProject.selectView('source');
         myProject.pasteCode('when a scene begins');
     }
     </script>
+<<<<<<< HEAD
     <a href="javascript:pasteCode1969()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i></p></font></td></tr></table><p class="hangingin2">&nbsp;&nbsp;&nbsp;&nbsp;<img border=0 src=inform:/doc_images/rulenone.png title="start of rulebook"><i>a scene (called the event)</i>&nbsp;&nbsp;<font color="#800000">scene description text rule</font>&nbsp;&nbsp;<script language="JavaScript">
     function pasteCode1970(code) {
+=======
+    <a href="javascript:pasteCode2004()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i></p></font></td></tr></table><p class="hangingin2">&nbsp;&nbsp;&nbsp;&nbsp;<img border=0 src=inform:/doc_images/rulenone.png title="start of rulebook"><i>a scene (called the event)</i>&nbsp;&nbsp;<font color="#800000">scene description text rule</font>&nbsp;&nbsp;<script language="JavaScript">
+    function pasteCode2005(code) {
+>>>>>>> Alpha-v1.1
         var myProject = project();
 
         myProject.selectView('source');
         myProject.pasteCode('scene description text rule');
     }
     </script>
+<<<<<<< HEAD
     <a href="javascript:pasteCode1970()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
     function pasteCode1971(code) {
+=======
+    <a href="javascript:pasteCode2005()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+    function pasteCode2006(code) {
+>>>>>>> Alpha-v1.1
         var myProject = project();
 
         myProject.selectView('source');
         myProject.pasteCode('The scene description text rule is not listed in the when scene begins rulebook.[=0x000A=]');
     }
     </script>
+<<<<<<< HEAD
     <a href="javascript:pasteCode1971()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
     </font></td><td width="8"></td></tr><tr><td width="8"><img src="inform:/bg_images/bl_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td><td></td><td width="8"><img src="inform:/bg_images/br_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td></tr></table></p><p class="in1"><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #e0e0e0"><tr><td width="8"><img src="inform:/bg_images/tl_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td><td></td><td width="8"><img src="inform:/bg_images/tr_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td></tr><tr><td width="8"></td><td><font size=2><table border="0" cellspacing="4" cellpadding="0" width=100%><tr><td align="left" valign="top"><font size=2><p class="tightin1"><b>when a scene ends</b> ...  a scene based rulebook</p></font></td><td align="right" valign="top"><font size=2><p class="tightin1"><script language="JavaScript">
     function pasteCode1972(code) {
+=======
+    <a href="javascript:pasteCode2006()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i></p>
+    </font></td><td width="8"></td></tr><tr><td width="8"><img src="inform:/bg_images/bl_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td><td></td><td width="8"><img src="inform:/bg_images/br_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td></tr></table></p><p class="in1"><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #e0e0e0"><tr><td width="8"><img src="inform:/bg_images/tl_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td><td></td><td width="8"><img src="inform:/bg_images/tr_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td></tr><tr><td width="8"></td><td><font size=2><table border="0" cellspacing="4" cellpadding="0" width=100%><tr><td align="left" valign="top"><font size=2><p class="tightin1"><b>when a scene ends</b> ...  a scene based rulebook</p></font></td><td align="right" valign="top"><font size=2><p class="tightin1"><script language="JavaScript">
+    function pasteCode2007(code) {
+>>>>>>> Alpha-v1.1
         var myProject = project();
 
         myProject.selectView('source');
         myProject.pasteCode('when a scene ends');
     }
     </script>
+<<<<<<< HEAD
     <a href="javascript:pasteCode1972()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i></p></font></td></tr></table><p class="tightin2">There are no rules in this rulebook.</p></font></td><td width="8"></td></tr><tr><td width="8"><img src="inform:/bg_images/bl_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td><td></td><td width="8"><img src="inform:/bg_images/br_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td></tr></table></p></div>
+=======
+    <a href="javascript:pasteCode2007()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i></p></font></td></tr></table><p class="tightin2">There are no rules in this rulebook.</p></font></td><td width="8"></td></tr><tr><td width="8"><img src="inform:/bg_images/bl_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td><td></td><td width="8"><img src="inform:/bg_images/br_corner_e0e0e0.gif" width="8" height="8" border="0" alt="..." /></td></tr></table></p></div>
+>>>>>>> Alpha-v1.1
     <hr>
 
     <!--CONTENT ENDS-->
