@@ -3,18 +3,7 @@
 [Entry Text: Intro to the game, reminder for commands, etc]
 When play begins:
 	Say "Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! When playing our game, make sure you have a look at the possible actions that
-		can be taken!";
-	Say "Valid Actions:
--look (cardinal direction)
--examine (object/person)
--listen
--listen to (object/person/room)
--go (cardinal direction)
--inventory
--pick up (object)
--drop (object)
-
-"
+		can be taken!".
 
 Understand "look [direction]" as facing.
 
@@ -68,7 +57,7 @@ instead of purchasing a thing:
 	if the noun is newspaper or the noun is paper:
 		if the boy is carrying the newspaper:
 			now the player is carrying the newspaper;
-			say "Well, there goes your quarter. This better be good....";
+			say "Well, there goes your quarter. This better be good.... (You can now look at the newspaper in your inventory)";
 		otherwise:
 			say "You already bought it...";
 	otherwise:
@@ -159,7 +148,7 @@ The last time allotment rule:
 	[Tenement F0]
 
 The Tenement is a room. "You wake up to the drip of some cold water on your head. It's nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely.
-The unforgiving drops continue to pound mericlessless against your head - drilling in the miserly state of your surroundings. Swerving from the next oncoming drip, you adjust yourself, you observe other tenants in your room. Each of them are shells:  diminished beings curling, clutching themselves as if to hold on to the meager remains of their life-force in their cagey bodies. Clothes are a laugh at this point, looking more like throwaway rags than anything else. The dim rays of incriminating sunlight cut its way through the musty room and announce the breaking of dawn. You force yourself out of bed. Work awaits."
+The unforgiving drops continue to pound mericlessly against your head - drilling in the miserly state of your surroundings. Swerving from the next oncoming drip, you adjust yourself, and observe other tenants in your room. Each of them are shells:  diminished beings curling, clutching themselves as if to hold on to the meager remains of their life-force in their cagey bodies. Clothes are a laugh at this point, looking more like throwaway rags than anything else. The dim rays of sunlight their way through the musty room, announcing the break of dawn. You force yourself out of bed. Work awaits."
 
 [NOTE TO SELF]	[Make sure some of this is only repeated in the mornings or one time]
 	
@@ -169,7 +158,7 @@ The Alley is east of The Tenement. "You stumble from the darkness of the tenemen
 
 	[Front Gate F0]
 
-The Front Gate is east of The Alley. "After about 10 minutes of walking, you finally show up at the factory front gate. Peeking through the clouds of smoke pouring from the chimneys, you can just barely tell that it's a sunny day.
+The Front Gate is east of The Alley. "After about 15 minutes of walking, you finally show up at the factory front gate. Peeking through the clouds of smoke pouring from the chimneys, you can just barely tell that it's a sunny day.
 You see all the other factory workers slowly filing in. 
 Will you walk into the factory? As soon as you walk into the factory, you'll be starting your 11-hour shift."
 
@@ -363,7 +352,6 @@ instead of examining a thing:
 			
 			The paper then explained what had happened to Jones' wife. She got too close to the machine, the paper said, and before she knew it, it sucked her in and tore her apart. Only some of her remains were found.
 			
-			You knew about this event well; it was in your own factory. But you hadn't seen the event take place, so it was interesting to see the details somewhere - especially when the company itself has been completely silent.
+			You knew about this event well; it had happened in your own factory. But you hadn't seen the event take place, so it was interesting to see the details somewhere - especially when the company itself has been completely silent.
 			
 			You doubt that it'll break the silence any time soon, either.";
-
