@@ -317,7 +317,7 @@ Every turn:
 [NOTE TO SELF, REPEAT THIS ONCE]
 
 	[Robin]
-Robin is a woman in Spindle Room. “You see Robin, who is (like usual) gossiping with her neighbor. She’s trying to be discrete, but it’s hard not to hear her when she has to speak over the roar of the machines to be heard by anyone. You can’t make our every word, but maybe if you listen more carefully, you’ll get to hear something interesting…”
+Robin is a woman in Spindle Room. “You see Robin, who is (like usual) gossiping with her neighbor. She’s trying to be discrete, but it’s hard not to hear her when she has to speak over the roar of the machines to be heard by anyone. You can’t make out every word, but maybe if you listen more carefully, you’ll get to hear something interesting…”
 
 [------------------------------------------------------------------------Things-----------------------------------------------------------------------]
 													[----------Sound----------]
@@ -355,3 +355,4 @@ instead of examining a thing:
 			You knew about this event well; it had happened in your own factory. But you hadn't seen the event take place, so it was interesting to see the details somewhere - especially when the company itself has been completely silent.
 			
 			You doubt that it'll break the silence any time soon, either.";
+
