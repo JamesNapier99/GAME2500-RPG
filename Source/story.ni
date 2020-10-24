@@ -32,11 +32,12 @@ Include Basic Screen Effects by Emily Short.
 Table of Fancy Status
 left	central	right 
 "--Day--"	"Time of Day"	"Insanity" 
-"[current weekday]"	"[time of day as 24h time]"	"0" 
+"[current weekday]"	"[time of day as 24h time]"	"[Insanity]/100"
 
 Rule for constructing the status line:
 	 fill status bar with Table of Fancy Status;
 	 rule succeeds.
+
 [-----------------------------------------------------------------------Talking Actions-----------------------------------------------------------------------]
 		
 talking is an action applying to one thing.
@@ -70,7 +71,8 @@ instead of purchasing a thing:
 	if the noun is newspaper or the noun is paper:
 		if the boy is carrying the newspaper:
 			now the player is carrying the newspaper;
-			say "Well, there goes your quarter. This better be good.... (You can now look at the newspaper in your inventory)";
+			say "Well, there goes your quarter. This better be good.";
+			say "a newspaper has been added to your inventory.";
 		otherwise:
 			say "You already bought it...";
 	otherwise:
@@ -119,7 +121,9 @@ When Day begins:
 Dusk is a recurring scene. Dusk begins when Day ends. Dusk ends when (the time of day is 7:00 PM or the time of day is after 7:00 PM). 
 
 When Dusk begins: 
-	say "The sun has passed across the sky and is on the verge of setting." 
+	say "The sun has passed across the sky and is on the verge of setting.";
+	increase insanity by 20.
+
 [-----------------------------------------------------------------------Time of Day-----------------------------------------------------------------------]
 
 A weekday is a kind of value. The weekdays are Monday, Tuesday, Wednesday, Thursday, Friday. The current weekday is a weekday that varies. The current weekday is Monday.
@@ -166,6 +170,16 @@ A time allotment rule for talking:
 The last time allotment rule: 
 	now work duration is 1. 
 
+[-----------------------------------------------------------------------Insanity-----------------------------------------------------------------------]
+
+Insanity is a number that varies. Insanity is 0.
+
+Every turn:
+	if (insanity) >= (100):
+		say "You collapse to your knees, mind buckling under the strain of what you have learned. Embrace the Madness.";
+		stop game abruptly;
+	otherwise:
+		continue the action;
 [-----------------------------------------------------------------------Rooms-----------------------------------------------------------------------]
 
 	[Tenement F0]
