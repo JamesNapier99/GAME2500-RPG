@@ -35,6 +35,124 @@ Looking toward is an action applying to one visible thing.
 Carry out looking toward:
 	say "You make out [the noun] that way."
 
+[-----------------------------------------------------------------------Talking Actions-----------------------------------------------------------------------]
+		
+talking is an action applying to one thing.
+understand "ask [thing]" as talking.
+understand "ask [thing] about" as talking.
+understand "talk to [thing]" as talking.
+understand "speak to [thing]" as talking.
+understand "approach [thing]" as talking.
+understand "go to [thing]" as talking.
+
+instead of talking a person:
+	if the noun is Jones:
+		say "You approach him, but he suddenly starts coughing hysterically, and gestures at you to move away. Maybe this isn't the best time to be talking to him, anyway.";
+		continue the action;
+	if the noun is Winston:
+		say "You come up to him and he gives you the lunch bag.";
+		now the player has the lunch bag;
+		continue the action;
+	otherwise:
+		say "Who?";
+		continue the action;
+		
+[-----------------------------------------------------------------------Actions-----------------------------------------------------------------------]
+
+purchasing is an action applying to one thing.
+understand "buy [thing]" as purchasing.
+understand "purchase [thing]" as purchasing.
+understand "get [thing]" as purchasing.
+
+instead of purchasing a thing:
+	if the noun is newspaper or the noun is paper:
+		if the boy is carrying the newspaper:
+			now the player is carrying the newspaper;
+			say "Well, there goes your quarter. This better be good....";
+		otherwise:
+			say "You already bought it...";
+	otherwise:
+		say "You can't buy this."
+
+
+[-----------------------------------------------------------------------Time-----------------------------------------------------------------------]
+
+To say (relevant time - a time) as 24h time: 
+	let H be the hours part of relevant time; 
+	let M be the minutes part of relevant time; 
+	say "[if H is less than 10]0[end if][H][if M is less than 10]0[end if][M]". 
+
+When play begins: 
+	now the time of day is 5:45 AM; 
+	now the right hand status line is "[time of day as 24h time]". 
+		
+
+[-----------------------------------------------------------------------Time of Day-----------------------------------------------------------------------]
+
+The sun is a backdrop. It is everywhere. The description is "Currently out of sight." 
+
+
+Night is a recurring scene. [Night begins when play begins. ]Night begins when Dusk ends. Night ends when (the time of day is 5:00 AM or the time of day is after 5:00 AM).
+
+When Night begins: 
+	say "The sun falls below the horizon and the temperature drops abruptly to well below zero."; 
+	now the description of the sun is "Currently out of sight." 
+
+Dawn is a recurring scene. Dawn begins when play begins. Dawn begins when Night ends. Dawn ends when (the time of day is 6:00 AM or the time of day is after 6:00 AM). 
+
+When Dawn begins: 
+	say "The sun appears on the horizon."; 
+	now the description of the sun is "It is tiny and weak.". 
+
+Day is a recurring scene. Day begins when Dawn ends. Day ends when (the time of day is 6:00 PM or the time of day is after 6:00 PM). 
+
+When Day begins: 
+	say "The sun is now properly up." 
+
+Dusk is a recurring scene. Dusk begins when Day ends. Dusk ends when (the time of day is 7:00 PM or the time of day is after 7:00 PM). 
+
+When Dusk begins: 
+	say "The sun has passed across the sky and is on the verge of setting." 
+
+[-----------------------------------------------------------------------Action Duration-----------------------------------------------------------------------]
+
+Work duration is a number that varies. 
+
+Every turn: 
+	now work duration is 0; 
+	increment the turn count; 
+	follow the time allotment rules; 
+	if work duration is 0, rule succeeds; 
+	increase the time of day by (work duration minutes - 1 minute). 
+
+The time allotment rules are a rulebook. 
+
+A time allotment rule for examining or looking: 
+	now work duration is 0; 
+	rule succeeds. 
+
+A time allotment rule for going: 
+	now work duration is 15; 
+	rule succeeds. 
+
+A time allotment rule for going up: 
+	now work duration is 15; 
+	rule succeeds. 
+
+A time allotment rule for waiting: 
+	now work duration is 60; 
+	rule succeeds. 
+	
+A time allotment rule for purchasing:
+	now work duration is 3;
+	rule succeeds.
+
+A time allotment rule for talking:
+	now work duration is 5;
+	rule succeeds.
+
+The last time allotment rule: 
+	now work duration is 1. 
 
 [-----------------------------------------------------------------------Rooms-----------------------------------------------------------------------]
 
@@ -133,7 +251,7 @@ Winston is a man in the Cotton Engines. Winston is carrying a lunch bag.
 		
 	[Overseer]
 	[Forces player back to work]
-Overseer is a man in Cotton Engines. "The overseer is heavy and muscular, with a large white beard and eyes you can barely make out, what with all the bags and wrinkles covering them up. He’s somehow intimidating, despite the fact that it seems like his body could fall apart any second."
+Overseer is a man in the Cotton Engines. "The Overseer is heavy and muscular, with a large white beard and eyes you can barely make out, what with all the bags and wrinkles covering them up. He’s somehow intimidating, despite the fact that it seems like his body could fall apart any second."
 
 Overseer can be active or passive. Overseer is Active.
 
@@ -155,12 +273,13 @@ OverseerRepeat is false.
 Every turn when Overseer is active:
 	if Overseer is in a room (called the current space):
 		if the player is in current space:
-			say "The Overseer stomps over to you, yelling 'What are you doing here! Get back to work, or I'll dock your pay for the rest of the month!'
-You scurry back to the cotton engines";
-			move the player to Cotton Engines, without printing a room description;
-			now the player is in Cotton Engines;
-			say "Well that was rude. Guess I should avoid him next time.";
-			continue the action;
+			if the current space is not Cotton Engines:
+				say "The Overseer stomps over to you, yelling 'What are you doing here! Get back to work, or I'll dock your pay for the rest of the month!'
+					You scurry back to the cotton engines";
+				move the player to Cotton Engines, without printing a room description;
+				now the player is in Cotton Engines;
+				say "Well that was rude. Guess I should avoid him next time.";
+				continue the action;
 		let next space be a random room which is adjacent to the current space;
 		repeat through the Table of Overseer's Movement:
 			if next space is the destination entry:
@@ -248,42 +367,3 @@ instead of examining a thing:
 			
 			You doubt that it'll break the silence any time soon, either.";
 
-[-----------------------------------------------------------------------Talking Actions-----------------------------------------------------------------------]
-		
-talking is an action applying to one thing.
-understand "ask [thing]" as talking.
-understand "ask [thing] about" as talking.
-understand "talk to [thing]" as talking.
-understand "speak to [thing]" as talking.
-understand "approach [thing]" as talking.
-understand "go to [thing]" as talking.
-
-instead of talking a person:
-	if the noun is Jones:
-		say "You approach him, but he suddenly starts coughing hysterically, and gestures at you to move away. Maybe this isn't the best time to be talking to him, anyway.";
-		continue the action;
-	if the noun is Winston:
-		say "You come up to him and he gives you the lunch bag.";
-		now the player has the lunch bag;
-		continue the action;
-	otherwise:
-		say "Who?";
-		continue the action;
-		
-[-----------------------------------------------------------------------Actions-----------------------------------------------------------------------]
-
-purchasing is an action applying to one thing.
-understand "buy [thing]" as purchasing.
-understand "purchase [thing]" as purchasing.
-understand "get [thing]" as purchasing.
-
-instead of purchasing a thing:
-	if the noun is newspaper or the noun is paper:
-		if the boy is carrying the newspaper:
-			now the player is carrying the newspaper;
-			say "Well, there goes your quarter. This better be good....";
-		otherwise:
-			say "You already bought it...";
-	otherwise:
-		say "You can't buy this."
-				
