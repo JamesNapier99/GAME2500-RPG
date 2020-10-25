@@ -53,7 +53,13 @@ instead of talking a person:
 		say "You approach him, but he suddenly starts coughing hysterically, and gestures at you to move away. Maybe this isn't the best time to be talking to him, anyway.";
 		continue the action;
 	if the noun is Winston:
-		say "You come up to him and he gives you the lunch bag.";
+		say "Winston seems more perturbed than usual - but rightfully so. Everyone's been a bit anxious since... 'it' happened. 
+		
+		'Seems like the boss is gone today,' he observes. 'Must be in some serious legal trouble about what just happened.'
+		
+		'I know,' you reply. 'Do you think we're out of a job?'
+		
+		'Dear god, I hope not. Though it's about time Boss faces some repercussions for all the nonsense he's gotten away with. Now everyone's just wondering who ordered Jones' wife to go to the basement in the first place.... Perhaps the ladies in the Spindle Room would know something like that; they do seem to know just about everything.'";
 		now the player has the lunch bag;
 		continue the action;
 	otherwise:
@@ -185,7 +191,7 @@ Every turn:
 	[Tenement F0]
 
 The Tenement is a room. "You wake up to the drip of some cold water on your head. It's nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely.
-The unforgiving drops continue to pound mericlessly against your head - drilling in the miserly state of your surroundings. Swerving from the next oncoming drip, you adjust yourself, and observe other tenants in your room. Each of them are shells:  diminished beings curling, clutching themselves as if to hold on to the meager remains of their life-force in their cagey bodies. Clothes are a laugh at this point, looking more like throwaway rags than anything else. The dim rays of sunlight their way through the musty room, announcing the break of dawn. You force yourself out of bed. Work awaits."
+The unforgiving drops continue to pound mericlessly against your head - drilling in the miserly state of your surroundings. Swerving from the next oncoming drip, you adjust yourself, and observe other tenants in your room. Each of them are shells:  diminished beings curling, clutching themselves as if to hold on to the meager remains of their life-force in their cagey bodies. Clothes are a laugh at this point, looking more like throwaway rags than anything else. The dim rays of sunlight peek through the musty room, announcing the break of dawn. You force yourself out of bed. Work awaits."
 
 [NOTE TO SELF]	[Make sure some of this is only repeated in the mornings or one time]
 	
@@ -196,16 +202,15 @@ The Alley is east of The Tenement. "You stumble from the darkness of the tenemen
 	[Front Gate F0]
 
 The Front Gate is east of The Alley. "After about 15 minutes of walking, you finally show up at the factory front gate. Peeking through the clouds of smoke pouring from the chimneys, you can just barely tell that it's a sunny day.
-You see all the other factory workers slowly filing in. 
-Will you walk into the factory? As soon as you walk into the factory, you'll be starting your 11-hour shift."
+You see all the other factory laborers slowly filing in, and sigh at the thought of having to start your 11 hour shift."
 
 [NOTE TO SELF]	[MAKE SURE THIS IS TIME SENSITIVE]
 
 	[Main Entrance F0]
 
-The Main Entrance is south of Front Gate. "The hulking doors invite to swallow you in. You are hit by a gush of humid sweltry breeze - no, not a breeze, it is the air you are to breathe now. It slowly cooks you in, ready to service you to some other. 'There won’t be much to eat,' You think sardonically. 
-A small crowd of grim women shuffle around the Mecca of the puncher. It bites the slim slivers of paper."
+The Main Entrance is south of Front Gate. "The hulking doors invite to swallow you in. You are hit by a gush of humid sweltry breeze - no, more than a breeze - it's the air you'll have to breathe now. 'There won’t be much to eat tonight,' You think sardonically. 
 
+This isn't your entrance; this is for the factory elites - the owner, the overseer, and their friends. It's a privilege to use the main entrance. Wage workers like you have to go the long way through the worker's entrance."
 
 	[Intake Desk F0]
 
@@ -219,6 +224,8 @@ The Spindle Room Gossip is scenery in Spindle Room. The sound of Spindle Room Go
 	[Loading Dock F0]
 	
 The Loading Dock is east of Cotton Engines.
+"You feel a light gust of outdoor air. Still, you feel just as caged in as you would in the Cotton Engines; the air is still full of chimney smoke, and the sounds are just as grating as ever.
+It’s hard to see anything ahead of you with so many stacks of boxes in the way. You see Randy - a balding, overweight man - organizing them in some way you can’t understand."
 
 	[Boiler Room F0]
 
@@ -226,27 +233,30 @@ The Boiler Room is south of Central Stairs.
 
 	[Worker's Entrance F0]
 
-The Worker's Entrance is west of Main Entrance.
+The Worker's Entrance is west of Main Entrance. "As the workers file in, a young man yells at them to go faster. 'If any’un sees you messin’ around, you’ll be outuvva job!' You didn’t need any reminder of that."
 
 	[Locker Rooms F0]
 The Locker Rooms is south of Worker's Entrance and west of Cotton Engines.
+"The first thing you notice as you walk into the locker rooms is the disgusting body odor radiating from every locker. You’re unsure how to describe the sensation of the smell hitting your body: perhaps it slammed into your body? Either way, you’re blinded momentarily by the horrid stench. After a few seconds that feel like an eternity, you regain your senses. You see the walls lined with tall metal lockers. A couple of benches are there on the ground for you to sit on while changing."
 
 	[Cotton Engines F0]
 
-The Cotton Engines is south of the Spindle Room. "As you work, the violent, periodic smashing of machinery forces itself in your head. You try to ignore it and focus on your cotton gin work, but every time you look at the thing, you can't help but picture what happened to Jones' wife. You shudder at the thought, and turn away from the machine for a bit, but there your boss is, staring in your soul with a furious glare. You turn back to the machine and keep working."
+The Cotton Engines is south of the Spindle Room. "As you work, the violent, periodic smashing of machinery forces itself into your head. You try to ignore it and focus on your cotton gin work, but every time you look at the machine, you can't help but picture what happened to Jones' wife. You shudder at the thought, and turn away from it in disgust for a bit, but then you think of the Overseer. The Overseer wouldn't like to see you distracted from your work."
 [5 hours later, the machine whirring stops for lunch break. You only have 10 minutes.
 You see your friend Winston in the other corner of the room. Being the (slightly) more well-off of you two, he has lunch for both of you."]
 
 [NOTE TO SELF]	[TIME LUNCH AND SHIT, DONT REPEAT IT EVERY TIME]
 	[Central Stairs B1-F1]
 
-The Central Stairs is south of Cotton Engines.
+The Central Stairs is south of Cotton Engines. "You arrive at the stairwell. It’s dimly lit and handrail-free, with grated metal stairs that seem like they could barely support one person. You can't make out much above or below you, but you do hear the violent whirring of cotton gin machines coming from directly below your feet."
 
 	[----------F1--------]
 	
 		[Finishing Room]
 		
-	The Finishing Room is above Central Stairs.
+	The Finishing Room is above Central Stairs. "The most peaceful section of the building, the finishing room is a safe haven away from the rotten sounds and smells that pervade the rest of the factory. Large, plentiful windows let the sunlight in.
+	
+	You see three women silently knitting cotton clothes. None of them look like they want to be bothered."
 	
 	[----------B1----------]
 	
@@ -276,11 +286,11 @@ Your daily wage is about 50 cents. Is it really worth it?"
 
 	[Winston]
 
-Winston is a man in the Cotton Engines. Winston is carrying a lunch bag.
+Winston is a man in the Cotton Engines. Winston is carrying a lunch bag. "Your best friend, Winston, is working right next to you. He seems willing to talk."
 		
 	[Overseer]
 	[Forces player back to work]
-Overseer is a man in the Cotton Engines. "The Overseer is heavy and muscular, with a large white beard and eyes you can barely make out, what with all the bags and wrinkles covering them up. He’s somehow intimidating, despite the fact that it seems like his body could fall apart any second."
+Overseer is a man in the Cotton Engines. "You see the Overseer. The Overseer is heavy and muscular, with a large white beard and eyes you can barely make out, what with all the bags and wrinkles covering them up. He’s somehow intimidating, despite the fact that it seems like his body could fall apart any second."
 
 Overseer can be active or passive. Overseer is Active.
 
@@ -304,7 +314,7 @@ Every turn when Overseer is active:
 		if the player is in current space:
 			if the current space is not Cotton Engines:
 				say "The Overseer stomps over to you, yelling 'What are you doing here! Get back to work, or I'll dock your pay for the rest of the month!'
-					You scurry back to the cotton engines";
+					You scurry back to the cotton engines.";
 				move the player to Cotton Engines, without printing a room description;
 				now the player is in Cotton Engines;
 				say "Well that was rude. Guess I should avoid him next time.";
@@ -332,7 +342,7 @@ You hurry back to the cotton engines.";
 					say "Well that was rude. Guess I should avoid him next time.";
 				otherwise:
 					say "The Overseer stomps over to you, yelling 'What are you doing here! Get back to work, or I'll dock your pay for the rest of the month!'
-You hurry back to the cottno engines";
+You hurry back to the cotton engines";
 					move the player to Cotton Engines, without printing a room description;
 					now the player is in Cotton Engines;
 					say "Well that was rude. Guess I should avoid him next time.";
@@ -381,6 +391,14 @@ Before printing the name of something audible while listening to a room:
 													
 The newspaper, paper is a thing. The newspaper, paper is carried by the Boy. 
 
+A bench is a kind of supporter. A bench is always enterable. In the Locker Rooms is three benches. 
+
+The closed lockers is fixed in place in the Locker Rooms. "You can see some closed lockers lined up across the wall."
+
+The open lockers is fixed in place in the Locker Rooms. "Interestingly, alongside the closed lockers are some unaccompanied open ones."
+
+In the Locker Rooms is a damaged locker, lone locker. The damaged locker is an undescribed container. In the damaged locker is a mysterious key.
+
 instead of examining a thing:
 	if the noun is newspaper or the noun is paper:
 		if the Boy is carrying the newspaper:
@@ -395,3 +413,15 @@ instead of examining a thing:
 			You knew about this event well; it had happened in your own factory. But you hadn't seen the event take place, so it was interesting to see the details somewhere - especially when the company itself has been completely silent.
 			
 			You doubt that it'll break the silence any time soon, either.";
+	if the noun is closed lockers:
+		say "You try and peer through the small slits on each locker door, but ultimately the stench emanating stench is too much from each locker to investigate the closed lockers thoroughly.";
+	if the noun is open lockers:
+		say "You see some of the lockers are left open during the day. Unfortunately, it isn’t the locker of anyone important. You take a peek through all of the doors and nothing of interest seems to be inside…
+		
+		That is, until you get to a lone damaged locker on the back right of the room. From afar, it looks as though it was locked, but as you get closer you see that the lock has actually been damaged and can now be opened.";
+	if the noun is damaged locker or the noun is lone locker:
+		say "The locker appears to be normal  (changes based on insanity). However, at the bottom you see a key. You’re not sure exactly what it opens, but it's probably important. You take the keys and close the door so it looks exactly like you left it.";
+		now the player is carrying the mysterious key.
+		
+
+	
