@@ -56,17 +56,25 @@ instead of talking a person:
 	if the noun is Winston:
 		say "Winston seems more perturbed than usual - but rightfully so. Everyone's been a bit anxious since... 'it' happened. 
 		
-		'Seems like the boss is gone today,' he observes. 'Must be in some serious legal trouble about what just happened.'
+		'Seems like the boss is gone today,' he observes. 'Must be in some serious legal trouble right now.'
 		
-		'I know,' you reply. 'Do you think we're out of a job?'
+		'You listen silently, wondering if this whole situation could end up putting you all out of work.
 		
-		'Dear god, I hope not. Though it's about time Boss faces some repercussions for all the nonsense he's gotten away with. Now everyone's just wondering who ordered Jones' wife to go to the basement in the first place.... Perhaps the ladies in the Spindle Room would know something like that; they do seem to know just about everything.'";
+		'Now everyone's just wondering who ordered Jones' wife to go to the basement in the first place.... Perhaps the ladies in the Spindle Room would know something like that; they do seem to know just about everything.'";
 		now the player has the lunch bag;
 		continue the action;
+	else if the noun is Overseer:
+		say "The Overseer isn't the conversational type.";
 	otherwise:
 		say "Who?";
 		continue the action;
-		
+	
+Instead of sleeping:
+	if the player is in the Tenement and the time of day is before 5:45 AM or the time of day is after 6 PM:
+		say "You rest your eyes, and before you know it, it's already morning again.";
+		now the time of day is 5:45 AM;
+	otherwise:
+		say "This isn't an appropriate time and place to be sleeping.".
 [-----------------------------------------------------------------------Actions-----------------------------------------------------------------------]
 
 purchasing is an action applying to one thing.
@@ -390,7 +398,7 @@ You hurry back to the cotton engines";
 
 Before doing something to Overseer:
 	now Overseer is passive;
-	say "The Overseer glares at you. 'What are you looking at. Get back to work'.";
+	say "The Overseer glares at you. 'What are you looking at? Get back to work'.";
 
 Every turn when Overseer is passive:
 	now Overseer is active.
@@ -439,7 +447,11 @@ In the Locker Rooms is a damaged locker, lone locker. The damaged locker is an u
 
 A desk chair is a kind of supporter. A desk chair is fixed in place. In the Intake Desk is one desk chair.
 
+A bench is a kind of supporter. A bench is fixed in place. A bench is always enterable. In the Locker Rooms is three benches. 
 
+In the Locker Rooms is a damaged locker.  The damaged locker is fixed in place. The damaged locker is an undescribed closed openable container. In the damaged locker is a mysterious key.
+
+The reception desk is an open container in the Intake Desk. The reception desk is fixed in place. The drawer is a container in the reception desk. The book is a thing in the drawer.
 
 instead of examining a thing:
 	if the noun is newspaper or the noun is paper:
@@ -461,9 +473,25 @@ instead of examining a thing:
 		say "You see some of the lockers are left open during the day. Unfortunately, it isn’t the locker of anyone important. You take a peek through all of the doors and nothing of interest seems to be inside…
 		
 		That is, until you get to a lone damaged locker on the back right of the room. From afar, it looks as though it was locked, but as you get closer you see that the lock has actually been damaged and can now be opened.";
-	if the noun is damaged locker or the noun is lone locker:
+	if the noun is damaged locker:
+		if the time of day is after 6 PM or the time of day is before 5:45 AM:
+			say "The locker appears to be normal  (changes based on insanity). However, at the bottom you see a key. You’re not sure exactly what it opens, but it's probably important. You take the keys and close the door so it looks exactly like you left it.";
+			now the player is carrying the mysterious key;
+		otherwise:
+			say "I shouldn’t look into this in broad daylight - but I should come back later.";
+	if the noun is reception desk:
+		if the time of day is after 6 PM or the time of day is before 5:45 AM:
+			say "You examine the desk and notice a drawer.";
+			now the player is carrying the mysterious key;
+		otherwise:
+			say "Jackie's right there! She'll never let you go through her desk."
+
+instead of opening the damaged locker:
+	if the time of day is after 6 PM or the time of day is before 5:45 AM:
 		say "The locker appears to be normal  (changes based on insanity). However, at the bottom you see a key. You’re not sure exactly what it opens, but it's probably important. You take the keys and close the door so it looks exactly like you left it.";
-		now the player is carrying the mysterious key.
+		now the player is carrying the mysterious key;
+	otherwise:
+		say "I shouldn’t look into this in broad daylight - but I should come back later.".
 		
 
 	
