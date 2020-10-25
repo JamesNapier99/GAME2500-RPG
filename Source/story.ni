@@ -50,10 +50,10 @@ understand "go to [thing]" as talking.
 
 instead of talking a person:
 	if the noun is Jones:
-		say "You approach him, but he suddenly starts coughing hysterically, and gestures at you to move away. Maybe this isn't the best time to be talking to him, anyway.";
+		say "You approach him, but he suddenly starts having a coughing fit and gestures at you to move away. Maybe this isn't the best time to be talking to him, anyway...";
 		continue the action;
 	if the noun is Winston:
-		say "You come up to him and he gives you the lunch bag.";
+		say "You come up to him and he hands you the lunch bag.";
 		now the player has the lunch bag;
 		continue the action;
 	otherwise:
@@ -71,7 +71,7 @@ instead of purchasing a thing:
 	if the noun is newspaper or the noun is paper:
 		if the boy is carrying the newspaper:
 			now the player is carrying the newspaper;
-			say "Well, there goes your quarter. This better be good.";
+			say "Well, there goes a quarter. This better be good.";
 			say "a newspaper has been added to your inventory.";
 		otherwise:
 			say "You already bought it...";
@@ -97,7 +97,7 @@ The sun is a backdrop. It is everywhere. The description is "Currently out of si
 Night is a recurring scene. [Night begins when play begins. ]Night begins when Dusk ends. Night ends when ((the time of day is 5:00 AM or the time of day is after 5:00 AM) and the time of day is before 7:00 AM).
 
 When Night begins: 
-	say "The sun falls below the horizon and the temperature drops abruptly to well below zero."; 
+	say "The sun falls below the horizon and the temperature plunges to well below zero."; 
 	now the description of the sun is "Currently out of sight." 
 
 Dawn is a recurring scene. Dawn begins when play begins. Dawn begins when Night ends. Dawn ends when (the time of day is 6:00 AM or the time of day is after 6:00 AM). 
@@ -116,12 +116,12 @@ When Dawn begins:
 Day is a recurring scene. Day begins when Dawn ends. Day ends when (the time of day is 6:00 PM or the time of day is after 6:00 PM). 
 
 When Day begins: 
-	say "The sun is now properly up." 
+	say "The sun is now up in the sky." 
 
 Dusk is a recurring scene. Dusk begins when Day ends. Dusk ends when (the time of day is 7:00 PM or the time of day is after 7:00 PM). 
 
 When Dusk begins: 
-	say "The sun has passed across the sky and is on the verge of setting.";
+	say "The sun has taken its journey through the sky and is on the verge of setting.";
 	increase insanity by 20.
 
 [-----------------------------------------------------------------------Time of Day-----------------------------------------------------------------------]
@@ -176,7 +176,17 @@ Insanity is a number that varies. Insanity is 0.
 
 Every turn:
 	if (insanity) >= (100):
-		say "You collapse to your knees, mind buckling under the strain of what you have learned. Embrace the Madness.";
+		say "Your legs buckle and you collapse to the floor: a puppet with its strings. severed. 
+		
+			You wonder why. 
+			
+			And then it happens.
+			
+			The pillars of your mind forget their form and cease to be. Thoughts from beyond take you in like a swelling dark tide - enveloping you, swallowing you...You let out a pleaful gasp - your last consciousness act - as the fateful currents seize you from reason's shores and carry you off into a sea of unspeakable turmoil. 
+			
+			You are no more.
+			
+			All that's left is Madness.";
 		stop game abruptly;
 	otherwise:
 		continue the action;
@@ -184,19 +194,29 @@ Every turn:
 
 	[Tenement F0]
 
-The Tenement is a room. "You wake up to the drip of some cold water on your head. It's nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely.
-The unforgiving drops continue to pound mericlessly against your head - drilling in the miserly state of your surroundings. Swerving from the next oncoming drip, you adjust yourself, and observe other tenants in your room. Each of them are shells:  diminished beings curling, clutching themselves as if to hold on to the meager remains of their life-force in their cagey bodies. Clothes are a laugh at this point, looking more like throwaway rags than anything else. The dim rays of sunlight peek through the musty room, announcing the break of dawn. You force yourself out of bed. Work awaits."
+The Tenement is a room. "You wake up to a sear of cold dripping on your head.
+
+It's just water. 
+
+Nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely.
+
+The unforgiving drops continue to pound mericlessly against your head - drilling into you the miserly state of your surroundings. Swerving from the next oncoming drip, you adjust yourself, and observe the other tenants in your room. 
+
+Like shadows, being just as thin and sulken, they all curl, and clutch to themselves as if to hold on to the meager remains of their life-force to their cagey bodies. Clothes are a laugh at this point, looking more like throwaway rags than anything else. Looking at them adds no hope to your already meager pile. 
+
+The dim rays of treacherous sunlight begin to blaze through the musty room, announcing the break of dawn. Work awaits."
 
 [NOTE TO SELF]	[Make sure some of this is only repeated in the mornings or one time]
 	
 	[Alley F0]
 
-The Alley is east of The Tenement. "You stumble from the darkness of the tenement into the gloomy alley. It's eerily quiet as this time of day, but in a few minutes you know the crowds will come pouring out from every household you can see. Perhaps you should move quickly to avoid the rush."
+The Alley is east of The Tenement. "You stumble from the haze of the tenement into the gloomy alley. It's eerily quiet as this time of day - just you and a few others make footsteps barely audible on the brownish streets - but in minutes you know the streets will swell with a crowd streaming out from every household: a ready army of working ants. You breathe in a bit of the silence, and you quicken your pace."
 
 	[Front Gate F0]
 
-The Front Gate is east of The Alley. "After about 15 minutes of walking, you finally show up at the factory front gate. Peeking through the clouds of smoke pouring from the chimneys, you can just barely tell that it's a sunny day.
-You see all the other factory laborers slowly filing in, and sigh at the thought of having to start your 11 hour shift."
+The Front Gate is east of The Alley. "After about 15 minutes of walking through a waking town, you have arrived at the factory front gate. Snakes of smoke pour from the high chimneys and hide the sun behind a screen of noxious white. The world lies in a dreamish haze.
+
+You join the line of workers filtering through the factory doors."
 
 [NOTE TO SELF]	[MAKE SURE THIS IS TIME SENSITIVE]
 
@@ -208,11 +228,11 @@ This isn't your entrance; this is for the factory elites - the owner, the overse
 
 	[Intake Desk F0]
 
-The Intake Desk is south of Main Entrance
+The Intake Desk is south of Main Entrance "Crafted from luxurious black wood, the intake desks stand in stark contrast from the rest of the factory. No one ever mans it, but it still makes you feel watched. "
 
 	[Spindle Room F0]
 	
-The Spindle Room is south of Intake Desk.
+The Spindle Room is south of Intake Desk. "Machines stretch the length and width of the factory creating a grid like labyrith of rust and steel..It's hard to see an end to the rows of contraptions. "
 
 The Spindle Room Gossip is scenery in Spindle Room. The sound of Spindle Room Gossip is "Whisper whisper whisper".
 	[Loading Dock F0]
@@ -223,7 +243,7 @@ It’s hard to see anything ahead of you with so many stacks of boxes in the way
 
 	[Boiler Room F0]
 
-The Boiler Room is south of Central Stairs.
+The Boiler Room is south of Central Stairs."The heat is nearly unbearable. Steam dance in and out from a mosaic of pipes without warning, sometimes bathing you in burning condensation."
 
 	[Worker's Entrance F0]
 
@@ -401,3 +421,5 @@ instead of examining a thing:
 			You knew about this event well; it had happened in your own factory. But you hadn't seen the event take place, so it was interesting to see the details somewhere - especially when the company itself has been completely silent.
 			
 			You doubt that it'll break the silence any time soon, either.";
+			
+	
