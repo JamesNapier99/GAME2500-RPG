@@ -73,6 +73,8 @@ Instead of sleeping:
 	if the player is in the Tenement and the time of day is before 5:45 AM or the time of day is after 6 PM:
 		say "You rest your eyes, and before you know it, it's already morning again.";
 		now the time of day is 5:45 AM;
+	else if the player is in the Tenement:
+		say "You rest your eyes, but you can't get yourself to go to sleep. Maybe try again later.";
 	otherwise:
 		say "This isn't an appropriate time and place to be sleeping.".
 [-----------------------------------------------------------------------Actions-----------------------------------------------------------------------]
@@ -238,7 +240,7 @@ The Alley is east of The Tenement. "You stumble from the darkness of the tenemen
 
 	[Front Gate F0]
 
-The Front Gate is a factory room. The Front Gate is east of The Alley. "After about 15 minutes of walking, you finally show up at the factory front gate. Peeking through the clouds of smoke pouring from the chimneys, you can just barely tell that it's a sunny day.
+The Front Gate is east of The Alley. "After about 15 minutes of walking, you finally show up at the factory front gate. Peeking through the clouds of smoke pouring from the chimneys, you can just barely tell that it's a sunny day.
 
 You see all the other factory laborers slowly filing in, and sigh at the thought of having to start your 11 hour shift."
 
@@ -280,6 +282,11 @@ The Locker Rooms is a Factory Room. The Locker Rooms is south of Worker's Entran
 
 "The first thing you notice as you walk into the locker rooms is the disgusting body odor radiating from every locker. You’re unsure how to describe the sensation of the smell hitting your body: perhaps it slammed into your body? Either way, you’re blinded momentarily by the horrid stench. After a few seconds that feel like an eternity, you regain your senses. You see the walls lined with tall metal lockers. A couple of benches are there on the ground for you to sit on while changing."
 
+The Locker Rooms contains the metal lockers. The metal lockers is scenery.
+
+The Locker Rooms contains a broken locker. In the broken locker is the Mysterious Key. The broken locker is closed and openable. The broken locker is scenery.
+
+The Mysterious key is an object. "This strangely designed key seems to warp and shift it's non-euclidean geometry. It brings on a headache if looked at too closely.".
 	[Cotton Engines F0]
 
 
@@ -408,9 +415,10 @@ Jackie is a woman in Intake Desk. “You see Jackie, the company secretary, star
 
 Every turn:
 	if the player is in Intake Desk:
-		say "Jackie, flustered, says 'What are you doing here!?' I have some strong words for that Overseer of yours.' and blows a small whistle.";
-		move the Overseer to Intake Desk;
-		say "The Overseer stalks into the room, clearly angry that he heard the whistle."
+		if Jackie is in Intake Desk:
+			say "Jackie, flustered, says 'What are you doing here!?' I have some strong words for that Overseer of yours.' and blows a small whistle.";
+			move the Overseer to Intake Desk;
+			say "The Overseer stalks into the room, clearly angry that he heard the whistle."
 
 [NOTE TO SELF, REPEAT THIS ONCE]
 
@@ -437,22 +445,18 @@ Before printing the name of something audible while listening to a room:
 	say "[sound] from the ";
 													[---------------------------]
 													
+
+
+
 The newspaper, paper is a thing. The newspaper, paper is carried by the Boy. 
-
-The closed lockers is fixed in place in the Locker Rooms. "You can see some closed lockers lined up across the wall."
-
-The open lockers is fixed in place in the Locker Rooms. "Interestingly, alongside the closed lockers are some unaccompanied open ones."
-
-In the Locker Rooms is a damaged locker, lone locker. The damaged locker is an undescribed container. In the damaged locker is a mysterious key.
 
 A desk chair is a kind of supporter. A desk chair is fixed in place. In the Intake Desk is one desk chair.
 
 A bench is a kind of supporter. A bench is fixed in place. A bench is always enterable. In the Locker Rooms is three benches. 
 
-In the Locker Rooms is a damaged locker.  The damaged locker is fixed in place. The damaged locker is an undescribed closed openable container. In the damaged locker is a mysterious key.
-
+[
 The reception desk is an open container in the Intake Desk. The reception desk is fixed in place. The drawer is a container in the reception desk. The book is a thing in the drawer.
-
+]
 instead of examining a thing:
 	if the noun is newspaper or the noun is paper:
 		if the Boy is carrying the newspaper:
@@ -467,31 +471,24 @@ instead of examining a thing:
 			You knew about this event well; it had happened in your own factory. But you hadn't seen the event take place, so it was interesting to see the details somewhere - especially when the company itself has been completely silent.
 			
 			You doubt that it'll break the silence any time soon, either.";
-	if the noun is closed lockers:
-		say "You try and peer through the small slits on each locker door, but ultimately the stench emanating stench is too much from each locker to investigate the closed lockers thoroughly.";
-	if the noun is open lockers:
-		say "You see some of the lockers are left open during the day. Unfortunately, it isn’t the locker of anyone important. You take a peek through all of the doors and nothing of interest seems to be inside…
-		
-		That is, until you get to a lone damaged locker on the back right of the room. From afar, it looks as though it was locked, but as you get closer you see that the lock has actually been damaged and can now be opened.";
-	if the noun is damaged locker:
-		if the time of day is after 6 PM or the time of day is before 5:45 AM:
-			say "The locker appears to be normal  (changes based on insanity). However, at the bottom you see a key. You’re not sure exactly what it opens, but it's probably important. You take the keys and close the door so it looks exactly like you left it.";
-			now the player is carrying the mysterious key;
-		otherwise:
-			say "I shouldn’t look into this in broad daylight - but I should come back later.";
-	if the noun is reception desk:
-		if the time of day is after 6 PM or the time of day is before 5:45 AM:
-			say "You examine the desk and notice a drawer.";
-			now the player is carrying the mysterious key;
-		otherwise:
-			say "Jackie's right there! She'll never let you go through her desk."
+	if the noun is metal lockers:
+		now the description of the Locker Rooms is "The first thing you notice as you walk into the locker rooms is the disgusting body odor radiating from every locker. You’re unsure how to describe the sensation of the smell hitting your body: perhaps it slammed into your body? Either way, you’re blinded momentarily by the horrid stench. After a few seconds that feel like an eternity, you regain your senses. You see the walls lined with tall metal lockers. A couple of benches are there on the ground for you to sit on while changing.
 
-instead of opening the damaged locker:
-	if the time of day is after 6 PM or the time of day is before 5:45 AM:
-		say "The locker appears to be normal  (changes based on insanity). However, at the bottom you see a key. You’re not sure exactly what it opens, but it's probably important. You take the keys and close the door so it looks exactly like you left it.";
-		now the player is carrying the mysterious key;
+		A broken locker stands hidden in the corner, it's lock damaged so badly that it no longer functions. You might be able to open this. ";
+		say "You see some of the lockers are left open during the day. Unfortunately, it isn’t the locker of anyone important. You take a peek through all of the doors and nothing of interest seems to be inside…
+
+		You try and peer through the small slits on each locker door, but ultimately the stench emanating stench is too much from each locker to investigate the closed lockers thoroughly.
+
+		That is, until you get to a lone damaged locker on the back right of the room. From afar, it looks as though it was locked, but as you get closer you see that the lock has actually been damaged and can now be opened.";
+	if the noun is broken locker:
+		say "The locker's lock is so badly broken that it no longer functions. You might be able to open this.";
+
+instead of opening a broken locker:
+	if the time of day is before 6 PM and the time of day is after 5:45 AM:
+		say "I shouldn’t look into this in broad daylight - but I should come back later.";
 	otherwise:
-		say "I shouldn’t look into this in broad daylight - but I should come back later.".
+		now the broken locker is open;
+		say "You open the broken locker. [If the mysterious key is in the broken locker]Lying on the bottom is a Mysterious Key.[otherwise]It is empty.";
 		
 
 	
