@@ -918,8 +918,6 @@
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-<<<<<<< HEAD
-=======
     <key>131</key><dict>
         <key>Filename</key><string>C:\Program Files (x86)\Inform 7\Internal\Extensions\emily short\basic screen effects.i7x</string>
         <key>Line</key><integer>1</integer>
@@ -969,5 +967,4 @@
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
->>>>>>> Alpha-v1.1
 </dict></plist>
