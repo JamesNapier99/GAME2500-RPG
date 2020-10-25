@@ -24,6 +24,7 @@ Looking toward is an action applying to one visible thing.
 Carry out looking toward:
 	say "You make out [the noun] that way."
 
+The player is in the Tenement.
 [-----------------------------------------------------------------------Extensions-----------------------------------------------------------------------]
 
 Include Basic Screen Effects by Emily Short.
@@ -111,19 +112,43 @@ When Dawn begins:
 		say "Your continued exposure to the machine has driven you insane.";
 		stop game abruptly; [MORE DESCRIPTION!!!]
 	otherwise:
-		now the current weekday is the weekday after the current weekday.
+		now the current weekday is the weekday after the current weekday;
+	move Boy to Alley.
 
 Day is a recurring scene. Day begins when Dawn ends. Day ends when (the time of day is 6:00 PM or the time of day is after 6:00 PM). 
 
 When Day begins: 
-	say "The sun is now properly up." 
+	say "The sun is now properly up.";
+	move the Overseer to Cotton Engines;
+	if Overseer can be seen by the player, say "The Overseer walks in to his shift, clearly grumpy that today even existed.
+He looks at you, confused, and says, 'You are here awful early for a slacker.'";
+	move Jackie to Intake Desk;
+	if Jackie can be seen by the player, say "Jackie tromps into the Intake Desk, clearly still drowsy.";
+	move Robin to Spindle Room;
+	if Robin can be seen by the player, say "Jackie skips into work, clearly about to overflow with new gossip";
+	move Winston to Cotton Engines;
+	if Winston can be seen by the player, say "Winston trudges into work, begrudingly prepared to today's shift".
+	
 
 Dusk is a recurring scene. Dusk begins when Day ends. Dusk ends when (the time of day is 7:00 PM or the time of day is after 7:00 PM). 
 
 When Dusk begins: 
 	say "The sun has passed across the sky and is on the verge of setting.";
-	increase insanity by 20.
+	increase insanity by 20;
+	if Jackie can be seen by the player, say "Jackie packs up her things for the day, clearly wary of your prying eyes, and makes her way out of the main entrance.";
+	move Jackie to NPC Room;
+	if Robin can be seen by the player, say "Robin gives you a wave, then packs up her things and heads out of the factory for the day.";
+	move Robin to NPC Room;
+	if Winston can be seen by the player, say "Winston gives you a grim smile, and says 'See ya tomorrow ya sod' as he heads out towards the Locker Rooms.";
+	move Winston to NPC Room;
+	if the player is in a Factory Room:
+		say "
+You pack up your things and make your way through the Worker's Entrance towards home. Whatever happens at night in the Factory, you're not sure if you want to be there to see it. 
 
+Hit the SPACE to continue.";
+		wait for the SPACE key;
+		move the player to the Tenement;
+		
 [-----------------------------------------------------------------------Time of Day-----------------------------------------------------------------------]
 
 A weekday is a kind of value. The weekdays are Monday, Tuesday, Wednesday, Thursday, Friday. The current weekday is a weekday that varies. The current weekday is Monday.
@@ -179,9 +204,13 @@ Every turn:
 		say "You collapse to your knees, mind buckling under the strain of what you have learned. Embrace the Madness.";
 		stop game abruptly;
 	otherwise:
-		continue the action;
+		continue the action.
 [-----------------------------------------------------------------------Rooms-----------------------------------------------------------------------]
 
+The NPC room is a room.
+[----------------------------------------]
+
+A Factory Room is a kind of room. 
 	[Tenement F0]
 
 The Tenement is a room. "You wake up to the drip of some cold water on your head. It's nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely.
@@ -195,26 +224,26 @@ The Alley is east of The Tenement. "You stumble from the darkness of the tenemen
 
 	[Front Gate F0]
 
-The Front Gate is east of The Alley. "After about 15 minutes of walking, you finally show up at the factory front gate. Peeking through the clouds of smoke pouring from the chimneys, you can just barely tell that it's a sunny day.
+The Front Gate is a factory room. The Front Gate is east of The Alley. "After about 15 minutes of walking, you finally show up at the factory front gate. Peeking through the clouds of smoke pouring from the chimneys, you can just barely tell that it's a sunny day.
 You see all the other factory laborers slowly filing in, and sigh at the thought of having to start your 11 hour shift."
 
 [NOTE TO SELF]	[MAKE SURE THIS IS TIME SENSITIVE]
 
 	[Main Entrance F0]
 
-The Main Entrance is south of Front Gate. "The hulking doors invite to swallow you in. You are hit by a gush of humid sweltry breeze - no, more than a breeze - it's the air you'll have to breathe now. 'There won’t be much to eat tonight,' You think sardonically. 
-
+The Main Entrance is a Factory Room. The Main Entrance is south of Front Gate. "The hulking doors invite to swallow you in. You are hit by a gush of humid sweltry breeze - no, more than a breeze - it's the air you'll have to breathe now. 'There won’t be much to eat tonight,' You think sardonically. 
 This isn't your entrance; this is for the factory elites - the owner, the overseer, and their friends. It's a privilege to use the main entrance. Wage workers like you have to go the long way through the worker's entrance."
 
 	[Intake Desk F0]
 
-The Intake Desk is south of Main Entrance
+The Intake Desk is a Factory Room. The Intake Desk is south of Main Entrance
 
 	[Spindle Room F0]
 	
 The Spindle Room is south of Intake Desk.
 
 The Spindle Room Gossip is scenery in Spindle Room. The sound of Spindle Room Gossip is "Whisper whisper whisper".
+
 	[Loading Dock F0]
 	
 The Loading Dock is east of Cotton Engines.
@@ -223,32 +252,33 @@ It’s hard to see anything ahead of you with so many stacks of boxes in the way
 
 	[Boiler Room F0]
 
-The Boiler Room is south of Central Stairs.
+The Boiler Room is a Factory Room. The Boiler Room is south of Central Stairs.
 
 	[Worker's Entrance F0]
 
-The Worker's Entrance is west of Main Entrance. "As the workers file in, a young man yells at them to go faster. 'If any’un sees you messin’ around, you’ll be outuvva job!' You didn’t need any reminder of that."
+The Worker's Entrance is a Factory Room. The Worker's Entrance is west of Main Entrance. "As the workers file in, a young man yells at them to go faster. 'If any’un sees you messin’ around, you’ll be outuvva job!' You didn’t need any reminder of that."
 
 	[Locker Rooms F0]
-The Locker Rooms is south of Worker's Entrance and west of Cotton Engines.
+The Locker Rooms is a Factory Room. The Locker Rooms is south of Worker's Entrance and west of Cotton Engines.
 "The first thing you notice as you walk into the locker rooms is the disgusting body odor radiating from every locker. You’re unsure how to describe the sensation of the smell hitting your body: perhaps it slammed into your body? Either way, you’re blinded momentarily by the horrid stench. After a few seconds that feel like an eternity, you regain your senses. You see the walls lined with tall metal lockers. A couple of benches are there on the ground for you to sit on while changing."
 
 	[Cotton Engines F0]
 
-The Cotton Engines is south of the Spindle Room. "As you work, the violent, periodic smashing of machinery forces itself into your head. You try to ignore it and focus on your cotton gin work, but every time you look at the machine, you can't help but picture what happened to Jones' wife. You shudder at the thought, and turn away from it in disgust for a bit, but then you think of the Overseer. The Overseer wouldn't like to see you distracted from your work."
+The Cotton Engines is a Factory Room. The Cotton Engines is south of the Spindle Room. "As you work, the violent, periodic smashing of machinery forces itself into your head. You try to ignore it and focus on your cotton gin work, but every time you look at the machine, you can't help but picture what happened to Jones' wife. You shudder at the thought, and turn away from it in disgust for a bit, but then you think of the Overseer. The Overseer wouldn't like to see you distracted from your work."
 [5 hours later, the machine whirring stops for lunch break. You only have 10 minutes.
 You see your friend Winston in the other corner of the room. Being the (slightly) more well-off of you two, he has lunch for both of you."]
+
 
 [NOTE TO SELF]	[TIME LUNCH AND SHIT, DONT REPEAT IT EVERY TIME]
 	[Central Stairs B1-F1]
 
-The Central Stairs is south of Cotton Engines. "You arrive at the stairwell. It’s dimly lit and handrail-free, with grated metal stairs that seem like they could barely support one person. You can't make out much above or below you, but you do hear the violent whirring of cotton gin machines coming from directly below your feet."
+The Central Stairs is a Factory Room. The Central Stairs is south of Cotton Engines. "You arrive at the stairwell. It’s dimly lit and handrail-free, with grated metal stairs that seem like they could barely support one person. You can't make out much above or below you, but you do hear the violent whirring of cotton gin machines coming from directly below your feet."
 
 	[----------F1--------]
 	
 		[Finishing Room]
 		
-	The Finishing Room is above Central Stairs. "The most peaceful section of the building, the finishing room is a safe haven away from the rotten sounds and smells that pervade the rest of the factory. Large, plentiful windows let the sunlight in.
+	The Finishing Room is a Factory Room. The Finishing Room is above Central Stairs. "The most peaceful section of the building, the finishing room is a safe haven away from the rotten sounds and smells that pervade the rest of the factory. Large, plentiful windows let the sunlight in.
 	
 	You see three women silently knitting cotton clothes. None of them look like they want to be bothered."
 	
@@ -352,6 +382,7 @@ Every turn when Overseer is passive:
 
 	[Jackie]
 Jackie is a woman in Intake Desk. “You see Jackie, the company secretary, staring at the wall in silence as she sits at her reception desk. She glances at you quickly, taking on a suspicious expression, but then looks back, as if she has better things to do. Suddenly, she notices that you’re looking at the book on her desk. It’s hard to see what the title is, but instinctively, she grabs it and shoves it into the nearest drawer, locking it with a key.”
+
 Every turn:
 	if the player is in Intake Desk:
 		say "Jackie, flustered, says 'What are you doing here!?' I have some strong words for that Overseer of yours.' and blows a small whistle.";
@@ -385,7 +416,9 @@ Before printing the name of something audible while listening to a room:
 													
 The newspaper, paper is a thing. The newspaper, paper is carried by the Boy. 
 
-A bench is a kind of supporter. A bench is always enterable. In the Locker Rooms is three benches.
+A desk chair is a kind of supporter. A desk chair is fixed in place. In the Intake Desk is one desk chair.
+
+A bench is a kind of supporter. A bench is always enterable. A bench is fixed in place. In the Locker Rooms is three benches.
 
 instead of examining a thing:
 	if the noun is newspaper or the noun is paper:
