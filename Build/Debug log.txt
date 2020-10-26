@@ -14,11 +14,7 @@ Reading language definition from <C:\Program Files (x86)\Inform 7\Internal\Langu
 Phase I ... Lexical analysis
 -----------------------------------------------------
 
-<<<<<<< HEAD
-I've now read your source text, which is 1807 words long.
-=======
-I've now read your source text, which is 2729 words long.
->>>>>>> Alpha-v1.1
+I've now read your source text, which is 4056 words long.
 
 
 -----------------------------------------------------
@@ -27,10 +23,7 @@ Phase II ... Semantic analysis Ia
 
 I've also read Standard Rules by Graham Nelson, which is 42655 words long.
 I've also read English Language by Graham Nelson, which is 2297 words long.
-<<<<<<< HEAD
-=======
 I've also read Basic Screen Effects by Emily Short, which is 2218 words long.
->>>>>>> Alpha-v1.1
 
 
 -----------------------------------------------------
@@ -182,13 +175,8 @@ Providing for a total heap of 8192, given requirement of 8192
 Phase XIII ... Compilation now complete
 -----------------------------------------------------
 
-<<<<<<< HEAD
-Total of 104 files written as streams.
-CPU time: 67 centiseconds
-=======
 Total of 107 files written as streams.
 CPU time: 70 centiseconds
->>>>>>> Alpha-v1.1
 
 
 That concludes the debugging log from this run of Inform.
