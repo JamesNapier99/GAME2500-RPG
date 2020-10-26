@@ -275,9 +275,9 @@ Nothing unusual; the neighbors above have had a dilapidated floor for months now
 
 The unforgiving drops continue to pound mericlessly against your head - drilling into you the miserly state of your surroundings. Swerving from the next oncoming drip, you adjust yourself, and observe the other tenants in your room. 
 
-Like shadows, being just as thin and sulken, they all curl, and clutch to themselves as if to hold on to the meager remains of their life-force to their cagey bodies. Clothes are a laugh at this point, looking more like throwaway rags than anything else. Looking at them adds no hope to your already meager pile. 
+Like shadows, being just as thin and sulken, they all curl, and clutch to themselves as if to hold on to the meager remains of their life-force. Clothes are a laugh at this point, looking more like throwaway rags than anything else.
 
-The dim rays of treacherous sunlight begin to blaze through the musty room, announcing the break of dawn. Work awaits.
+Dim rays of grimly colored sunlight blaze through the musty room, announcing the break of dawn. Work awaits.
 [otherwise]
 You're back home. Your bed is right there, and you feel a strong urge to sleep, but at the same time you can't stop thinking about the factory.
 ".
@@ -338,7 +338,7 @@ You feel a light gust of outdoor air.".
 	[Boiler Room F0]
 The Boiler Room is a Factory Room. Boiler Room is south of Central Stairs."
 [If the time of day is before 6 PM and the time of day is after 5:44 AM]
-The heat is nearly unbearable. Steam dance in and out from a mosaic of pipes without warning, sometimes bathing you in burning condensation.
+The heat is nearly unbearable. Steam dances in and out from a mosaic of pipes without warning, bathing you in burning condensation.
 [otherwise if insanity <= 40]
 The steaming heat of the boiler room has been replaced by a slight - yet still uncomfortable - warmth. As you inspect the room, you see that condensed steam has left marks on the machines that look strangely like letters.
 They say 'YOU -- ARE -- NOT -- READY -- TO -- READ -- THE -- GOSPEL -- YET... COME -- BACK -- ANOTHER -- TIME...'
@@ -356,7 +356,7 @@ You feel an uncomfortably cold gust of wind cross your body as you approach the 
 	[Locker Rooms F0]
 The Locker Rooms is a Factory Room. The Locker Rooms is south of Worker's Entrance and west of Cotton Engines."
 [If the time of day is before 6 PM and the time of day is after 5:44 AM]
-The first thing you notice as you walk into the locker rooms is the disgusting body odor radiating from every locker. You’re unsure how to describe the sensation of the smell hitting your body: perhaps it slammed into your body? Either way, you’re blinded momentarily by the horrid stench. After a few seconds that feel like an eternity, you regain your senses. You see the walls lined with tall metal lockers. A couple of benches are there on the ground for you to sit on while changing.
+The first thing you notice as you walk into the locker rooms is the disgusting body odor radiating from every locker. You’re unsure how to describe the sensation of the smell hitting your body: perhaps it slammed into your body? Either way, you’re blinded momentarily by the horrid stench. After a few seconds that feel like an eternity, you regain your senses. A couple of benches are there on the ground for you to sit on while changing. You see the walls lined with tall metal lockers, both closed and (mysteriously) open.
 [otherwise]
 The smell of the locker room is only slightly less horrendous at night - but the added darkness makes that smell all your mind can process. You see the walls lined with tall metal lockers. A couple of benches are there on the ground for you to sit on."
 
@@ -448,13 +448,39 @@ instead of unlocking the Basement Door with the Mysterious Key:
 	Main Basement is a room. "As soon as you enter, you notice that the air is not as stale as you would expect for a room that allegedly people had not been inside of for a long time. [If the player is carrying a candle] You illuminate the room with your candle. Surrounding you is a large open room, mostly barren. The walls are completely made of brick. Both the floor and ceiling seem to be made out of wood, with wooden support beams holding the ceiling. [otherwise] You have no hope of seeing anything in here until you bring some kind of light source."
 	
 		[Lounge Door]
-		The Lounge Door is a closed door.  The Lounge Door is undescribed. The Lounge Door is west of Main Basement and east of Hidden Basement Room.
+		The Lounge Door is a closed door.  The Lounge Door is undescribed. The Lounge Door is west of Main Basement and east of Machine Room.
 		
 instead of opening the Lounge Door:
-	say "You open the Lounge Door, revealing a new room to the west."
+	say "It creaks open, revealing a new room to the west.";
+	continue the action.
 		
 		[Hidden Basement Room]
-	Hidden Basement Room is a room. "You are in the Hidden Basement Room now."
+	Machine Room is a room. "
+	You walk into a narrow corridor, and walk towards a faint light on the other side. As you approach, you start to notice the smell of blood. Several more steps and you smell rotting flesh. Eventually, you manage to get to the room where the light comes from, and what you see before you horrifies you to your very core.
+	
+You see the Machine. 
+
+A massive metal structure - organism? - in the middle of a large room. It moves, breathes, like it's human, but its contorted metal parts make its humanlike features feel unreal - so disturbing and unnatural that you simply can't look at it straight. It's almost like it has control over your head, jerking it away every time you turn your head toward its direction. 
+
+In some kind of vain attempt at a human voice, the machine squeaks and roars with mad energy. You don't understand. You can't possibly understand - until suddenly, it's as if the machine's soul becomes infused with yours, and you hear everything.
+
+'WOMAN ---- IS ---- DEAD
+
+WOMAN ---- PARTS ---- INSIDE ---- ME
+
+WOMAN ---- PARTS ---- MAKE ---- ME ---- MORE ---- HUMAN
+
+YOU ---- WILL ---- MAKE ---- ME ---- HUMAN ---- TOO
+
+You can just barely see numerous tiny lights on the small orifices on its body - if that thing can be called a body. Much more clearly, you see everything around the machine. You see what looks like a control panel on the wall. 
+You turn around and see the door behind you has closed. You attempt to open it but the door won't budge. There's no leaving now."
+
+instead of entering the Main Basement:
+	if the player is in the Machine Room:
+		say "With some unholy force, the machine prevents you from even looking towards the door behind you.";
+		stop the action;
+	otherwise:
+		continue the action.
 	
 [-----------------------------------------------------------------------People-----------------------------------------------------------------------]
 	[Jones]
@@ -615,6 +641,23 @@ The sparkling object is scenery in the Main Basement. The sparkling object is fi
 
 instead of examining sparkling object:
 		say "You walk up to the object and pick it up. It's a shiny silver key - strangely warm, considering that the floor itself is cold to the touch. While pondering this, you lean against one of the crates, and to your surprise it moves, unveiling a new door. The door is labeled 'Lounge.'";
+		
+The control panel is a thing in the Machine Room. The control panel is fixed in place.
+
+Instead of examining the control panel:
+	say "You walk towards the control panel and investigate. You don’t know what any of it means, but there are numbers underneath what looks like dials. There are also some valves, but you don't know what they do.
+	
+	Suddenly, you feel a violent surge of pain in your head as the machine gets louder. Louder. Louder.
+	
+	YOU ---- HAVE ---- NO ---- CONTROL
+	
+	YOUR ---- FATE ---- IS ---- INEVITABLE
+	
+	All of a sudden, you feel a soul-tearing pain in your stomach. Your body, as if it was a puppet, gets dragged towards the machine. It's louder. Louder.
+	
+	WELCOME ---- TO ---- YOUR ---- NEXT ---- LIFE
+	
+	The last thing you see is the machine's innards, as you get thrown inside it."
 
 The reception desk is a thing in the Intake Desk. "
 [If the player is not carrying the book] 
@@ -625,7 +668,7 @@ Nothing much left to see here.". Part of the reception desk is a closed openable
 instead of examining the metal lockers:
 	now the description of the Locker Rooms is "
 	[If the time of day is before 6 PM and the time of day is after 5:44 AM]
-	The first thing you notice as you walk into the locker rooms is the disgusting body odor radiating from every locker. You’re unsure how to describe the sensation of the smell hitting your body: perhaps it slammed into your body? Either way, you’re blinded momentarily by the horrid stench. After a few seconds that feel like an eternity, you regain your senses. You see the walls lined with tall metal lockers. A couple of benches are there on the ground for you to sit on while changing.
+	The first thing you notice as you walk into the locker rooms is the disgusting body odor radiating from every locker. You’re unsure how to describe the sensation of the smell hitting your body; it's so bad that you’re blinded momentarily by the horrid stench. After a few seconds that feel like an eternity, you regain your senses. You see the walls lined with tall metal lockers. A couple of benches are there on the ground for you to sit on while changing.
 
 	A broken locker stands hidden in the corner, its lock damaged so badly that it no longer functions. You might be able to open this.
 	[otherwise]
