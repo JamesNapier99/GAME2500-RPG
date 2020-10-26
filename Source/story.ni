@@ -51,6 +51,7 @@ understand "go to [thing]" as talking.
 
 instead of talking a person:
 	if the noun is Jones:
+
 		if the time of day is before 6 PM and the time of day is after 5:44 AM:
 			say "You approach him, but he suddenly starts coughing hysterically, and gestures at you to move away. Maybe this isn't the best time to be talking to him, anyway.";
 		otherwise:
@@ -64,6 +65,7 @@ instead of talking a person:
 		You listen silently, wondering if this whole situation could end up putting you all out of work.
 		
 		'Now everyone's just wondering who ordered Jones' wife to go to the basement in the first place.... Perhaps the ladies in the Spindle Room would know something like that; they do seem to know just about everything.'";
+
 		now the player has the lunch bag;
 		continue the action;
 	else if the noun is Overseer:
@@ -92,7 +94,7 @@ instead of purchasing a thing:
 	if the noun is newspaper or the noun is paper:
 		if the boy is carrying the newspaper:
 			now the player is carrying the newspaper;
-			say "Well, there goes your quarter. This better be good.";
+			say "Well, there goes a quarter. This better be good.";
 			say "a newspaper has been added to your inventory.";
 		otherwise:
 			say "You already bought it...";
@@ -132,7 +134,7 @@ The sun is a backdrop. It is everywhere. The description is "Currently out of si
 Night is a recurring scene. [Night begins when play begins. ]Night begins when Dusk ends. Night ends when ((the time of day is 5:00 AM or the time of day is after 5:00 AM) and the time of day is before 7:00 AM).
 
 When Night begins: 
-	say "The sun falls below the horizon and the temperature drops abruptly to well below zero."; 
+	say "The sun falls below the horizon and the temperature plunges to well below zero."; 
 	now the description of the sun is "Currently out of sight." 
 
 Dawn is a recurring scene. Dawn begins when play begins. Dawn begins when Night ends. Dawn ends when (the time of day is 6:00 AM or the time of day is after 6:00 AM). 
@@ -152,6 +154,7 @@ When Dawn begins:
 Day is a recurring scene. Day begins when Dawn ends. Day ends when (the time of day is 6:00 PM or the time of day is after 6:00 PM). 
 
 When Day begins: 
+
 	say "The sun is now properly up.";
 	move the Overseer to Cotton Engines;
 	if Overseer can be seen by the player, say "The Overseer walks in to his shift, clearly grumpy that today even exists.
@@ -167,7 +170,7 @@ He looks at you, confused, and says, 'You're here awful early for a slacker....'
 Dusk is a recurring scene. Dusk begins when Day ends. Dusk ends when (the time of day is 7:00 PM or the time of day is after 7:00 PM). 
 
 When Dusk begins:
-	say "The sun has passed across the sky and is on the verge of setting.";
+	say "The sun has taken its journey through the sky and is on the verge of setting.";
 	increase insanity by 20;
 	if Jackie can be seen by the player, say "Jackie packs up her things for the day, clearly wary of your prying eyes, and makes her way out of the main entrance.";
 	move Jackie to NPC Room;
@@ -185,6 +188,7 @@ Hit SPACE to continue.";
 		wait for the SPACE key;
 		move the player to the Tenement;
 		
+
 [-----------------------------------------------------------------------Time of Day-----------------------------------------------------------------------]
 
 A weekday is a kind of value. The weekdays are Monday, Tuesday, Wednesday, Thursday, Friday. The current weekday is a weekday that varies. The current weekday is Monday.
@@ -237,7 +241,17 @@ Insanity is a number that varies. Insanity is 0.
 
 Every turn:
 	if (insanity) >= (100):
-		say "You collapse to your knees, mind buckling under the strain of what you have learned. Embrace the Madness.";
+		say "Your legs buckle and you collapse to the floor: a puppet with its strings. severed. 
+		
+			You wonder why. 
+			
+			And then it happens.
+			
+			The pillars of your mind forget their form and cease to be. Thoughts from beyond take you in like a swelling dark tide - enveloping you, swallowing you...You let out a pleaful gasp - your last consciousness act - as the fateful currents seize you from reason's shores and carry you off into a sea of unspeakable turmoil. 
+			
+			You are no more.
+			
+			All that's left is Madness.";
 		stop game abruptly;
 	otherwise:
 		continue the action.
@@ -249,18 +263,29 @@ The NPC room is a room.
 A Factory Room is a kind of room. 
 	[Tenement F0]
 
+
 The Tenement is a room. 
 "[If the time of day is before 6 PM and the time of day is after 5:44 AM] 
-You wake up to the drip of some cold water on your head. It's nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely.
-The unforgiving drops continue to pound mericlessly against your head - drilling in the miserly state of your surroundings. Swerving from the next oncoming drip, you adjust yourself, and observe other tenants in your room. Each of them are shells:  diminished beings curling, clutching themselves as if to hold on to the meager remains of their life-force in their cagey bodies. Clothes are a laugh at this point, looking more like throwaway rags than anything else. The dim rays of sunlight peek through the musty room, announcing the break of dawn. You force yourself out of bed. Work awaits.
+You wake up to a sear of cold dripping on your head.
+
+It's just water. 
+
+Nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely.
+
+The unforgiving drops continue to pound mericlessly against your head - drilling into you the miserly state of your surroundings. Swerving from the next oncoming drip, you adjust yourself, and observe the other tenants in your room. 
+0
+Like shadows, being just as thin and sulken, they all curl, and clutch to themselves as if to hold on to the meager remains of their life-force to their cagey bodies. Clothes are a laugh at this point, looking more like throwaway rags than anything else. Looking at them adds no hope to your already meager pile. 
+
+The dim rays of treacherous sunlight begin to blaze through the musty room, announcing the break of dawn. Work awaits.
 [otherwise]
 You're back home. Your bed is right there, and you feel a strong urge to sleep, but at the same time you can't stop thinking about the factory.
 "
 
+
 [NOTE TO SELF]	[Make sure some of this is only repeated in the mornings or one time]
 	
 	[Alley F0]
-
+00
 The Alley is east of The Tenement. 
 "[If the time of day is before 6 PM and the time of day is after 5:44 AM]
 You stumble from the darkness of the tenement into the gloomy alley. It's eerily quiet as this time of day, but in a few minutes you know the crowds will come pouring out from every household you can see. Perhaps you should move quickly to avoid the rush.
@@ -271,11 +296,13 @@ You walk stealthily through the alley, hoping that nobody will detect you and th
 
 The Front Gate is east of The Alley. 
 "[If the time of day is before 6 PM and the time of day is after 5:44 AM]
-After about 15 minutes of walking, you finally show up at the factory front gate. Peeking through the clouds of smoke pouring from the chimneys, you can just barely tell that it's a sunny day.
+After about 15 minutes of walking through a waking town, you have arrived at the factory front gate. Snakes of smoke pour from the high chimneys and hide the sun behind a screen of noxious white. The world lies in a dreamish haze.
+
 
 You see all the other factory laborers slowly filing in, and sigh at the thought of having to start your 11 hour shift.
 [otherwise]
 It's a rare sight to see the factory completely free of noxious smoke. You almost start feeling pleasant, but then you hear the echo of a loud crash. It seems like it came inside the factory. Suddenly, your mind races, as infinite fears - rational and irrational - cross your mind. Is the Overseer still here? Is someone getting killed? Are the machines acting up? You wonder if it's safe to be here at this hour."
+
 
 [NOTE TO SELF]	[MAKE SURE THIS IS TIME SENSITIVE]
 
@@ -292,16 +319,17 @@ The Main Factory Door is wide open. You're surprised at first, but you recall th
 
 	[Intake Desk F0]
 
-The Intake Desk is a Factory Room. The Intake Desk is south of Main Entrance.
+The Intake Desk is a Factory Room. The Intake Desk is south of Main Entrance. "Crafted from luxurious black wood, the intake desks stand in stark contrast from the rest of the factory. No one ever mans it, but it still makes you feel watched. "
 
 	[Spindle Room F0]
 	
-The Spindle Room is south of Intake Desk. "You sneak into the Spindle Room. [If the time of day is after 6 PM or the time of day is before 5:44 AM]Silence."
+The Spindle Room is south of Intake Desk. "You sneak into the Spindle Room. Machines stretch the length and width of the factory creating a grid like labyrith of rust and steel..It's hard to see an end to the rows of contraptions. "[If the time of day is after 6 PM or the time of day is before 5:44 AM]Silence."
 
 The Spindle Room Gossip is scenery in Spindle Room. The sound of Spindle Room Gossip is "[If the time of day is before 6 PM and the time of day is after 5:44 AM]
 conversation between Robin and her partner:
 '...Who even ordered her down there in the first place? It doesn't make sense! There's no reason management would care to have her outside of the Spindle Room!'
 Her partner's response: 'Rumor has it that Jackie wanted her down there. Only God knows why, though...' You're fascinated, but you should always take it with a grain of salt when it comes[otherwise]silence".
+
 
 	[Loading Dock F0]
 	
@@ -314,7 +342,8 @@ You feel a light gust of outdoor air. "
 
 	[Boiler Room F0]
 
-The Boiler Room is a Factory Room. The Boiler Room is south of Central Stairs.
+The Boiler Room is a Factory Room. Boiler Room is south of Central Stairs."The heat is nearly unbearable. Steam dance in and out from a mosaic of pipes without warning, sometimes bathing you in burning condensation."
+
 
 	[Worker's Entrance F0]
 
@@ -574,6 +603,7 @@ instead of examining a thing:
 			You knew about this event well; it had happened in your own factory. But you hadn't seen the event take place, so it was interesting to see the details somewhere - especially when the company itself has been completely silent.
 			
 			You doubt that it'll break the silence any time soon, either.";
+
 	if the noun is metal lockers:
 		now the description of the Locker Rooms is "The first thing you notice as you walk into the locker rooms is the disgusting body odor radiating from every locker. You’re unsure how to describe the sensation of the smell hitting your body: perhaps it slammed into your body? Either way, you’re blinded momentarily by the horrid stench. After a few seconds that feel like an eternity, you regain your senses. You see the walls lined with tall metal lockers. A couple of benches are there on the ground for you to sit on while changing.
 
@@ -596,6 +626,5 @@ instead of opening a broken locker:
 	otherwise:
 		now the broken locker is open;
 		say "You open the broken locker. [If the mysterious key is in the broken locker]Lying on the bottom is a Mysterious Key.[otherwise]It is empty.";
-		
 
 	
