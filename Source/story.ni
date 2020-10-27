@@ -5,6 +5,8 @@ When play begins:
 	Say "Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! When playing our game, make sure you have a look at the possible actions that
 		can be taken!".
 
+The display banner rule is listed before the when play begins stage rule in the startup rules.
+
 Understand "look [direction]" as facing.
 
 Facing is an action applying to one visible thing.
@@ -14,9 +16,6 @@ Carry out facing:
 	if the viewed item is not a room, say "You can't see anything promising that way." instead;
 	try looking toward the viewed item.
 	
-Instead of facing up:
-	say "Above you is bright sky."
-
 Understand "look toward [any adjacent room]" as looking toward. Understand "examine [any adjacent room]" as looking toward.
 
 Looking toward is an action applying to one visible thing.
@@ -63,7 +62,7 @@ instead of talking a person:
 		
 		You listen silently, wondering if this whole situation could end up putting you all out of work.
 		
-		'Now everyone's just wondering who ordered Jones' wife to go to the basement in the first place.... Perhaps the ladies in the Spindle Room would know something like that; they do seem to know just about everything.'";
+		'Now everyone's just wondering who ordered Jones[apostrophe] wife to go to the basement in the first place.... Perhaps the ladies in the Spindle Room would know something like that; they do seem to know just about everything.'";
 		now the player has the lunch bag;
 		continue the action;
 	else if the noun is Overseer:
@@ -75,6 +74,7 @@ instead of talking a person:
 Instead of sleeping:
 	if the player is in the Tenement and the time of day is before 5 AM or the time of day is after 6 PM:
 		say "You rest your eyes, and before you know it, it's already morning again. It's time for yet another shift.";
+		decrease Insanity by 5;
 		now the time of day is 5:45 AM;
 	else if the player is in the Tenement:
 		say "You rest your eyes, but you can't get yourself to go to sleep. Maybe try again later.";
@@ -130,7 +130,7 @@ When play begins:
 The sun is a backdrop. It is everywhere. The description is "Currently out of sight." 
 
 
-Night is a recurring scene. [Night begins when play begins. ]Night begins when Dusk ends. Night ends when ((the time of day is 5:00 AM or the time of day is after 5:00 AM) and the time of day is before 7:00 AM).
+Night is a recurring scene. Night begins when Dusk ends. Night ends when ((the time of day is 5:00 AM or the time of day is after 5:00 AM) and the time of day is before 7:00 AM).
 
 When Night begins: 
 	say "The sun falls below the horizon and the temperature drops. [If the player is not in a factory room]Best not be out for too long."; 
@@ -143,9 +143,23 @@ When Dawn begins:
 	now the description of the sun is "It is tiny and weak.";
 	if the StartState is true:
 		now StartState is false;
+	else if the current weekday is Wednesday:
+		say "You can't wait till Friday. It seems like the culmination of all your work this week will come then, if not sooner.";
+	else if the current weekday is Thursday:
+		say "You can feel yourself changing, slowly being drawn back to the factory every day. Something about that basement just keeps bringing you back.";
 	else if the current weekday is Friday:
-		say "Your continued exposure to the machine has driven you insane.";
-		stop game abruptly; [MORE DESCRIPTION!!!]
+		say "Your legs buckle and you collapse to the floor: a puppet with its strings. severed. 
+		
+			You wonder why. 
+			
+			And then it happens.
+			
+			The pillars of your mind forget their form and cease to be. Thoughts from beyond take you in like a swelling dark tide - enveloping you, swallowing you...You let out a pleaful gasp - your last consciousness act - as the fateful currents seize you from reason's shores and carry you off into a sea of unspeakable turmoil. 
+			
+			You are no more.
+			
+			All that's left is Madness.";
+		stop game abruptly;
 	otherwise:
 		now the current weekday is the weekday after the current weekday;
 	move Boy to Alley;
@@ -157,8 +171,7 @@ Day is a recurring scene. Day begins when Dawn ends. Day ends when (the time of 
 When Day begins: 
 	say "The sun is now properly up.";
 	move the Overseer to Cotton Engines;
-	if Overseer can be seen by the player, say "The Overseer walks in to his shift, clearly grumpy that today even exists.
-He looks at you, confused, and says, 'You're here awful early for a slacker....'";
+	if Overseer can be seen by the player, say "The Overseer walks in to his shift, clearly grumpy that today even exists. He looks at you, confused, and says, 'You're here awful early for a slacker....'";
 	move Jackie to Intake Desk;
 	if Jackie can be seen by the player, say "Jackie tromps into the Intake Desk, clearly still drowsy.";
 	move Robin to Spindle Room;
@@ -180,12 +193,14 @@ When Dusk begins:
 	move Winston to NPC Room;
 	if Boy can be seen by the player, say "The boy gives you a strange look, and then goes home for the night.";
 	move Boy to NPC Room;
+	if Overseer can be seen by the player, say "The Overseer stalks into the locker room, clearly ready to finally be out of this place.";
+	move Overseer to NPC Room;
 	if the player is not carrying candle:
 		move Candle to Loading Dock;
 	if the player is in a Factory Room:
 		say "
-It's dusk. You pack up your things and make your way through the Worker's Entrance towards home. Whatever happens at night in the Factory, you're not sure if you want to be there to see it. 
-Hit SPACE to continue.";
+		It's dusk. You pack up your things and make your way through the Worker's Entrance towards home. Whatever happens at night in the Factory, you're not sure if you want to be there to see it. 
+		Hit SPACE to continue.";
 		wait for the SPACE key;
 		move the player to the Tenement;
 		
@@ -214,27 +229,27 @@ A time allotment rule for examining or looking:
 	rule succeeds. 
 
 A time allotment rule for going: 
-	now work duration is 15; 
+	now work duration is 30; 
 	rule succeeds. 
 
 A time allotment rule for going up: 
-	now work duration is 15; 
+	now work duration is 30; 
 	rule succeeds. 
 
 A time allotment rule for waiting: 
-	now work duration is 60; 
+	now work duration is 120; 
 	rule succeeds. 
 	
 A time allotment rule for purchasing:
-	now work duration is 3;
-	rule succeeds.
-
-A time allotment rule for talking:
 	now work duration is 5;
 	rule succeeds.
 
+A time allotment rule for talking:
+	now work duration is 15;
+	rule succeeds.
+
 The last time allotment rule: 
-	now work duration is 1. 
+	now work duration is 5. 
 
 [-----------------------------------------------------------------------Insanity-----------------------------------------------------------------------]
 
@@ -268,40 +283,43 @@ A Factory Room is a kind of room.
 The Tenement is a room. "
 [If the time of day is before 6 PM and the time of day is after 5:44 AM] 
 You wake up to a sear of cold dripping on your head.
-
 It's just water. 
-
 Nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely.
 
 The unforgiving drops continue to pound mericlessly against your head - drilling into you the miserly state of your surroundings. Swerving from the next oncoming drip, you adjust yourself, and observe the other tenants in your room. 
-
 Like shadows, being just as thin and sulken, they all curl, and clutch to themselves as if to hold on to the meager remains of their life-force. Clothes are a laugh at this point, looking more like throwaway rags than anything else.
 
 Dim rays of grimly colored sunlight blaze through the musty room, announcing the break of dawn. Work awaits.
+
+To the west is the Alley.
 [otherwise]
 You're back home. Your bed is right there, and you feel a strong urge to sleep, but at the same time you can't stop thinking about the factory.
+
+To the west is the Alley.
 ".
-
-
-[NOTE TO SELF]	[Make sure some of this is only repeated in the mornings or one time]
 	
 	[Alley F0]
 The Alley is east of The Tenement. "
 [If the time of day is before 6 PM and the time of day is after 5:44 AM]
 You stumble from the darkness of the tenement into the gloomy alley. It's eerily quiet as this time of day, but in a few minutes you know the crowds will come pouring out from every household you can see. Perhaps you should move quickly to avoid the rush.
+
+To the west is the Tenement. To the east is the Front Gate
 [otherwise]
-You walk stealthily through the alley, hoping that nobody will detect you and think you're a thief. (Who else is going to be walking here at this time of night?) It's strangely peaceful, with the full moon directly overhead. ".
+You walk stealthily through the alley, hoping that nobody will detect you and think you're a thief. (Who else is going to be walking here at this time of night?) It's strangely peaceful, with the full moon directly overhead.
+
+To the west is the Tenement. To the east is the Front Gate".
 
 	[Front Gate F0]
 
 The Front Gate is east of The Alley. "[If the time of day is before 6 PM and the time of day is after 5:44 AM]
 After about 15 minutes of walking through a waking town, you have arrived at the factory front gate. Snakes of smoke pour from the high chimneys and hide the sun behind a screen of noxious black. The world lies in a dreamish haze.
 You see all the other factory laborers slowly filing in, and sigh at the thought of having to start your 11 hour shift.
+
+To the west is the Alley. To the south is the Main Entrance.
 [otherwise]
-It's a rare sight to see the factory completely free of noxious smoke. You almost start feeling pleasant, but then you hear the echo of a loud crash. It seems like it came inside the factory. Suddenly, your mind races, as infinite fears - rational and irrational - cross your mind. Is the Overseer still here? Is someone getting killed? Are the machines acting up? You wonder if it's safe to be here at this hour.".
+It's a rare sight to see the factory completely free of noxious smoke. You almost start feeling pleasant, but then you hear the echo of a loud crash. It seems like it came inside the factory. Suddenly, your mind races, as infinite fears - rational and irrational - cross your mind. Is the Overseer still here? Is someone getting killed? Are the machines acting up? You wonder if it's safe to be here at this hour.
 
-
-[NOTE TO SELF]	[MAKE SURE THIS IS TIME SENSITIVE]
+To the west is the Alley. To the south is the Main Entrance".
 
 	[Main Entrance F0]
 
@@ -310,16 +328,26 @@ The Main Entrance is a Factory Room. The Main Entrance is south of Front Gate. "
 [If the time of day is before 6 PM and the time of day is after 5:44 AM]
 The hulking doors invite to swallow you in. You are hit by a gush of humid sweltry breeze - no, more than a breeze - it's the air you'll have to breathe now. 'There won’t be much to eat tonight,' You think sardonically.
 This isn't your entrance; this is for the factory elites - the owner, the overseer, and their friends. It's a privilege to use the main entrance. Wage workers like you have to go the long way through the worker's entrance.
+
+To the north is the Front Gate. To the south is the Intake Desk. To the west is the Worker's Entrance.
 [otherwise]
-The Main Factory Door is wide open. You're surprised at first, but you recall that the Overseer has been forgetful about these kinds of things. You assume that he just forgot to close it.".
+The Main Factory Door is wide open. You're surprised at first, but you recall that the Overseer has been forgetful about these kinds of things. You assume that he just forgot to close it.
+
+To the north is the Front Gate. To the south is the Intake Desk. To the west is the Worker's Entrance.".
 
 	[Intake Desk F0]
 
-The Intake Desk is a Factory Room. The Intake Desk is south of Main Entrance. "Crafted from luxurious black wood, the intake desks stand in stark contrast from the rest of the factory. No one ever mans it, but it still makes you feel watched. "
+The Intake Desk is a Factory Room. The Intake Desk is south of Main Entrance. "Crafted from luxurious black wood, the intake desks stand in stark contrast from the rest of the factory. No one ever mans it, but it still makes you feel watched. 
+
+To the north is the Main Entrance. To the south is the Spindle Room".
 
 	[Spindle Room F0]
 	
-The Spindle Room is south of Intake Desk. "You sneak into the Spindle Room. Machines stretch the length and width of the factory creating a gridlike labyrith of rust and steel...It's hard to see an end to the rows of contraptions. [If the time of day is after 6 PM or the time of day is before 5:44 AM]The room is silent."
+The Spindle Room is south of Intake Desk. "You sneak into the Spindle Room. Machines stretch the length and width of the factory creating a gridlike labyrith of rust and steel...It's hard to see an end to the rows of contraptions. 
+
+To the north is the Intake Desk. To the south is the Cotton Engines.
+
+[If the time of day is after 6 PM or the time of day is before 5:44 AM]The room is silent.".
 
 The Spindle Room Gossip is scenery in Spindle Room. The sound of Spindle Room Gossip is "[If the time of day is before 6 PM and the time of day is after 5:44 AM]
 conversation between Robin and her partner:
@@ -331,34 +359,52 @@ Her partner's response: 'Rumor has it that Jackie wanted her down there. Only Go
 The Loading Dock is east of Cotton Engines. "
 [If the time of day is before 6 PM and the time of day is after 5:44 AM]
 You feel a light gust of outdoor air. Still, you feel just as caged in as you would in the Cotton Engines; the air is still full of chimney smoke, and the sounds are just as grating as ever.
-It’s hard to see anything ahead of you with so many stacks of boxes in the way. You see Randy - a balding, overweight man carrying a candlelight (strange that he'd do something like that in broad daylight). He organized the boxes in some way you can’t understand, and then walk behind the boxes again, out of sight.
-[otherwise]
-You feel a light gust of outdoor air.".
+It’s hard to see anything ahead of you with so many stacks of boxes in the way. You see Randy - a balding, overweight man carrying a candle (strange that he'd do something like that in broad daylight). He organizes the boxes in some way you can’t understand, then walks behind the boxes again, out of sight.
+
+To the west is the Cotton Engines.
+[else if the candle is in the Loading Dock]
+You feel a light gust of outdoor air. Oddly, a lit candle sits on one of the stacks of boxes. [otherwise]You feel a light gust of outdoor air.
+
+To the west is the Cotton Engines";
 
 	[Boiler Room F0]
 The Boiler Room is a Factory Room. Boiler Room is south of Central Stairs."
 [If the time of day is before 6 PM and the time of day is after 5:44 AM]
-The heat is nearly unbearable. Steam dances in and out from a mosaic of pipes without warning, bathing you in burning condensation.
+The heat is nearly unbearable. Steam dances in and out from a mosaic of pipes without warning, bathing you in burning condensation
+
+To the north is the Central Stairs.
 [otherwise if insanity <= 40]
 The steaming heat of the boiler room has been replaced by a slight - yet still uncomfortable - warmth. As you inspect the room, you see that condensed steam has left marks on the machines that look strangely like letters.
 They say 'YOU -- ARE -- NOT -- READY -- TO -- READ -- THE -- GOSPEL -- YET... COME -- BACK -- ANOTHER -- TIME...'
+
+To the north is the Central Stairs
 [otherwise]
 The steaming heat of the boiler room has been replaced by a slight - yet still uncomfortable - warmth. As you inspect the room, you see that condensed steam has left marks on the machines that look strangely like letters.
-They say 'THOSE -- WHO -- SEEK -- THE -- LOWER -- LEVEL -- MUST -- READ --THE	 -- TIPS	-- OF -- SURVIVAL'"
+They say 'THOSE -- WHO -- SEEK -- THE -- LOWER -- LEVEL -- MUST -- READ	--THE	--GOSPEL'
+
+To the north is the Central Stairs".
 
 	[Worker's Entrance F0]
 The Worker's Entrance is a Factory Room. The Worker's Entrance is west of Main Entrance. "
 [If the time of day is before 6 PM and the time of day is after 5:44 AM]
 The grim workers shuffle around the Mecca of the puncher. It bites savagely into the slim slivers of paper slipped into the cracked rusted box. You join the slow-moving hoard and punch in your strip of paper. Click.
+
+To the east is the Main Entrance. To the south is the Locker Rooms.
 [otherwise]
-You feel an uncomfortably cold gust of wind cross your body as you approach the Worker's Entrance.".
+You feel an uncomfortably cold gust of wind cross your body as you approach the Worker's Entrance.
+
+To the east is the Main Entrance. To the south is the Locker Rooms".
 
 	[Locker Rooms F0]
 The Locker Rooms is a Factory Room. The Locker Rooms is south of Worker's Entrance and west of Cotton Engines."
 [If the time of day is before 6 PM and the time of day is after 5:44 AM]
 The first thing you notice as you walk into the locker rooms is the disgusting body odor radiating from every locker. You’re unsure how to describe the sensation of the smell hitting your body: perhaps it slammed into your body? Either way, you’re blinded momentarily by the horrid stench. After a few seconds that feel like an eternity, you regain your senses. A couple of benches are there on the ground for you to sit on while changing. You see the walls lined with tall metal lockers, both closed and (mysteriously) open.
+
+To the north is the Worker's Entrance. To the east is the Cotton Engines.
 [otherwise]
-The smell of the locker room is only slightly less horrendous at night - but the added darkness makes that smell all your mind can process. You see the walls lined with tall metal lockers. A couple of benches are there on the ground for you to sit on."
+The smell of the locker room is only slightly less horrendous at night - but the added darkness makes that smell all your mind can process. You see the walls lined with tall metal lockers. A couple of benches are there on the ground for you to sit on.
+
+To the north is the Worker's Entrance. To the east is the Cotton Engines.".
 
 The Locker Rooms contains the metal lockers. The metal lockers is scenery.
 
@@ -370,28 +416,34 @@ The Mysterious key is an object. "This strangely designed key seems to warp and 
 The Cotton Engines is a Factory Room. The Cotton Engines is south of the Spindle Room. "
 [If the time of day is before 6 PM and the time of day is after 5:44 AM]
 As you work, the violent, periodic smashing of machinery forces itself into your head. You try to ignore it and focus on your cotton gin work, but every time you look at the machine, you can't help but picture what happened to Jones' wife. You shudder at the thought, and turn away from it in disgust for a bit, but then you think of the Overseer. The Overseer wouldn't like to see you distracted from your work.
+
+To the north is the Spindle Room. To the east is the Loading Dock. To the south is the Central Stairs. To the west is the Locker Rooms.
 [otherwise]
-It's so dark inside the Cotton Engines that you almost stab yourself on the harsher end of a machine. At this point, you start to hear a strange periodic whirring, but it's hard to tell where it is, or what it could be coming from.".
+It's so dark inside the Cotton Engines that you almost stab yourself on the harsher end of a machine. At this point, you start to hear a strange periodic whirring, but it's hard to tell where it is, or what it could be coming from.
+
+To the north is the Spindle Room. To the east is the Loading Dock. To the south is the Central Stairs. To the west is the Locker Rooms.".
 
 after going to the Cotton Engines:
 	if the time of day is after 6 PM or the time of day is before 5:45 AM:
-		increase insanity by 1;
+		increase insanity by 2;
 		continue the action;
 	otherwise:
 		continue the action.
-
-[5 hours later, the machine whirring stops for lunch break. You only have 10 minutes.
-You see your friend Winston in the other corner of the room. Being the (slightly) more well-off of you two, he has lunch for both of you."]
-[NOTE TO SELF]	[TIME LUNCH AND SHIT, DONT REPEAT IT EVERY TIME]
 
 	[Central Stairs B1-F1]
 The Central Stairs is a Factory Room. The Central Stairs is south of Cotton Engines.  "
 [If the time of day is before 6 PM and the time of day is after 5:44 AM]
 You arrive at the stairwell. It’s dimly lit and handrail-free, with grated metal stairs that seem like they could barely support one person. You can't make out much above or below you, but you do hear the violent whirring of cotton gin machines coming from directly below your feet.
+
+To the north is the Cotton Engines. To the south is the Boiler Room. Up is the Finishing Room. Down is the Basement Stairs.
 [otherwise if insanity <= 80]
 You remember where you are just in time to avoid losing your sense of direction and falling down the staircase. That whirring you heard in the Cotton Engines is intensifying. Getting louder. More violent. More painful. It's starting to grind on your senses. Where is it?
+
+To the north is the Cotton Engines. To the south is the Boiler Room. Up is the Finishing Room. Down is the Basement Stairs.
 [otherwise]
-don't delay the inevitable                     i am in the basement."
+don't delay the inevitable                     i am in the basement.
+
+To the north is the Cotton Engines. To the south is the Boiler Room. Up is the Finishing Room. Down is the Basement Stairs."
 
 after going to the Central Stairs:
 	if the time of day is after 6 PM or the time of day is before 5:45 AM:
@@ -408,11 +460,15 @@ The Finishing Room is a Factory Room. The Finishing Room is above Central Stairs
 [If the time of day is before 6 PM and the time of day is after 5:44 AM]
 The most peaceful section of the building, the finishing room is a safe haven away from the rotten sounds and smells that pervade the rest of the factory. Large, plentiful windows let the sunlight in.
 You see three women whispering to each other as they knit cotton clothes. None of them look like they want to be bothered. Perhaps this is something you could listen in on?
+
+Down is the Central Stairs.
 [otherwise]
-The moonlight breaks through the window of the Finishing Room, letting you just barely see your surroundings. Doesn't seem to be anything of note."
+The moonlight breaks through the window of the Finishing Room, letting you just barely see your surroundings. Doesn't seem to be anything of note.
+
+Down is the Central Stairs".
 	
 The Finishing Room Gossip is scenery in Finishing Room. The sound of Finishing Room Gossip is "[If the time of day is before 6 PM and the time of day is after 5:44 AM]
-whispering. They're discussing the fact that the basement has been closed off ever since the 'incident.' One of them says that the boss must have locked the basement away to avoid the police finding evidence of anything. Another replied that this couldn't be the case, as she's seen the basement key in the locker room. So is the wisdom
+three women whispering to each other. They're discussing the fact that the basement has been closed off ever since the 'incident.' One of them says that the boss must have locked the basement away to avoid the police finding evidence of anything. Another replied that this couldn't be the case, as she's seen the basement key in the locker room. So is the wisdom
 [otherwise]
 silence".
 	
@@ -423,9 +479,13 @@ The Basement Stairs is below Central Stairs. "
 [If the time of day is before 6 PM and the time of day is after 5:44 AM]
 Before you is a set of dusty, old, wooden stairs. The center of each stair has lost much of its color from use over the last however-many years. You look to the right and notice that the bare wooden framework of the cotton gin is visible. A single light bulb hangs from the ceiling to produce light.
 On the bottom of the stairs is a heavy metal door, presumably leading to the rest of the basement. It looks as if there is a lock above the door knob. You think you would be able to open the door silently, but you’re not entirely sure.
+
+West is the Basement Door. Up is the Central Stairs.
 [otherwise]
 You guide yourself carefully down each individual step, as the whirring gets louder. Louder. Louder. You can hardly take it. You're internally screaming at yourself to run, to go higher and seek shelter from whatever's uttering this sound. But you continue anyway, torturing yourself, not knowing why.
-On the bottom of the stairs is a heavy metal door, presumably leading to the rest of the basement. It looks as if there is a lock above the door knob.".
+On the bottom of the stairs is a heavy metal door, presumably leading to the rest of the basement. It looks as if there is a lock above the door knob.
+
+West is the Basement Door. Up is the Central Stairs.".
 
 after going to the Basement Stairs:
 	if the time of day is after 6 PM or the time of day is before 5:45 AM:
@@ -433,8 +493,9 @@ after going to the Basement Stairs:
 		continue the action;
 	otherwise:
 		continue the action.
-		[Basement Door]
-	The Basement Door is a locked closed door. The Basement Door is west of Basement Stairs and east of Main Basement. The matching key of the Basement Door is the Mysterious Key.
+		
+	[Basement Door]
+The Basement Door is a locked closed door. The Basement Door is west of Basement Stairs and east of Main Basement. The matching key of the Basement Door is the Mysterious Key.
 	
 instead of unlocking the Basement Door with the Mysterious Key:
 	If the time of day is before 6 PM and the time of day is after 5:44 AM:
@@ -444,36 +505,34 @@ instead of unlocking the Basement Door with the Mysterious Key:
 	otherwise:
 		continue the action.
 			
-		[Main Basement]
-	Main Basement is a room. "As soon as you enter, you notice that the air is not as stale as you would expect for a room that allegedly people had not been inside of for a long time. [If the player is carrying a candle] You illuminate the room with your candle. Surrounding you is a large open room, mostly barren. The walls are completely made of brick. Both the floor and ceiling seem to be made out of wood, with wooden support beams holding the ceiling. [otherwise] You have no hope of seeing anything in here until you bring some kind of light source."
+	[NEEDS TO ACTUALLY OPEN THE DOOR?]
+
+	[Main Basement]
+Main Basement is a room. "As soon as you enter, you notice that the air is not as stale as you would expect for a room that allegedly people had not been inside of for a long time. [If the player is carrying a candle] You illuminate the room with your candle. Surrounding you is a large open room, mostly barren. The walls are completely made of brick. Both the floor and ceiling seem to be made out of wood, with wooden support beams holding the ceiling. [otherwise] You have no hope of seeing anything in here until you bring some kind of light source. 
+
+East is the Central Stairs.".
 	
-		[Lounge Door]
-		The Lounge Door is a closed door.  The Lounge Door is undescribed. The Lounge Door is west of Main Basement and east of Machine Room.
+	[Lounge Door]
+The Lounge Door is a locked closed door.  The Lounge Door is undescribed. The Lounge Door is west of Main Basement and east of Machine Room. The matching key of the Lounge Door is the silver key.
 		
-instead of opening the Lounge Door:
+after opening the Lounge Door:
 	say "It creaks open, revealing a new room to the west.";
-	continue the action.
 		
-		[Hidden Basement Room]
-	Machine Room is a room. "
-	You walk into a narrow corridor, and walk towards a faint light on the other side. As you approach, you start to notice the smell of blood. Several more steps and you smell rotting flesh. Eventually, you manage to get to the room where the light comes from, and what you see before you horrifies you to your very core.
+	[Hidden Basement Room]
+Machine Room is a room. "
+You walk into a narrow corridor, and walk towards a faint light on the other side. As you approach, you start to notice the smell of blood. Several more steps and you smell rotting flesh. Eventually, you manage to get to the room where the light comes from, and what you see before you horrifies you to your very core.
 	
 You see the Machine. 
-
 A massive metal structure - organism? - in the middle of a large room. It moves, breathes, like it's human, but its contorted metal parts make its humanlike features feel unreal - so disturbing and unnatural that you simply can't look at it straight. It's almost like it has control over your head, jerking it away every time you turn your head toward its direction. 
-
 In some kind of vain attempt at a human voice, the machine squeaks and roars with mad energy. You don't understand. You can't possibly understand - until suddenly, it's as if the machine's soul becomes infused with yours, and you hear everything.
-
 'WOMAN ---- IS ---- DEAD
-
 WOMAN ---- PARTS ---- INSIDE ---- ME
-
 WOMAN ---- PARTS ---- MAKE ---- ME ---- MORE ---- HUMAN
-
 YOU ---- WILL ---- MAKE ---- ME ---- HUMAN ---- TOO
-
 You can just barely see numerous tiny lights on the small orifices on its body - if that thing can be called a body. Much more clearly, you see everything around the machine. You see what looks like a control panel on the wall. 
-You turn around and see the door behind you has closed. You attempt to open it but the door won't budge. There's no leaving now."
+You turn around and see the door behind you has closed.
+
+East is the Lounge Door".
 
 instead of entering the Main Basement:
 	if the player is in the Machine Room:
@@ -489,18 +548,18 @@ Jones is a man in the Tenement. "
 Jones is the only other tenant that appears to be awake. It's only reasonable - how could he sleep? Nobody - not if they went through what he did.
 You feel the urge to approach him, but you're not sure if it's the right thing to do right now.
 [otherwise]
-You look at Jones to see if he's been doing any better, but there he is, already asleep."
+You look at Jones to see if he's been doing any better, but there he is, already asleep.".
 
 	[Newspaper Boy]
 The Boy is a man in the Alley. "You pass a boy, yelling about the latest issue of the Boston Globe. He holds up the paper to your face and says 'You want it, pal? Just 25 cents...' 
-Your daily wage is about 50 cents. Is it really worth it?"
+Your daily wage is about 50 cents. Is it really worth it?".
 
 	[Winston]
-Winston is a man in the Cotton Engines. Winston is carrying a lunch bag. "Your best friend, Winston, is working right next to you. He seems willing to talk."
+Winston is a man in the Cotton Engines. Winston is carrying a lunch bag. "Your best friend, Winston, is working right next to you. He seems willing to talk.".
 		
 	[Overseer]
 	[Forces player back to work]
-Overseer is a man in the Cotton Engines. "You see the Overseer. The Overseer is heavy and muscular, with a large white beard and eyes you can barely make out, what with all the bags and wrinkles covering them up. He’s somehow intimidating, despite the fact that it seems like his body could fall apart any second."
+Overseer is a man in the Cotton Engines. "You see the Overseer. The Overseer is heavy and muscular, with a large white beard and eyes you can barely make out, what with all the bags and wrinkles covering them up. He’s somehow intimidating, despite the fact that it seems like his body could fall apart any second.".
 
 Overseer can be active or passive. Overseer is Active.
 
@@ -520,44 +579,54 @@ OverseerRepeat is a truth state that varies.
 OverseerRepeat is false.
 
 Every turn when Overseer is active:
-	if Overseer is in a room (called the current space):
-		if the player is in current space:
-			if the current space is not Cotton Engines:
-				say "Right then and there, the Overseer stomps over to you, yelling 'What are you doing here! Get back to work, or I'll dock your pay for the rest of the month!'
-					You scurry back to the cotton engines.";
-				move the player to Cotton Engines, without printing a room description;
-				now the player is in Cotton Engines;
-				say "(Well, that was rude. Guess I should avoid the Overseer next time.)";
-				continue the action;
-		let next space be a random room which is adjacent to the current space;
-		repeat through the Table of Overseer's Movement:
-			if next space is the destination entry:
-				if Overseer can be seen by the player, say "The Overseer heads to [the next space].";
-				move Overseer to the next space;
-				now OverseerMove is true;
-				break;
-			otherwise:
-				if OverseerRepeat is false:
-					if Overseer can be seen by the player, say "You see the Overseer looking around impatiently, almost wanting to find something wrong with the place.";
-					now OverseerRepeat is true;
-		if Overseer can be seen by the player:
-			if the player is in Cotton Engines:
-				if OverseerMove is true, say "Overseer arrives from [the current space] and glares at you.";
-			otherwise:
-				if OverseerMove is true:
-					say "The Overseer arrives from [the current space] and stomps over to you, yelling 'What are you doing here! Get back to work, or I'll dock your pay for the rest of the month!'
-You hurry back to the cotton engines.";
-					move the player to Cotton Engines, without printing a room description;
-					now the player is in Cotton Engines;
-					say "(Well, that was rude. Guess I should avoid the Overseer next time.)";
-				otherwise:
+	if Overseer is not in NPC Room:
+		if Overseer is in a room (called the current space):
+			if the player is in current space:
+				if the current space is not Cotton Engines:
 					say "Right then and there, the Overseer stomps over to you, yelling 'What are you doing here! Get back to work, or I'll dock your pay for the rest of the month!'
-You hurry back to the cotton engines";
+					You scurry back to the cotton engines.
+
+					Hit SPACE to continue:";
+					wait for the SPACE key;
 					move the player to Cotton Engines, without printing a room description;
 					now the player is in Cotton Engines;
 					say "(Well, that was rude. Guess I should avoid the Overseer next time.)";
-	now OverseerMove is false;
-	now OverseerRepeat is false;
+					continue the action;
+			let next space be a random room which is adjacent to the current space;
+			repeat through the Table of Overseer's Movement:
+				if next space is the destination entry:
+					if Overseer can be seen by the player, say "The Overseer heads to [the next space].";
+					move Overseer to the next space;
+					now OverseerMove is true;
+					break;
+				otherwise:
+					if OverseerRepeat is false:
+						if Overseer can be seen by the player, say "You see the Overseer looking around impatiently, almost wanting to find something wrong with the place.";
+						now OverseerRepeat is true;
+			if Overseer can be seen by the player:
+				if the player is in Cotton Engines:
+					if OverseerMove is true, say "Overseer arrives from [the current space] and glares at you.";
+				otherwise:
+					if OverseerMove is true:
+						say "The Overseer arrives from [the current space] and stomps over to you, yelling 'What are you doing here! Get back to work, or I'll dock your pay for the rest of the month!'
+						You hurry back to the cotton engines.
+
+						Hit SPACE to continue:";
+						wait for the SPACE key;
+						move the player to Cotton Engines, without printing a room description;
+						now the player is in Cotton Engines;
+						say "(Well, that was rude. Guess I should avoid the Overseer next time.)";
+					otherwise:
+						say "Right then and there, the Overseer stomps over to you, yelling 'What are you doing here! Get back to work, or I'll dock your pay for the rest of the month!'
+						You hurry back to the cotton engines.
+
+						Press SPACE to continue:";
+						wait for the SPACE key;
+						move the player to Cotton Engines, without printing a room description;
+						now the player is in Cotton Engines;
+						say "(Well, that was rude. Guess I should avoid the Overseer next time.)";
+		now OverseerMove is false;
+		now OverseerRepeat is false;
 	
 Before doing something to Overseer:
 	now Overseer is passive;
@@ -567,19 +636,17 @@ Every turn when Overseer is passive:
 	now Overseer is active.
 	
 	[Jackie]
-Jackie is a woman in Intake Desk. “You see Jackie, the company secretary, staring at the wall in silence as she sits at her reception desk. She glances at you quickly, taking on a suspicious expression, but then looks back, as if she has better things to do. Suddenly, she notices that you’re looking at the book on her desk. It’s hard to see what the title is, but instinctively, she grabs it and shoves it into the nearest drawer, locking it with a key.”
+Jackie is a woman in Intake Desk. “You see Jackie, the company secretary, staring at the wall in silence as she sits at her reception desk. She glances at you quickly, taking on a suspicious expression, but then looks back, as if she has better things to do. Suddenly, she notices that you’re looking at the book on her desk. It’s hard to see what the title is, but instinctively, she grabs it and shoves it into the nearest drawer, locking it with a key.”.
 
 Every turn:
 	if the player is in Intake Desk:
 		if Jackie is in Intake Desk:
 			say "Jackie, flustered, says 'What are you doing here!?' I have some strong words for that Overseer of yours.' and blows a small whistle.";
 			move the Overseer to Intake Desk;
-			say "The Overseer stalks into the room, clearly angry that he heard the whistle."
-			
-[NOTE TO SELF, REPEAT THIS ONCE]
+			say "The Overseer stalks into the room, clearly angry that he heard the whistle.".
 
 	[Robin]
-Robin is a woman in Spindle Room. “You see Robin among all the other spindle workers. She's gossiping with her neighbor (like usual). She’s trying to be discrete, but it’s hard not to hear her when she has to speak over the roar of the machines to be heard by anyone. You can’t make out every word, but maybe if you listen more carefully, you’ll get to hear something interesting…”
+Robin is a woman in Spindle Room. “You see Robin among all the other spindle workers. She's gossiping with her neighbor (like usual). She’s trying to be discrete, but it’s hard not to hear her when she has to speak over the roar of the machines to be heard by anyone. You can’t make out every word, but maybe if you listen more carefully, you’ll get to hear something interesting…”.
 [------------------------------------------------------------------------Things-----------------------------------------------------------------------]
 													[----------Sound----------]
 													
@@ -616,8 +683,12 @@ A bench is a kind of supporter. A bench is fixed in place. A bench is always ent
 
 After examining the mysterious key:
 	increase Insanity by 5;
+
+After taking the mysterious key:
+	say "This strangely designed key seems to warp and shift it's non-euclidean geometry. It brings on a headache if looked at too closely.";
+	increase Insanity by 10;
 	
-A candle is a thing in the NPC Room.
+A candle is a thing in the NPC Room. "The candle's flickering glow is odly welcoming".
 
 crates is a thing in the Main Basement. crates is fixed in place. "
 [if the player is carrying a candle]
@@ -632,16 +703,66 @@ the floor is a thing in the Main Basement. The floor is fixed in place."
 [if the player is carrying a candle]
 You're fascinated by how spotless the floor is. Should you look into that further?
 [otherwise] 
-There isn't much productive you can do."
+There isn't much productive you can do.".
 
 instead of examining floor:
-		say "Interestingly, there is no dust on the floor, as if someone has been taking very good care of it this whole time. You continue to look around and notice that there are some skid marks. Perhaps someone was dragging or pushing around something heavy? Out of the corner of your eye, you notice some sparkling object. Something small that looks to be made of metal, but is too far away to tell what it is.";
+	say "Interestingly, there is no dust on the floor, as if someone has been taking very good care of it this whole time. You continue to look around and notice that there are some skid marks. Perhaps someone was dragging or pushing around something heavy? Out of the corner of your eye, you notice some sparkling object. Something small that looks to be made of metal, but is too far away to tell what it is.";
 
 The sparkling object is scenery in the Main Basement. The sparkling object is fixed in place.
 
 instead of examining sparkling object:
-		say "You walk up to the object and pick it up. It's a shiny silver key - strangely warm, considering that the floor itself is cold to the touch. While pondering this, you lean against one of the crates, and to your surprise it moves, unveiling a new door. The door is labeled 'Lounge.'";
-		
+	say "You walk up to the object and pick it up. It's a shiny silver key - strangely warm, considering that the floor itself is cold to the touch. While pondering this, you lean against one of the crates, and to your surprise it moves, unveiling a new door. The door is labeled 'Lounge.'";
+	now the description of the Main Basement is "As soon as you enter, you notice that the air is not as stale as you would expect for a room that allegedly people had not been inside of for a long time. [If the player is carrying a candle] You illuminate the room with your candle. Surrounding you is a large open room, mostly barren. The walls are completely made of brick. Both the floor and ceiling seem to be made out of wood, with wooden support beams holding the ceiling. [otherwise] You have no hope of seeing anything in here until you bring some kind of light source. 
+
+	East is the Central Stairs. West is the Lounge Door";
+	now the Lounge Door is described;
+	if the player does not have a silver key:
+		increase Insanity by 10;
+		now the player has a silver key;
+		say "This silver key has no seams, almost as if it was a flowing band of pure silver. It makes you feel good in the strangest ways.";
+
+Before going through the Lounge Door:
+	if the player is in the Machine Room:
+		if ReadTheGospel is true:
+			say "You go to open the door, and the knowledge passed on by The Gospel shrieks through your mind. The Lounge Door flies open at your touch, 
+			and you barrel up the stairs, through the factory, and out into the streets. 
+
+			DON'T ------ STOP ----- RUNNING ------ DON'T ----- LOOK -----BACK
+			
+			As your panicked flight takes you through and out of town, your mind can't help but return to The Gospel. 
+			
+			Your panic subsides, and you can't help but break out into song as you run:
+
+			[quotation mark]Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+			Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+			Shes'hi th'tiym h'po'glt'yuthr'us 'r'lauw't'iy!
+
+			Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+			Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+			Shu'mphle'gy YOSVIERNAWTH
+
+			PRAISE BE![quotation mark]";
+			stop game abruptly;
+		otherwise:
+			say "You attempt to open it but the door won't budge. There's no leaving now. 
+
+			As you turn back to face the Machine, you realize something:
+
+			It only want to be more human ... just like you.
+
+			It is so lonely down here ... just like you.
+
+			Now neither of you will be lonely .... ever .... again.
+
+			A feeling of pure bliss washes over your body as you become one with the Machine.";
+			stop the action;
+			
+
+The silver key is an object. "This silver key has no seams, almost as if it was a flowing band of pure silver. It makes you feel good in the strangest ways.";
+
+after examining the silver key:
+	increase Insanity by 5;
+
 The control panel is a thing in the Machine Room. The control panel is fixed in place.
 
 Instead of examining the control panel:
@@ -657,14 +778,54 @@ Instead of examining the control panel:
 	
 	WELCOME ---- TO ---- YOUR ---- NEXT ---- LIFE
 	
-	The last thing you see is the machine's innards, as you get thrown inside it."
+	The last thing you see is the machine's innards, as you get thrown inside it.";
+	stop game abruptly;
 
 The reception desk is a thing in the Intake Desk. "
 [If the player is not carrying the book] 
 Jackie's reception desk - particularly its drawer - piques your interest. 
 [otherwise] 
-Nothing much left to see here.". Part of the reception desk is a closed openable container called a drawer. The reception desk is fixed in place. In the drawer is a book.
+Nothing much left to see here.". Part of the reception desk is a closed openable container called a drawer. The reception desk is fixed in place. In the drawer is the book.
  
+The book is an object.
+
+ReadTheGospel is a truth state that varies. ReadTheGospel is false
+
+Understand "The Gospel" as the book when the printed name of the book is "The Gospel".
+
+before examining the book for the first time:
+	say "As you turn the book over in your hand, you can make out the faded title: The Gospel";
+	now the printed name of the book is "The Gospel";
+	now the description of the book is "
+	As you flick through the pages of The Gospel, most of the text is in a languages that you do not fully understand. The script seems to wiggle and worm its way across the page, almost as if some sort of creature was trapped underneath the pages. 
+
+	On one page, however, you find the following passage:
+
+	[quotation mark]And as the Great Being was birthed beneath this place, the people praised Them, and sang of Them:
+	
+	Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+	Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+	Shes'hi th'tiym h'po'glt'yuthr'us 'r'lauw't'iy!
+
+	Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+	Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+	Shu'mphle'gy YOSVIERNAWTH[quotation mark]
+	
+	[if ReadTheGospel is false]
+	Your brain trembles as it takes in these words, and you can feel your mind open briefly to the cosmos, experiencing the infinite expanse, then collapsing back into 
+	its dust of a shell within your head.
+	
+	You collapse for a time, then rise, burdened with this new knowledge.
+	[otherwise]
+	You feel warm as you recite the comforting song underneath your breath.
+	";
+	increase Insanity by 15;
+	now the printed name of the book is "The Gospel";
+	now ReadTheGospel is true;
+	
+instead of examining the reception desk:
+	say "The desk is crafted from a luxurious black wood. There seems to be nothing on top, but you can see a drawer with the key left in the lock. You might be able to open this drawer.".
+	
 instead of examining the metal lockers:
 	now the description of the Locker Rooms is "
 	[If the time of day is before 6 PM and the time of day is after 5:44 AM]
@@ -678,18 +839,12 @@ instead of examining the metal lockers:
 	say "You try and peer through the small slits on the closed locker doors, but ultimately the stench is too much from each locker to investigate them thoroughly.
 		
 	Then, you examine the lockers that have been left open. Unfortunately, none of them are for anyone important. You take a peek through all of the doors and nothing of interest seems to be inside…
-
 	That is, until you get to a lone broken locker on the back right of the room. From afar, it looks as though it was locked, but as you get closer you see that the lock has actually been broken and can now be opened.".
 	
 instead of examining the broken locker:
 		say "The locker's lock is so badly broken that it no longer functions. You might be able to open this.";
 
-[
-	if the noun is drawer:
-		say "Jackie put a book in here.";
-	if the noun is book:
-		say "The book is called 'The True Gospel'.".
-]
+
 
 instead of opening a broken locker:
 	if the time of day is before 6 PM and the time of day is after 5:45 AM:
