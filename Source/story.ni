@@ -264,17 +264,19 @@ Insanity is a number that varies. Insanity is 0.
 
 Every turn:
 	if (insanity) >= (100):
-		say "Your legs buckle and you collapse to the floor: a puppet with its strings. severed. 
+		say "Your legs buckle and you collapse to the floor: a puppet with its strings severed. 
 		
 			You wonder why. 
 			
 			And then it happens.
 			
-			The pillars of your mind forget their form and cease to be. Thoughts from beyond take you in like a swelling dark tide - enveloping you, swallowing you...You let out a pleaful gasp - your last consciousness act - as the fateful currents seize you from reason's shores and carry you off into a sea of unspeakable turmoil. 
+			The pillars of your mind abandon their form and cease to be. Thoughts from beyond take you in like a swelling dark tide - enveloping you, swallowing you...You let out a pleaful gasp - your last conscious act - as the fateful currents seize you from reason's shores and carry you off into a sea of unspeakable turmoil. 
 			
 			You are no more.
 			
-			All that's left is Madness.";
+			All that's left is Madness.
+			
+			*You Achieved Ending 4 - Too Much Insanity*";
 		stop game abruptly;
 	otherwise:
 		continue the action.
@@ -297,6 +299,9 @@ The unforgiving drops continue to pound mericlessly against your head - drilling
 Like shadows, being just as thin and sulken, they all curl, and clutch to themselves as if to hold on to the meager remains of their life-force. Clothes are a laugh at this point, looking more like throwaway rags than anything else.
 
 Dim rays of grimly colored sunlight blaze through the musty room, announcing the break of dawn. Work awaits.
+[otherwise]
+You're back home. Your bed is right there, and you feel a strong urge to sleep, but at the same time you can't stop thinking about the factory.
+
 
 To the east is the Alley.
 [otherwise]
@@ -382,14 +387,22 @@ The heat is nearly unbearable. Steam dances in and out from a mosaic of pipes wi
 To the north is the Central Stairs.
 [otherwise if insanity <= 40]
 The steaming heat of the boiler room has been replaced by a slight - yet still uncomfortable - warmth. As you inspect the room, you see that condensed steam has left marks on the machines that look strangely like letters.
+
 They say 'YOU -- ARE -- NOT -- READY -- TO -- READ -- THE -- GOSPEL -- YET... COME -- BACK -- ANOTHER -- TIME...'
 
 To the north is the Central Stairs
 [otherwise]
 The steaming heat of the boiler room has been replaced by a slight - yet still uncomfortable - warmth. As you inspect the room, you see that condensed steam has left marks on the machines that look strangely like letters.
-They say 'THOSE -- WHO -- SEEK -- THE -- LOWER -- LEVEL -- MUST -- READ	--THE	--GOSPEL'
+
+They say 'THE -- GOSPEL -- IS -- THE -- WAY.'
+
+To the north is the Central Stairs
+[otherwise]
+The steaming heat of the boiler room has been replaced by a slight - yet still uncomfortable - warmth. As you inspect the room, you see that condensed steam has left marks on the machines that look strangely like letters.
+They say 'THOSE -- WHO -- ENTER -- THE -- LOWER -- LEVEL -- MUST -- ACCEPT -- HIS -- TERMS'
 
 To the north is the Central Stairs".
+
 
 	[Worker's Entrance F0]
 The Worker's Entrance is a Factory Room. The Worker's Entrance is west of Main Entrance. "
@@ -530,12 +543,15 @@ Machine Room is a room. "
 You walk into a narrow corridor, and walk towards a faint light on the other side. As you approach, you start to notice the smell of blood. Several more steps and you smell rotting flesh. Eventually, you manage to get to the room where the light comes from, and what you see before you horrifies you to your very core.
 	
 You see the Machine. 
-A massive metal structure - organism? - in the middle of a large room. It moves, breathes, like it's human, but its contorted metal parts make its humanlike features feel unreal - so disturbing and unnatural that you simply can't look at it straight. It's almost like it has control over your head, jerking it away every time you turn your head toward its direction. 
+
+A massive metal structure - organism? - in the center of the massive room. It moves, breathes, like it's human, but its contorted metal parts make its humanlike features feel unreal - so disturbing and unnatural that you simply can't look at it straight. It's almost like it has control over your head, jerking it away every time you turn your head toward its direction. 
+
 In some kind of vain attempt at a human voice, the machine squeaks and roars with mad energy. You don't understand. You can't possibly understand - until suddenly, it's as if the machine's soul becomes infused with yours, and you hear everything.
 'WOMAN ---- IS ---- DEAD
 WOMAN ---- PARTS ---- INSIDE ---- ME
 WOMAN ---- PARTS ---- MAKE ---- ME ---- MORE ---- HUMAN
 YOU ---- WILL ---- MAKE ---- ME ---- HUMAN ---- TOO
+
 You can just barely see numerous tiny lights on the small orifices on its body - if that thing can be called a body. Much more clearly, you see everything around the machine. You see what looks like a control panel on the wall. 
 You turn around and see the door behind you has closed.
 
@@ -692,10 +708,10 @@ After examining the mysterious key:
 	increase Insanity by 5;
 
 After taking the mysterious key:
-	say "This strangely designed key seems to warp and shift it's non-euclidean geometry. It brings on a headache if looked at too closely.";
+	say "You take it. This strangely designed key seems to warp and shift it's non-euclidean geometry. It brings on a headache if looked at too closely.";
 	increase Insanity by 10;
 	
-A candle is a thing in the NPC Room. "The candle's flickering glow is odly welcoming".
+A candle is a thing in the NPC Room. "The candle's flickering glow is oddly welcoming.".
 
 crates is a thing in the Main Basement. crates is fixed in place. "
 [if the player is carrying a candle]
@@ -748,21 +764,28 @@ Before going through the Lounge Door:
 			Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
 			Shu'mphle'gy YOSVIERNAWTH
 
-			PRAISE BE![quotation mark]";
+			*You Achieved Ending 1 - The Coward*";
+
 			stop game abruptly;
 		otherwise:
 			say "You attempt to open it but the door won't budge. There's no leaving now. 
 
-			As you turn back to face the Machine, you realize something:
+			As you turn back to face the Machine, your mind frozen in fear, the thing grabs your head with some intangible force, and turns it towards itself. 
+			
+			As you face the machine, your head irreversibly geared towards its presence, resistance becomes impossible. The machine's thoughts are now your thoughts. 
+			
+			But... that's not so bad... right?
 
-			It only want to be more human ... just like you.
+			After all, it only wants to be more human ... just like you.
 
-			It is so lonely down here ... just like you.
+			The machine is so lonely down here... just like you.
 
-			Now neither of you will be lonely .... ever .... again.
+			Now neither of you will be lonely .... ever again.
 
-			A feeling of pure bliss washes over your body as you become one with the Machine.";
-			stop the action;
+			A feeling of pure bliss washes over your body as you realize you'll never be alone again.
+			
+			*You Achieved Ending 2 - Bliss*";
+			stop game abruptly;
 			
 
 The silver key is an object. "This silver key has no seams, almost as if it was a flowing band of pure silver. It makes you feel good in the strangest ways.";
@@ -785,7 +808,9 @@ Instead of examining the control panel:
 	
 	WELCOME ---- TO ---- YOUR ---- NEXT ---- LIFE
 	
-	The last thing you see is the machine's innards, as you get thrown inside it.";
+	The last thing you see is the machine's innards, as you get thrown inside it.
+	
+	*You Achieved Ending 3 - Control*";
 	stop game abruptly;
 
 The reception desk is a thing in the Intake Desk. "
@@ -794,13 +819,15 @@ Jackie's reception desk - particularly its drawer - piques your interest.
 [otherwise] 
 Nothing much left to see here.". Part of the reception desk is a closed openable container called a drawer. The reception desk is fixed in place. In the drawer is the book.
  
+
 The book is an object.
 
-ReadTheGospel is a truth state that varies. ReadTheGospel is false
+ReadTheGospel is a truth state that varies. ReadTheGospel is false.
 
 Understand "The Gospel" as the book when the printed name of the book is "The Gospel".
 
 before examining the book for the first time:
+
 	say "As you turn the book over in your hand, you can make out the faded title: The Gospel";
 	now the printed name of the book is "The Gospel";
 	now the description of the book is "
@@ -824,17 +851,18 @@ before examining the book for the first time:
 	
 	You collapse for a time, then rise, burdened with this new knowledge.
 	[otherwise]
-	You feel warm as you recite the comforting song underneath your breath.
+
+	You feel warm as you recite the strangely comforting song underneath your breath.
 	";
 	increase Insanity by 15;
 	now the printed name of the book is "The Gospel";
-	
+
 after examining the book for the first time:
 	now ReadTheGospel is true;
 	
 instead of examining the reception desk:
 	say "The desk is crafted from a luxurious black wood. There seems to be nothing on top, but you can see a drawer with the key left in the lock. You might be able to open this drawer.".
-	
+
 instead of examining the metal lockers:
 	now the description of the Locker Rooms is "
 	[If the time of day is before 6 PM and the time of day is after 5:44 AM]
