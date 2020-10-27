@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-1734"/>
+  <activeNode nodeId="node-1777"/>
   <item nodeId="node-1">
     <command xml:space="preserve">GAME-2500-RPG</command>
-    <result xml:space="preserve">The sun appears on the horizon.&#x000A;&#x000A;Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! When playing our game, make sure you have a look at the possible actions that can be taken!&#x000A;&#x000A;GAME2500 RPG&#x000A;An Interactive Fiction by James Napier&#x000A;Release 1 / Serial number 201026 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Tenement&#x000A;  You wake up to a sear of cold dripping on your head. It's just water. Nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely.&#x000A;&#x000A;The unforgiving drops continue to pound mericlessly against your head - drilling into you the miserly state of your surroundings. Swerving from the next oncoming drip, you adjust yourself, and observe the other tenants in your room. Like shadows, being just as thin and sulken, they all curl, and clutch to themselves as if to hold on to the meager remains of their life-force. Clothes are a laugh at this point, looking more like throwaway rags than anything else.&#x000A;&#x000A;Dim rays of grimly colored sunlight blaze through the musty room, announcing the break of dawn. Work awaits.&#x000A;&#x000A;&#x000A;&#x000A;  Jones is the only other tenant that appears to be awake. It's only reasonable - how could he sleep? Nobody - not if they went through what he did. You feel the urge to approach him, but you're not sure if it's the right thing to do right now. &#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The sun appears on the horizon.&#x000A;&#x000A;GAME2500 RPG&#x000A;An Interactive Fiction by James Napier&#x000A;Release 1 / Serial number 201026 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! When playing our game, make sure you have a look at the possible actions that can be taken!&#x000A;&#x000A;Tenement&#x000A;  You wake up to a sear of cold dripping on your head. It's just water. Nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely.&#x000A;&#x000A;The unforgiving drops continue to pound mericlessly against your head - drilling into you the miserly state of your surroundings. Swerving from the next oncoming drip, you adjust yourself, and observe the other tenants in your room. Like shadows, being just as thin and sulken, they all curl, and clutch to themselves as if to hold on to the meager remains of their life-force. Clothes are a laugh at this point, looking more like throwaway rags than anything else.&#x000A;&#x000A;Dim rays of grimly colored sunlight blaze through the musty room, announcing the break of dawn. Work awaits.&#x000A;&#x000A;To the east is the Alley. &#x000A;&#x000A;  Jones is the only other tenant that appears to be awake. It's only reasonable - how could he sleep? Nobody - not if they went through what he did. You feel the urge to approach him, but you're not sure if it's the right thing to do right now. &#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! When playing our game, make sure you have a look at the possible actions that can be taken!&#x000A;&#x000A;GAME2500 RPG&#x000A;An Interactive Fiction by James Napier&#x000A;Release 1 / Serial number 201022 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Tenement&#x000A;You wake up to the drip of some cold water on your head. It's nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely. As you adjust yourself, you see all the other tenants in your room. Each of them are visibly malnourished, wearing clothes that look more like throwaway rags than anything else. The dim rays of sunlight coming into the room suggest that it's about 6 AM. You force yourself out of bed, guessing that work must start in about 30 minutes.&#x000A;&#x000A;Jones is the only other tenant that appears to be awake. It's only reasonable - how could he sleep? Nobody - not if they went through what he did. You feel the urge to approach him, but you're not sure if it's the right thing to do right now.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
@@ -34,7 +34,7 @@
   </item>
   <item nodeId="node-2">
     <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Alley&#x000A;  You stumble from the darkness of the tenement into the gloomy alley. It's eerily quiet as this time of day, but in a few minutes you know the crowds will come pouring out from every household you can see. Perhaps you should move quickly to avoid the rush. &#x000A;&#x000A;You pass a boy, yelling about the latest issue of the Boston Globe. He holds up the paper to your face and says "You want it, pal? Just 25 cents..." Your daily wage is about 50 cents. Is it really worth it?&#x000A;&#x000A;The sun is now properly up.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Alley&#x000A;  You stumble from the darkness of the tenement into the gloomy alley. It's eerily quiet as this time of day, but in a few minutes you know the crowds will come pouring out from every household you can see. Perhaps you should move quickly to avoid the rush.&#x000A;&#x000A;To the west is the Tenement. To the east is the Front Gate &#x000A;&#x000A;You pass a boy, yelling about the latest issue of the Boston Globe. He holds up the paper to your face and says "You want it, pal? Just 25 cents..." Your daily wage is about 50 cents. Is it really worth it?&#x000A;&#x000A;The sun is now properly up.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -51,7 +51,7 @@
   </item>
   <item nodeId="node-3">
     <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Front Gate&#x000A; After about 15 minutes of walking through a waking town, you have arrived at the factory front gate. Snakes of smoke pour from the high chimneys and hide the sun behind a screen of noxious black. The world lies in a dreamish haze. You see all the other factory laborers slowly filing in, and sigh at the thought of having to start your 11 hour shift. &#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Front Gate&#x000A; After about 15 minutes of walking through a waking town, you have arrived at the factory front gate. Snakes of smoke pour from the high chimneys and hide the sun behind a screen of noxious black. The world lies in a dreamish haze. You see all the other factory laborers slowly filing in, and sigh at the thought of having to start your 11 hour shift.&#x000A;&#x000A;To the west is the Alley. To the south is the Main Entrance. &#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -64,7 +64,7 @@
   </item>
   <item nodeId="node-4">
     <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Main Entrance&#x000A;  The hulking doors invite to swallow you in. You are hit by a gush of humid sweltry breeze - no, more than a breeze - it's the air you'll have to breathe now. "There won't be much to eat tonight," You think sardonically. This isn't your entrance; this is for the factory elites - the owner, the overseer, and their friends. It's a privilege to use the main entrance. Wage workers like you have to go the long way through the worker's entrance. &#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Main Entrance&#x000A;  The hulking doors invite to swallow you in. You are hit by a gush of humid sweltry breeze - no, more than a breeze - it's the air you'll have to breathe now. "There won't be much to eat tonight," You think sardonically. This isn't your entrance; this is for the factory elites - the owner, the overseer, and their friends. It's a privilege to use the main entrance. Wage workers like you have to go the long way through the worker's entrance.&#x000A;&#x000A;To the north is the Front Gate. To the south is the Intake Desk. To the west is the Worker's Entrance. &#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -76,7 +76,7 @@
   </item>
   <item nodeId="node-5">
     <command xml:space="preserve">w</command>
-    <result xml:space="preserve">Worker's Entrance&#x000A;  The grim workers shuffle around the Mecca of the puncher. It bites savagely into the slim slivers of paper slipped into the cracked rusted box. You join the slow-moving hoard and punch in your strip of paper. Click. &#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Worker's Entrance&#x000A;  The grim workers shuffle around the Mecca of the puncher. It bites savagely into the slim slivers of paper slipped into the cracked rusted box. You join the slow-moving hoard and punch in your strip of paper. Click.&#x000A;&#x000A;To the east is the Main Entrance. To the south is the Locker Rooms. &#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -138,7 +138,7 @@
   </item>
   <item nodeId="node-12">
     <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Locker Rooms&#x000A;  The first thing you notice as you walk into the locker rooms is the disgusting body odor radiating from every locker. You're unsure how to describe the sensation of the smell hitting your body: perhaps it slammed into your body? Either way, you're blinded momentarily by the horrid stench. After a few seconds that feel like an eternity, you regain your senses. A couple of benches are there on the ground for you to sit on while changing. You see the walls lined with tall metal lockers, both closed and (mysteriously) open. &#x000A;&#x000A;You can see three benches here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Locker Rooms&#x000A;  The first thing you notice as you walk into the locker rooms is the disgusting body odor radiating from every locker. You're unsure how to describe the sensation of the smell hitting your body: perhaps it slammed into your body? Either way, you're blinded momentarily by the horrid stench. After a few seconds that feel like an eternity, you regain your senses. A couple of benches are there on the ground for you to sit on while changing. You see the walls lined with tall metal lockers, both closed and (mysteriously) open.&#x000A;&#x000A;To the north is the Worker's Entrance. To the east is the Cotton Engines. &#x000A;&#x000A;You can see three benches here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -151,7 +151,7 @@
   </item>
   <item nodeId="node-13">
     <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Cotton Engines&#x000A;  As you work, the violent, periodic smashing of machinery forces itself into your head. You try to ignore it and focus on your cotton gin work, but every time you look at the machine, you can't help but picture what happened to Jones" wife. You shudder at the thought, and turn away from it in disgust for a bit, but then you think of the Overseer. The Overseer wouldn't like to see you distracted from your work. &#x000A;&#x000A;Your best friend, Winston, is working right next to you. He seems willing to talk.&#x000A;&#x000A;Overseer arrives from the Loading Dock and glares at you.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Cotton Engines&#x000A;  As you work, the violent, periodic smashing of machinery forces itself into your head. You try to ignore it and focus on your cotton gin work, but every time you look at the machine, you can't help but picture what happened to Jones" wife. You shudder at the thought, and turn away from it in disgust for a bit, but then you think of the Overseer. The Overseer wouldn't like to see you distracted from your work.&#x000A;&#x000A;To the north is the Spindle Room. To the east is the Loading Dock. To the south is the Central Stairs. To the west is the Locker Rooms. &#x000A;&#x000A;Your best friend, Winston, is working right next to you. He seems willing to talk.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
@@ -161,6 +161,7 @@
       <child nodeId="node-82"/>
       <child nodeId="node-168"/>
       <child nodeId="node-1710"/>
+      <child nodeId="node-1760"/>
     </children>
   </item>
   <item nodeId="node-14">
@@ -1999,7 +2000,7 @@
   </item>
   <item nodeId="node-1710">
     <command xml:space="preserve">work</command>
-    <result xml:space="preserve">You toil at the cotton mill for your entire shift. It's hard work, but at least it gets you... some money?&#x000A;&#x000A;The sun has taken its journey through the sky and is on the verge of setting.&#x000A;Winston gives you a grim smile, and says "See ya tomorrow, ya sod," as he heads out towards the Locker Rooms.&#x000A;The Overseer stalks into the locker room, clearly ready to finally be out of this place.&#x000A; It's dusk. You pack up your things and make your way through the Worker's Entrance towards home. Whatever happens at night in the Factory, you're not sure if you want to be there to see it. Hit SPACE to continue.</result>
+    <result xml:space="preserve">You toil at the cotton mill for your entire shift. It's hard work, but at least it gets you... some money?&#x000A;&#x000A;The sun has taken its journey through the sky and is on the verge of setting.&#x000A;Winston gives you a grim smile, and says "See ya tomorrow, ya sod," as he heads out towards the Locker Rooms.&#x000A; It's dusk. You pack up your things and make your way through the Worker's Entrance towards home. Whatever happens at night in the Factory, you're not sure if you want to be there to see it. Hit SPACE to continue.</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
@@ -2008,36 +2009,37 @@
   </item>
   <item nodeId="node-1711">
     <command xml:space="preserve"> </command>
-    <result xml:space="preserve">Tenement&#x000A;  You're back home. Your bed is right there, and you feel a strong urge to sleep, but at the same time you can't stop thinking about the factory. &#x000A;&#x000A;  You look at Jones to see if he's been doing any better, but there he is, already asleep.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Tenement&#x000A;  You're back home. Your bed is right there, and you feel a strong urge to sleep, but at the same time you can't stop thinking about the factory.&#x000A;&#x000A;To the east is the Alley. &#x000A;&#x000A;  You look at Jones to see if he's been doing any better, but there he is, already asleep.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
       <child nodeId="node-1712"/>
+      <child nodeId="node-1755"/>
     </children>
   </item>
   <item nodeId="node-1712">
     <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Alley&#x000A;  You walk stealthily through the alley, hoping that nobody will detect you and think you're a thief. (Who else is going to be walking here at this time of night?) It's strangely peaceful, with the full moon directly overhead. &#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Alley&#x000A;  You walk stealthily through the alley, hoping that nobody will detect you and think you're a thief. (Who else is going to be walking here at this time of night?) It's strangely peaceful, with the full moon directly overhead.&#x000A;&#x000A;To the west is the Tenement. To the east is the Front Gate&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-1713"/>
     </children>
   </item>
   <item nodeId="node-1713">
     <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Front Gate&#x000A; It's a rare sight to see the factory completely free of noxious smoke. You almost start feeling pleasant, but then you hear the echo of a loud crash. It seems like it came inside the factory. Suddenly, your mind races, as infinite fears - rational and irrational - cross your mind. Is the Overseer still here? Is someone getting killed? Are the machines acting up? You wonder if it's safe to be here at this hour.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Front Gate&#x000A; It's a rare sight to see the factory completely free of noxious smoke. You almost start feeling pleasant, but then you hear the echo of a loud crash. It seems like it came inside the factory. Suddenly, your mind races, as infinite fears - rational and irrational - cross your mind. Is the Overseer still here? Is someone getting killed? Are the machines acting up? You wonder if it's safe to be here at this hour.&#x000A;&#x000A;To the west is the Alley. To the south is the Main Entrance&#x000A;&#x000A;The sun falls below the horizon and the temperature drops. Best not be out for too long.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-1714"/>
     </children>
   </item>
   <item nodeId="node-1714">
     <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Main Entrance&#x000A;  The Main Factory Door is wide open. You're surprised at first, but you recall that the Overseer has been forgetful about these kinds of things. You assume that he just forgot to close it.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Main Entrance&#x000A;  The Main Factory Door is wide open. You're surprised at first, but you recall that the Overseer has been forgetful about these kinds of things. You assume that he just forgot to close it.&#x000A;&#x000A;To the north is the Front Gate. To the south is the Intake Desk. To the west is the Worker's Entrance.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-1715"/>
       <child nodeId="node-1730"/>
@@ -2177,9 +2179,9 @@
   </item>
   <item nodeId="node-1730">
     <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Intake Desk&#x000A;Crafted from luxurious black wood, the intake desks stand in stark contrast from the rest of the factory. No one ever mans it, but it still makes you feel watched. &#x000A;&#x000A;  Jackie's reception desk - particularly its drawer - piques your interest. &#x000A;&#x000A;The sun falls below the horizon and the temperature drops. &#x000A;&gt;</result>
+    <result xml:space="preserve">Intake Desk&#x000A;Crafted from luxurious black wood, the intake desks stand in stark contrast from the rest of the factory. No one ever mans it, but it still makes you feel watched.&#x000A;&#x000A;To the north is the Main Entrance. To the south is the Spindle Room&#x000A;&#x000A;  Jackie's reception desk - particularly its drawer - piques your interest. &#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-1731"/>
     </children>
@@ -2191,6 +2193,7 @@
     <changed>NO</changed>
     <children>
       <child nodeId="node-1732"/>
+      <child nodeId="node-1753"/>
     </children>
   </item>
   <item nodeId="node-1732">
@@ -2214,6 +2217,184 @@
   <item nodeId="node-1734">
     <command xml:space="preserve">examine The Gospel</command>
     <result xml:space="preserve">That noun did not make sense in this context.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1753">
+    <command xml:space="preserve">examine the book</command>
+    <result xml:space="preserve">As you turn the book over in your hand, you can make out the faded title: The Gospel&#x000A; As you flick through the pages of The Gospel, most of the text is in a languages that you do not fully understand. The script seems to wiggle and worm its way across the page, almost as if some sort of creature was trapped underneath the pages.&#x000A;&#x000A;On one page, however, you find the following passage:&#x000A;&#x000A;"And as the Great Being was birthed beneath this place, the people praised Them, and sang of Them:&#x000A;&#x000A;Car'ly'eti shawshy'tuy C'r'liyon t'esh'l! Car'ly'eti shawshy'tuy C'r'liyon t'esh'l! Shes'hi th'tiym h'po'glt'yuthr'us "r'lauw't'iy!&#x000A;&#x000A;Car'ly'eti shawshy'tuy C'r'liyon t'esh'l! Car'ly'eti shawshy'tuy C'r'liyon t'esh'l! Shu'mphle'gy YOSVIERNAWTH"&#x000A;&#x000A; Your brain trembles as it takes in these words, and you can feel your mind open briefly to the cosmos, experiencing the infinite expanse, then collapsing back into its dust of a shell within your head.&#x000A;&#x000A;You collapse for a time, then rise, burdened with this new knowledge. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1754"/>
+    </children>
+  </item>
+  <item nodeId="node-1754">
+    <command xml:space="preserve">examine The Gospel</command>
+    <result xml:space="preserve">As you flick through the pages of The Gospel, most of the text is in a languages that you do not fully understand. The script seems to wiggle and worm its way across the page, almost as if some sort of creature was trapped underneath the pages.&#x000A;&#x000A;On one page, however, you find the following passage:&#x000A;&#x000A;"And as the Great Being was birthed beneath this place, the people praised Them, and sang of Them:&#x000A;&#x000A;Car'ly'eti shawshy'tuy C'r'liyon t'esh'l! Car'ly'eti shawshy'tuy C'r'liyon t'esh'l! Shes'hi th'tiym h'po'glt'yuthr'us "r'lauw't'iy!&#x000A;&#x000A;Car'ly'eti shawshy'tuy C'r'liyon t'esh'l! Car'ly'eti shawshy'tuy C'r'liyon t'esh'l! Shu'mphle'gy YOSVIERNAWTH"&#x000A;&#x000A; You feel warm as you recite the comforting song underneath your breath. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1755">
+    <command xml:space="preserve">sleep</command>
+    <result xml:space="preserve">You rest your eyes, and before you know it, it's already morning again. It's time for yet another shift.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1756"/>
+      <child nodeId="node-1772"/>
+    </children>
+  </item>
+  <item nodeId="node-1756">
+    <command xml:space="preserve">wait</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1757"/>
+    </children>
+  </item>
+  <item nodeId="node-1757">
+    <command xml:space="preserve">examine the sun</command>
+    <result xml:space="preserve">It is tiny and weak.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1758"/>
+    </children>
+  </item>
+  <item nodeId="node-1758">
+    <command xml:space="preserve">wait</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1759"/>
+    </children>
+  </item>
+  <item nodeId="node-1759">
+    <command xml:space="preserve">wait</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1772">
+    <command xml:space="preserve">speak to Jones</command>
+    <result xml:space="preserve">You approach him, but he suddenly starts coughing hysterically, and gestures at you to move away. Maybe this isn't the best time to be talking to him, anyway.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1773"/>
+    </children>
+  </item>
+  <item nodeId="node-1773">
+    <command xml:space="preserve">speak to Jones</command>
+    <result xml:space="preserve">You approach him, but he suddenly starts coughing hysterically, and gestures at you to move away. Maybe this isn't the best time to be talking to him, anyway.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1760">
+    <command xml:space="preserve">wprl</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1761"/>
+    </children>
+  </item>
+  <item nodeId="node-1761">
+    <command xml:space="preserve">work</command>
+    <result xml:space="preserve">You toil at the cotton mill for your entire shift. It's hard work, but at least it gets you... some money?&#x000A;&#x000A;The sun has taken its journey through the sky and is on the verge of setting.&#x000A;Winston gives you a grim smile, and says "See ya tomorrow, ya sod," as he heads out towards the Locker Rooms.&#x000A; It's dusk. You pack up your things and make your way through the Worker's Entrance towards home. Whatever happens at night in the Factory, you're not sure if you want to be there to see it. Hit SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1762"/>
+    </children>
+  </item>
+  <item nodeId="node-1762">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">Tenement&#x000A;  You're back home. Your bed is right there, and you feel a strong urge to sleep, but at the same time you can't stop thinking about the factory.&#x000A;&#x000A;To the east is the Alley. &#x000A;&#x000A;  You look at Jones to see if he's been doing any better, but there he is, already asleep.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1763"/>
+    </children>
+  </item>
+  <item nodeId="node-1763">
+    <command xml:space="preserve"></command>
+    <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1764"/>
+    </children>
+  </item>
+  <item nodeId="node-1764">
+    <command xml:space="preserve">sleep</command>
+    <result xml:space="preserve">You rest your eyes, and before you know it, it's already morning again. It's time for yet another shift.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1765"/>
+    </children>
+  </item>
+  <item nodeId="node-1765">
+    <command xml:space="preserve">wait</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1766"/>
+    </children>
+  </item>
+  <item nodeId="node-1766">
+    <command xml:space="preserve">wait</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1767"/>
+    </children>
+  </item>
+  <item nodeId="node-1767">
+    <command xml:space="preserve">wait</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1768"/>
+    </children>
+  </item>
+  <item nodeId="node-1768">
+    <command xml:space="preserve">wait</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1769"/>
+    </children>
+  </item>
+  <item nodeId="node-1769">
+    <command xml:space="preserve">wait</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1770"/>
+    </children>
+  </item>
+  <item nodeId="node-1770">
+    <command xml:space="preserve">wait</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1771"/>
+    </children>
+  </item>
+  <item nodeId="node-1771">
+    <command xml:space="preserve">wait</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The sun falls below the horizon and the temperature drops. Best not be out for too long.&#x000A;&#x000A;The sun appears on the horizon.&#x000A;&#x000A;The sun is now properly up.&#x000A;&#x000A;The sun has taken its journey through the sky and is on the verge of setting.&#x000A;&#x000A;The sun falls below the horizon and the temperature drops. Best not be out for too long.&#x000A;&#x000A;The sun appears on the horizon.&#x000A;&#x000A;The sun is now properly up.&#x000A;&#x000A;The sun has taken its journey through the sky and is on the verge of setting.&#x000A;&#x000A;The sun falls below the horizon and the temperature drops. Best not be out for too long.&#x000A;&#x000A;The sun appears on the horizon.&#x000A;You can't wait till Friday. It seems like the culmination of all your work this week will come then, if not sooner.&#x000A;&#x000A;The sun is now properly up.&#x000A;&#x000A;The sun has taken its journey through the sky and is on the verge of setting.&#x000A;&#x000A;The sun falls below the horizon and the temperature drops. Best not be out for too long.&#x000A;&#x000A;The sun appears on the horizon.&#x000A;You can't wait till Friday. It seems like the culmination of all your work this week will come then, if not sooner.&#x000A;&#x000A;The sun is now properly up.&#x000A;&#x000A;The sun has taken its journey through the sky and is on the verge of setting.&#x000A;&#x000A;The sun falls below the horizon and the temperature drops. Best not be out for too long.&#x000A;&#x000A;The sun appears on the horizon.&#x000A;You can't wait till Friday. It seems like the culmination of all your work this week will come then, if not sooner.&#x000A;&#x000A;The sun is now properly up.&#x000A;&#x000A;The sun has taken its journey through the sky and is on the verge of setting.&#x000A;&#x000A;The sun falls below the horizon and the temperature drops. Best not be out for too long.&#x000A;&#x000A;The sun appears on the horizon.&#x000A;You can't wait till Friday. It seems like the culmination of all your work this week will come then, if not sooner.&#x000A;&gt;--&gt; The scene change machinery is stuck.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
@@ -7077,6 +7258,7 @@
     <changed>NO</changed>
     <children>
       <child nodeId="node-460"/>
+      <child nodeId="node-1735"/>
     </children>
   </item>
   <item nodeId="node-460">
@@ -7118,6 +7300,165 @@
   <item nodeId="node-464">
     <command xml:space="preserve">examine the lone locker</command>
     <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1735">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Tenement&#x000A;  You wake up to a sear of cold dripping on your head. It's just water. Nothing unusual; the neighbors above have had a dilapidated floor for months now. It's amazing that it hasn't given in entirely.&#x000A;&#x000A;The unforgiving drops continue to pound mericlessly against your head - drilling into you the miserly state of your surroundings. Swerving from the next oncoming drip, you adjust yourself, and observe the other tenants in your room. Like shadows, being just as thin and sulken, they all curl, and clutch to themselves as if to hold on to the meager remains of their life-force. Clothes are a laugh at this point, looking more like throwaway rags than anything else.&#x000A;&#x000A;Dim rays of grimly colored sunlight blaze through the musty room, announcing the break of dawn. Work awaits.&#x000A;&#x000A;To the east is the Alley. &#x000A;&#x000A;  Jones is the only other tenant that appears to be awake. It's only reasonable - how could he sleep? Nobody - not if they went through what he did. You feel the urge to approach him, but you're not sure if it's the right thing to do right now. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1736"/>
+    </children>
+  </item>
+  <item nodeId="node-1736">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1737"/>
+    </children>
+  </item>
+  <item nodeId="node-1737">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Alley&#x000A;  You stumble from the darkness of the tenement into the gloomy alley. It's eerily quiet as this time of day, but in a few minutes you know the crowds will come pouring out from every household you can see. Perhaps you should move quickly to avoid the rush.&#x000A;&#x000A;To the west is the Tenement. To the east is the Front Gate &#x000A;&#x000A;You pass a boy, yelling about the latest issue of the Boston Globe. He holds up the paper to your face and says "You want it, pal? Just 25 cents..." Your daily wage is about 50 cents. Is it really worth it?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1738"/>
+    </children>
+  </item>
+  <item nodeId="node-1738">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Front Gate&#x000A; After about 15 minutes of walking through a waking town, you have arrived at the factory front gate. Snakes of smoke pour from the high chimneys and hide the sun behind a screen of noxious black. The world lies in a dreamish haze. You see all the other factory laborers slowly filing in, and sigh at the thought of having to start your 11 hour shift.&#x000A;&#x000A;To the west is the Alley. To the south is the Main Entrance. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1739"/>
+    </children>
+  </item>
+  <item nodeId="node-1739">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Main Entrance&#x000A;  The hulking doors invite to swallow you in. You are hit by a gush of humid sweltry breeze - no, more than a breeze - it's the air you'll have to breathe now. "There won't be much to eat tonight," You think sardonically. This isn't your entrance; this is for the factory elites - the owner, the overseer, and their friends. It's a privilege to use the main entrance. Wage workers like you have to go the long way through the worker's entrance.&#x000A;&#x000A;To the north is the Front Gate. To the south is the Intake Desk. To the west is the Worker's Entrance. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1740"/>
+    </children>
+  </item>
+  <item nodeId="node-1740">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Worker's Entrance&#x000A;  The grim workers shuffle around the Mecca of the puncher. It bites savagely into the slim slivers of paper slipped into the cracked rusted box. You join the slow-moving hoard and punch in your strip of paper. Click.&#x000A;&#x000A;To the east is the Main Entrance. To the south is the Locker Rooms. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1741"/>
+    </children>
+  </item>
+  <item nodeId="node-1741">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Locker Rooms&#x000A;  The first thing you notice as you walk into the locker rooms is the disgusting body odor radiating from every locker. You're unsure how to describe the sensation of the smell hitting your body: perhaps it slammed into your body? Either way, you're blinded momentarily by the horrid stench. After a few seconds that feel like an eternity, you regain your senses. A couple of benches are there on the ground for you to sit on while changing. You see the walls lined with tall metal lockers, both closed and (mysteriously) open.&#x000A;&#x000A;To the north is the Worker's Entrance. To the east is the Cotton Engines. &#x000A;&#x000A;You can see three benches here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1742"/>
+    </children>
+  </item>
+  <item nodeId="node-1742">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Cotton Engines&#x000A;  As you work, the violent, periodic smashing of machinery forces itself into your head. You try to ignore it and focus on your cotton gin work, but every time you look at the machine, you can't help but picture what happened to Jones" wife. You shudder at the thought, and turn away from it in disgust for a bit, but then you think of the Overseer. The Overseer wouldn't like to see you distracted from your work.&#x000A;&#x000A;To the north is the Spindle Room. To the east is the Loading Dock. To the south is the Central Stairs. To the west is the Locker Rooms. &#x000A;&#x000A;Your best friend, Winston, is working right next to you. He seems willing to talk.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1743"/>
+    </children>
+  </item>
+  <item nodeId="node-1743">
+    <command xml:space="preserve">wprl</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1744"/>
+    </children>
+  </item>
+  <item nodeId="node-1744">
+    <command xml:space="preserve">work</command>
+    <result xml:space="preserve">You toil at the cotton mill for your entire shift. It's hard work, but at least it gets you... some money?&#x000A;&#x000A;The sun has taken its journey through the sky and is on the verge of setting.&#x000A;Winston gives you a grim smile, and says "See ya tomorrow, ya sod," as he heads out towards the Locker Rooms.&#x000A; It's dusk. You pack up your things and make your way through the Worker's Entrance towards home. Whatever happens at night in the Factory, you're not sure if you want to be there to see it. Hit SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1745"/>
+    </children>
+  </item>
+  <item nodeId="node-1745">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">Tenement&#x000A;  You're back home. Your bed is right there, and you feel a strong urge to sleep, but at the same time you can't stop thinking about the factory.&#x000A;&#x000A;To the east is the Alley. &#x000A;&#x000A;  You look at Jones to see if he's been doing any better, but there he is, already asleep.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1746"/>
+    </children>
+  </item>
+  <item nodeId="node-1746">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Alley&#x000A;  You walk stealthily through the alley, hoping that nobody will detect you and think you're a thief. (Who else is going to be walking here at this time of night?) It's strangely peaceful, with the full moon directly overhead.&#x000A;&#x000A;To the west is the Tenement. To the east is the Front Gate&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1747"/>
+    </children>
+  </item>
+  <item nodeId="node-1747">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Front Gate&#x000A; It's a rare sight to see the factory completely free of noxious smoke. You almost start feeling pleasant, but then you hear the echo of a loud crash. It seems like it came inside the factory. Suddenly, your mind races, as infinite fears - rational and irrational - cross your mind. Is the Overseer still here? Is someone getting killed? Are the machines acting up? You wonder if it's safe to be here at this hour.&#x000A;&#x000A;To the west is the Alley. To the south is the Main Entrance&#x000A;&#x000A;The sun falls below the horizon and the temperature drops. Best not be out for too long.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1748"/>
+    </children>
+  </item>
+  <item nodeId="node-1748">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Main Entrance&#x000A;  The Main Factory Door is wide open. You're surprised at first, but you recall that the Overseer has been forgetful about these kinds of things. You assume that he just forgot to close it.&#x000A;&#x000A;To the north is the Front Gate. To the south is the Intake Desk. To the west is the Worker's Entrance.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1749"/>
+    </children>
+  </item>
+  <item nodeId="node-1749">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Intake Desk&#x000A;Crafted from luxurious black wood, the intake desks stand in stark contrast from the rest of the factory. No one ever mans it, but it still makes you feel watched.&#x000A;&#x000A;To the north is the Main Entrance. To the south is the Spindle Room&#x000A;&#x000A;  Jackie's reception desk - particularly its drawer - piques your interest. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1750"/>
+    </children>
+  </item>
+  <item nodeId="node-1750">
+    <command xml:space="preserve">open the drawer</command>
+    <result xml:space="preserve">You open the drawer, revealing a book.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1751"/>
+    </children>
+  </item>
+  <item nodeId="node-1751">
+    <command xml:space="preserve">take the book</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1752"/>
+    </children>
+  </item>
+  <item nodeId="node-1752">
+    <command xml:space="preserve">examine the book</command>
+    <result xml:space="preserve">As you turn the book over in your hand, you can make out the faded title: The Gospel&#x000A; As you flick through the pages of The Gospel, most of the text is in a languages that you do not fully understand. The script seems to wiggle and worm its way across the page, almost as if some sort of creature was trapped underneath the pages.&#x000A;&#x000A;On one page, however, you find the following passage:&#x000A;&#x000A;"And as the Great Being was birthed beneath this place, the people praised Them, and sang of Them:&#x000A;&#x000A;Car'ly'eti shawshy'tuy C'r'liyon t'esh'l! Car'ly'eti shawshy'tuy C'r'liyon t'esh'l! Shes'hi th'tiym h'po'glt'yuthr'us "r'lauw't'iy!&#x000A;&#x000A;Car'ly'eti shawshy'tuy C'r'liyon t'esh'l! Car'ly'eti shawshy'tuy C'r'liyon t'esh'l! Shu'mphle'gy YOSVIERNAWTH"&#x000A;&#x000A; You feel warm as you recite the comforting song underneath your breath. &#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
@@ -9760,11 +10101,12 @@
   </item>
   <item nodeId="node-589">
     <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The sun has taken its journey through the sky and is on the verge of setting.&#x000A;&#x000A;The sun falls below the horizon and the temperature drops. Best not be out for too long.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-590"/>
+      <child nodeId="node-1774"/>
     </children>
   </item>
   <item nodeId="node-590">
@@ -12337,6 +12679,21 @@
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
+  <item nodeId="node-1774">
+    <command xml:space="preserve">sleep</command>
+    <result xml:space="preserve">You rest your eyes, and before you know it, it's already morning again. It's time for yet another shift.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1775"/>
+    </children>
+  </item>
+  <item nodeId="node-1775">
+    <command xml:space="preserve">talk to Jones</command>
+    <result xml:space="preserve">You go up to him and nudge him awake, but he pulls his covers tighter over himself in response.&#x000A;&#x000A;The sun appears on the horizon.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
   <item nodeId="node-877">
     <command xml:space="preserve"></command>
     <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
@@ -14557,11 +14914,12 @@
   </item>
   <item nodeId="node-1126">
     <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The sun has taken its journey through the sky and is on the verge of setting.&#x000A;&#x000A;The sun falls below the horizon and the temperature drops. Best not be out for too long.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-1127"/>
+      <child nodeId="node-1776"/>
     </children>
   </item>
   <item nodeId="node-1127">
@@ -14765,6 +15123,21 @@
   <item nodeId="node-1149">
     <command xml:space="preserve">look in the broken locker</command>
     <result xml:space="preserve">You can't see inside, since the broken locker is closed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-1776">
+    <command xml:space="preserve">sleep</command>
+    <result xml:space="preserve">You rest your eyes, and before you know it, it's already morning again. It's time for yet another shift.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-1777"/>
+    </children>
+  </item>
+  <item nodeId="node-1777">
+    <command xml:space="preserve">talk to Jones</command>
+    <result xml:space="preserve">You go up to him and nudge him awake, but he pulls his covers tighter over himself in response.&#x000A;&#x000A;You wake up drowsily, and decide to head back to bed.&#x000A;&#x000A;The sun appears on the horizon.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>

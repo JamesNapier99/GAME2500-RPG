@@ -70,16 +70,21 @@ instead of talking a person:
 	otherwise:
 		say "Who?";
 		continue the action;
-	
+
 Instead of sleeping:
 	if the player is in the Tenement and the time of day is before 5 AM or the time of day is after 6 PM:
 		say "You rest your eyes, and before you know it, it's already morning again. It's time for yet another shift.";
 		decrease Insanity by 5;
-		now the time of day is 5:45 AM;
+		now the time of day is 4:45 AM;
 	else if the player is in the Tenement:
 		say "You rest your eyes, but you can't get yourself to go to sleep. Maybe try again later.";
 	otherwise:
 		say "This isn't an appropriate place to be sleeping.".
+
+At 4:50 AM:
+	if the player is in the Tenement:
+		say "You decide its too early for all of this, and decide to head back to bed.";
+		now the time of day is 5:45 AM;
 [-----------------------------------------------------------------------Actions-----------------------------------------------------------------------]
 
 purchasing is an action applying to one thing.
@@ -291,11 +296,11 @@ Like shadows, being just as thin and sulken, they all curl, and clutch to themse
 
 Dim rays of grimly colored sunlight blaze through the musty room, announcing the break of dawn. Work awaits.
 
-To the west is the Alley.
+To the east is the Alley.
 [otherwise]
 You're back home. Your bed is right there, and you feel a strong urge to sleep, but at the same time you can't stop thinking about the factory.
 
-To the west is the Alley.
+To the east is the Alley.
 ".
 	
 	[Alley F0]
@@ -821,6 +826,8 @@ before examining the book for the first time:
 	";
 	increase Insanity by 15;
 	now the printed name of the book is "The Gospel";
+	
+after examining the book for the first time:
 	now ReadTheGospel is true;
 	
 instead of examining the reception desk:
