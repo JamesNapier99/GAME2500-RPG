@@ -1,4 +1,4 @@
-"GAME2500 RPG" by James Napier
+"GAME2500 RPG" by James, Jonathan, Sammy, and Hayson
 
 [Entry Text: Intro to the game, reminder for commands, etc]
 When play begins:

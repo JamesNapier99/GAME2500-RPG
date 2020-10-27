@@ -22,7 +22,7 @@ placeholder [IFID] = "8448A319-A88B-40C2-A260-383E576FA053"
 placeholder [RELEASE] = "1"
 placeholder [YEAR] = "2020"
 placeholder [TITLE] = "GAME2500 RPG"
-placeholder [AUTHOR] = "James Napier"
+placeholder [AUTHOR] = "James, Jonathan, Sammy, and Hayson"
 placeholder [BLURB] = "A work of interactive fiction."
 
 ! Other material to release
