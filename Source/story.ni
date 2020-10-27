@@ -242,17 +242,19 @@ Insanity is a number that varies. Insanity is 0.
 
 Every turn:
 	if (insanity) >= (100):
-		say "Your legs buckle and you collapse to the floor: a puppet with its strings. severed. 
+		say "Your legs buckle and you collapse to the floor: a puppet with its strings severed. 
 		
 			You wonder why. 
 			
 			And then it happens.
 			
-			The pillars of your mind forget their form and cease to be. Thoughts from beyond take you in like a swelling dark tide - enveloping you, swallowing you...You let out a pleaful gasp - your last consciousness act - as the fateful currents seize you from reason's shores and carry you off into a sea of unspeakable turmoil. 
+			The pillars of your mind abandon their form and cease to be. Thoughts from beyond take you in like a swelling dark tide - enveloping you, swallowing you...You let out a pleaful gasp - your last conscious act - as the fateful currents seize you from reason's shores and carry you off into a sea of unspeakable turmoil. 
 			
 			You are no more.
 			
-			All that's left is Madness.";
+			All that's left is Madness.
+			
+			*You Achieved Ending 4 - Too Much Insanity*";
 		stop game abruptly;
 	otherwise:
 		continue the action.
@@ -278,8 +280,17 @@ The unforgiving drops continue to pound mericlessly against your head - drilling
 Like shadows, being just as thin and sulken, they all curl, and clutch to themselves as if to hold on to the meager remains of their life-force. Clothes are a laugh at this point, looking more like throwaway rags than anything else.
 
 Dim rays of grimly colored sunlight blaze through the musty room, announcing the break of dawn. Work awaits.
+<<<<<<< Updated upstream
 [otherwise]
 You're back home. Your bed is right there, and you feel a strong urge to sleep, but at the same time you can't stop thinking about the factory.
+=======
+
+To the east is the Alley.
+[otherwise]
+You're back home. Your bed is right there, and you feel a strong urge to sleep, but at the same time you can't stop thinking about the factory.
+
+To the east is the Alley.
+>>>>>>> Stashed changes
 ".
 
 
@@ -341,10 +352,21 @@ The Boiler Room is a Factory Room. Boiler Room is south of Central Stairs."
 The heat is nearly unbearable. Steam dances in and out from a mosaic of pipes without warning, bathing you in burning condensation.
 [otherwise if insanity <= 40]
 The steaming heat of the boiler room has been replaced by a slight - yet still uncomfortable - warmth. As you inspect the room, you see that condensed steam has left marks on the machines that look strangely like letters.
+<<<<<<< Updated upstream
 They say 'YOU -- ARE -- NOT -- READY -- TO -- READ -- THE -- GOSPEL -- YET... COME -- BACK -- ANOTHER -- TIME...'
 [otherwise]
 The steaming heat of the boiler room has been replaced by a slight - yet still uncomfortable - warmth. As you inspect the room, you see that condensed steam has left marks on the machines that look strangely like letters.
 They say 'THOSE -- WHO -- SEEK -- THE -- LOWER -- LEVEL -- MUST -- READ --THE	 -- TIPS	-- OF -- SURVIVAL'"
+=======
+They say 'THE -- GOSPEL -- IS -- THE -- WAY.'
+
+To the north is the Central Stairs
+[otherwise]
+The steaming heat of the boiler room has been replaced by a slight - yet still uncomfortable - warmth. As you inspect the room, you see that condensed steam has left marks on the machines that look strangely like letters.
+They say 'THOSE -- WHO -- ENTER -- THE -- LOWER -- LEVEL -- MUST -- ACCEPT -- HIS -- TERMS'
+
+To the north is the Central Stairs".
+>>>>>>> Stashed changes
 
 	[Worker's Entrance F0]
 The Worker's Entrance is a Factory Room. The Worker's Entrance is west of Main Entrance. "
@@ -459,8 +481,12 @@ instead of opening the Lounge Door:
 	You walk into a narrow corridor, and walk towards a faint light on the other side. As you approach, you start to notice the smell of blood. Several more steps and you smell rotting flesh. Eventually, you manage to get to the room where the light comes from, and what you see before you horrifies you to your very core.
 	
 You see the Machine. 
+<<<<<<< Updated upstream
 
 A massive metal structure - organism? - in the middle of a large room. It moves, breathes, like it's human, but its contorted metal parts make its humanlike features feel unreal - so disturbing and unnatural that you simply can't look at it straight. It's almost like it has control over your head, jerking it away every time you turn your head toward its direction. 
+=======
+A massive metal structure - organism? - in the center of the massive room. It moves, breathes, like it's human, but its contorted metal parts make its humanlike features feel unreal - so disturbing and unnatural that you simply can't look at it straight. It's almost like it has control over your head, jerking it away every time you turn your head toward its direction. 
+>>>>>>> Stashed changes
 
 In some kind of vain attempt at a human voice, the machine squeaks and roars with mad energy. You don't understand. You can't possibly understand - until suddenly, it's as if the machine's soul becomes infused with yours, and you hear everything.
 
@@ -471,6 +497,12 @@ WOMAN ---- PARTS ---- INSIDE ---- ME
 WOMAN ---- PARTS ---- MAKE ---- ME ---- MORE ---- HUMAN
 
 YOU ---- WILL ---- MAKE ---- ME ---- HUMAN ---- TOO
+<<<<<<< Updated upstream
+=======
+
+You can just barely see numerous tiny lights on the small orifices on its body - if that thing can be called a body. Much more clearly, you see everything around the machine. You see what looks like a control panel on the wall. 
+You turn around and see the door behind you has closed.
+>>>>>>> Stashed changes
 
 You can just barely see numerous tiny lights on the small orifices on its body - if that thing can be called a body. Much more clearly, you see everything around the machine. You see what looks like a control panel on the wall. 
 You turn around and see the door behind you has closed. You attempt to open it but the door won't budge. There's no leaving now."
@@ -616,8 +648,17 @@ A bench is a kind of supporter. A bench is fixed in place. A bench is always ent
 
 After examining the mysterious key:
 	increase Insanity by 5;
+<<<<<<< Updated upstream
 	
 A candle is a thing in the NPC Room.
+=======
+
+After taking the mysterious key:
+	say "You take it. This strangely designed key seems to warp and shift it's non-euclidean geometry. It brings on a headache if looked at too closely.";
+	increase Insanity by 10;
+	
+A candle is a thing in the NPC Room. "The candle's flickering glow is oddly welcoming.".
+>>>>>>> Stashed changes
 
 crates is a thing in the Main Basement. crates is fixed in place. "
 [if the player is carrying a candle]
@@ -640,8 +681,71 @@ instead of examining floor:
 The sparkling object is scenery in the Main Basement. The sparkling object is fixed in place.
 
 instead of examining sparkling object:
+<<<<<<< Updated upstream
 		say "You walk up to the object and pick it up. It's a shiny silver key - strangely warm, considering that the floor itself is cold to the touch. While pondering this, you lean against one of the crates, and to your surprise it moves, unveiling a new door. The door is labeled 'Lounge.'";
 		
+=======
+	say "You walk up to the object and pick it up. It's a shiny silver key - strangely warm, considering that the floor itself is cold to the touch. While pondering this, you lean against one of the crates, and to your surprise it moves, unveiling a new door. The door is labeled 'Lounge.'";
+	now the description of the Main Basement is "As soon as you enter, you notice that the air is not as stale as you would expect for a room that allegedly people had not been inside of for a long time. [If the player is carrying a candle] You illuminate the room with your candle. Surrounding you is a large open room, mostly barren. The walls are completely made of brick. Both the floor and ceiling seem to be made out of wood, with wooden support beams holding the ceiling. [otherwise] You have no hope of seeing anything in here until you bring some kind of light source. 
+
+	East is the Central Stairs. West is the Lounge Door";
+	now the Lounge Door is described;
+	if the player does not have a silver key:
+		increase Insanity by 10;
+		now the player has a silver key;
+		say "This silver key has no seams, almost as if it was a flowing band of pure silver. It makes you feel good in the strangest ways.";
+
+Before going through the Lounge Door:
+	if the player is in the Machine Room:
+		if ReadTheGospel is true:
+			say "You go to open the door, and the knowledge passed on by The Gospel shrieks through your mind. The Lounge Door flies open at your touch, 
+			and you barrel up the stairs, through the factory, and out into the streets. 
+
+			DON'T ------ STOP ----- RUNNING ------ DON'T ----- LOOK -----BACK
+			
+			As your panicked flight takes you through and out of town, your mind can't help but return to The Gospel. 
+			
+			Your panic subsides, and you can't help but break out into song as you run:
+
+			[quotation mark]Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+			Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+			Shes'hi th'tiym h'po'glt'yuthr'us 'r'lauw't'iy!
+
+			Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+			Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+			Shu'mphle'gy YOSVIERNAWTH
+
+			PRAISE BE![quotation mark]
+			
+			*You Achieved Ending 1 - The Coward*";
+			stop game abruptly;
+		otherwise:
+			say "You attempt to open it but the door won't budge. There's no leaving now. 
+
+			As you turn back to face the Machine, your mind frozen in fear, the thing grabs your head with some intangible force, and turns it towards itself. 
+			
+			As you face the machine, your head irreversibly geared towards its presence, resistance becomes impossible. The machine's thoughts are now your thoughts. 
+			
+			But... that's not so bad... right?
+
+			After all, it only wants to be more human ... just like you.
+
+			The machine is so lonely down here... just like you.
+
+			Now neither of you will be lonely .... ever again.
+
+			A feeling of pure bliss washes over your body as you realize you'll never be alone again.
+			
+			*You Achieved Ending 2 - Bliss*";
+			stop the action;
+			
+
+The silver key is an object. "This silver key has no seams, almost as if it was a flowing band of pure silver. It makes you feel good in the strangest ways.";
+
+after examining the silver key:
+	increase Insanity by 5;
+
+>>>>>>> Stashed changes
 The control panel is a thing in the Machine Room. The control panel is fixed in place.
 
 Instead of examining the control panel:
@@ -657,7 +761,14 @@ Instead of examining the control panel:
 	
 	WELCOME ---- TO ---- YOUR ---- NEXT ---- LIFE
 	
+<<<<<<< Updated upstream
 	The last thing you see is the machine's innards, as you get thrown inside it."
+=======
+	The last thing you see is the machine's innards, as you get thrown inside it.
+	
+	*You Achieved Ending 3 - Control*";
+	stop game abruptly;
+>>>>>>> Stashed changes
 
 The reception desk is a thing in the Intake Desk. "
 [If the player is not carrying the book] 
@@ -665,6 +776,48 @@ Jackie's reception desk - particularly its drawer - piques your interest.
 [otherwise] 
 Nothing much left to see here.". Part of the reception desk is a closed openable container called a drawer. The reception desk is fixed in place. In the drawer is a book.
  
+<<<<<<< Updated upstream
+=======
+The book is an object.
+
+ReadTheGospel is a truth state that varies. ReadTheGospel is false.
+
+Understand "The Gospel" as the book when the printed name of the book is "The Gospel".
+
+before examining the book for the first time:
+	say "As you turn the book over in your hand, you can make out the faded title: The Gospel.";
+	now the printed name of the book is "The Gospel";
+	now the description of the book is "
+	As you flick through the pages of The Gospel, most of the text is in a language that you do not fully understand. The book's text seems to wiggle and inch its way across the paper's texture, almost as if some sort of creature was trapped underneath the pages. 
+
+	On one page, you find the following passage:
+
+	[quotation mark]And as the Great Being was birthed beneath this place, the people praised Them, and sang of Them:
+	
+	Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+	Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+	Shes'hi th'tiym h'po'glt'yuthr'us 'r'lauw't'iy!
+
+	Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+	Car'ly'eti shawshy'tuy C'r'liyon t'esh'l!
+	Shu'mphle'gy YOSVIERNAWTH[quotation mark]
+	
+	[if ReadTheGospel is false]
+	Your brain trembles as it takes in these words, and you can feel your mind open briefly to the cosmos, experiencing the infinite expanse, then collapsing back into 
+	its dust of a shell within your head.
+	
+	You collapse for a time, then rise, burdened with this new knowledge.
+	[otherwise]
+	You feel warm as you recite the strangely comforting song underneath your breath.
+	";
+	increase Insanity by 15;
+	now the printed name of the book is "The Gospel";
+	now ReadTheGospel is true;
+	
+instead of examining the reception desk:
+	say "The desk is crafted from a luxurious black wood. There seems to be nothing on top, but you can see a drawer with the key left in the lock. You might be able to open this drawer.".
+	
+>>>>>>> Stashed changes
 instead of examining the metal lockers:
 	now the description of the Locker Rooms is "
 	[If the time of day is before 6 PM and the time of day is after 5:44 AM]
