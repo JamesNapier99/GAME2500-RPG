@@ -12971,9 +12971,9 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! When play begins:
 [ R_799 ;
     if (debug_rules) DB_Rule(R_799, 799);
-    ! [2: say ~Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! When playing our game, make sure you have a look at the possible actions that can be taken!~]
-    say__p=1;! [3: ~Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! When playing our game, make sure you have a look at the possible actions that can be taken!~]
-    ParaContent(); print "Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! When playing our game, make sure you have a look at the possible actions that can be taken!"; new_line; .L_Say1; .L_SayX1;rfalse;
+    ! [2: say ~Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! You should have been given a Player Instructions Document. Please refer to that document while playing.^^You play as a worker at a cotton gin in the year 1870. Your friend's wife and co-worker has gone missing, and you decide to investigate her disappearance, and you're convinced it has to do with your old workplace.~]
+    say__p=1;! [3: ~Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! You should have been given a Player Instructions Document. Please refer to that document while playing.^^You play as a worker at a cotton gin in the year 1870. Your friend's wife and co-worker has gone missing, and you decide to investigate her disappearance, and you're convinced it has to do with your old workplace.~]
+    ParaContent(); print "Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! You should have been given a Player Instructions Document. Please refer to that document while playing.^^You play as a worker at a cotton gin in the year 1870. Your friend's wife and co-worker has gone missing, and you decide to investigate her disappearance, and you're convinced it has to do with your old workplace."; new_line; .L_Say1; .L_SayX1;rfalse;
 ];
 ! No specific request
 ! When play begins:
@@ -21161,7 +21161,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
                 ((
                     ((((((formal_par0 ofclass K3_direction) && (formal_par0 ofclass K3_direction))) && (((formal_par1 ofclass K1_room) && (formal_par1 ofclass K1_room))))) && ((
                     formal_rv = MapConnection(formal_par1,formal_par0)) | 1)
-                    )|| (ArgumentTypeFailed(15))
+                    )|| (ArgumentTypeFailed(17))
 
                 ))
             +

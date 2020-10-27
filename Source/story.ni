@@ -2,8 +2,10 @@
 
 [Entry Text: Intro to the game, reminder for commands, etc]
 When play begins:
-	Say "Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! When playing our game, make sure you have a look at the possible actions that
-		can be taken!".
+	Say "Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! You should have been given a Player Instructions Document.
+	Please refer to that document while playing.
+
+	You play as a worker at a cotton gin in the year 1870. Your friend’s wife and co-worker has gone missing, and you decide to investigate her disappearance, and you’re convinced it has to do with your old workplace.".
 
 The display banner rule is listed before the when play begins stage rule in the startup rules.
 
