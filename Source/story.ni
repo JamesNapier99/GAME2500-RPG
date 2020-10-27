@@ -2,9 +2,13 @@
 
 [Entry Text: Intro to the game, reminder for commands, etc]
 When play begins:
-	Say "Welcome to our Interactive Text-based RPG! We hope you enjoy your experience! You should have been given a Player Instructions Document.
-	Please refer to that document while playing.
-	You play as a worker at a cotton gin in the year 1870. Your friend’s wife and co-worker has gone missing, and you decide to investigate her disappearance, and you’re convinced it has to do with your old workplace.".
+	Say "Welcome to our Interactive Text-based RPG! 
+	
+	****You should have been given a Player Instructions Document, please refer to that document while playing****
+	
+	You play as a common worker at a cotton gin in the year 1870 - at the height of the industrial revolution. Your friend’s wife and co-worker has gone missing, and you decide to investigate her disappearance at your old workplace. Things are amiss, so be careful.
+	
+	Enjoy your experience...".
 
 The display banner rule is listed before the when play begins stage rule in the startup rules.
 
@@ -57,13 +61,13 @@ instead of talking a person:
 			say "You go up to him and nudge him awake, but he pulls his covers tighter over himself in response.";
 		continue the action;
 	if the noun is Winston:
-		say "Winston seems more perturbed than usual - but rightfully so. Everyone's been a bit anxious since... 'it' happened. 
+		say "Winston seems more perturbed than usual - rightfully so. Everyone's been a bit anxious since... 'it' happened. 
 		
-		'Seems like the boss is gone today,' he observes. 'Must be in some serious legal trouble right now.'
+		'Seems like the boss isn't around today.' He observes behind slit eyes. 'Seems he's pre-occupied with some serious legal trouble right now...'
 		
-		You listen silently, wondering if this whole situation could end up putting you all out of work.
+		You listen in silence. The worse thing that can happen are officials closing down the factory and putting you all out of work. You remember how it was wondering down the length of the street, anxiety biting down the pit of your stomach as you were turned down by one factory after another. Everybody's heard of the workhouses jobless people get sent too...Hell on earth - best try and avoid that scenario.
 		
-		'Now everyone's just wondering who ordered Jones[apostrophe] wife to go to the basement in the first place.... Perhaps the ladies in the Spindle Room would know something like that; they do seem to know just about everything.'";
+		'You know the funny thing? Not many talk about who ordered Jones[apostrophe] gal down to the basement in the first place....But if I were to wager, those cranky ladies in the Spindle Room would have a thing or two to say about that; they do seem to know just about...Everything' Winston said with a shudder.";
 		now the player has the lunch bag;
 		continue the action;
 	else if the noun is Overseer:
@@ -407,7 +411,7 @@ The Mysterious key is an object. "This strangely designed key seems to warp and 
 	[Cotton Engines F0]
 The Cotton Engines is a Factory Room. The Cotton Engines is south of the Spindle Room. "
 [If the time of day is before 6 PM and the time of day is after 5:44 AM]
-As you work, the violent, periodic smashing of machinery forces itself into your head. You try to ignore it and focus on your cotton gin work, but every time you look at the machine, you can't help but picture what happened to Jones' wife. You shudder at the thought, and turn away from it in disgust for a bit, but then you think of the Overseer. The Overseer wouldn't like to see you distracted from your work.
+As you work, the violent, periodic smashing of machinery forces itself into your head. You try to ignore it and focus on your cotton gin work, but every time you look at the machine, you can't help but picture what happened to Cathay - Jones' wife. You shudder at the thought, and turn away from it in disgust for a bit, but then you think of the Overseer. The Overseer wouldn't like to see you distracted from your work.
 To the north is the Spindle Room. To the east is the Loading Dock. To the south is the Central Stairs. To the west is the Locker Rooms.
 [otherwise]
 It's so dark inside the Cotton Engines that you almost stab yourself on the harsher end of a machine. At this point, you start to hear a strange periodic whirring, but it's hard to tell where it is, or what it could be coming from.
@@ -647,15 +651,16 @@ Before printing the name of something audible while listening to a room:
 	say "[sound] from the ";
 													[---------------------------]
 													
-The newspaper, paper is a thing. The newspaper, paper is carried by the Boy.  The description of the newspaper is "[If the Boy is carrying the newspaper]The boy pulls the newspaper out of your face, saying 'Oi, you can't look before ya buy![else]The paper is dated October 4, 1872. Seems to be a high end newspaper, because you can't understand many of the words. There is, however, one section that catches your eye.
+The newspaper, paper is a thing. The newspaper, paper is carried by the Boy.  The description of the newspaper is "[If the Boy is carrying the newspaper]The boy pulls the newspaper out of your face, saying 'Oi, no peeking before ya buy![else]The paper is dated October 4, 1872. Looks like a gentleman's paper - there are not many words you can understand. There is, however, one headline that catches your eye.
 			
 'Cotton Gin Accident leaves Factory Worker Dead'
 			
-The paper then explained what had happened to Jones' wife. She got too close to the machine, the paper said, and before she knew it, it sucked her in and tore her apart. Only some of her remains were found.
+It details a tragic incident that happened to a worker you used to know: Cathay - Jones' wife.  From the grisly remains of Cathay surrounding a machine, investigators concluded that she accidentally wandered too close to the machine and was swallowed up by its turning mechanism. Likely, and thankfully, it was quick. 
 			
-You knew about this event well; it had happened in your own factory. But you hadn't seen the event take place, so it was interesting to see the details somewhere - especially when the company itself has been completely silent.
+You've heard rumors of this incident but whispers of this quickly died down. Thankfully, you didn't see it with your own eyes and some bourgeoisie was kind enough to write about it - quiet surprising especially when the company itself has been completely silent about it.
 			
 You doubt that it'll break the silence any time soon, either.".
+
 
 A bench is a kind of supporter. A bench is fixed in place. A bench is always enterable. In the Locker Rooms is three benches. 
 
